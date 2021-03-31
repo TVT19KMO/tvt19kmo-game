@@ -6,7 +6,7 @@ public class PlatformPool : MonoBehaviour
 {
     public GameObject platformsPrefab;
     public int platformPoolSize = 6;
-    public float spawnRate = 3;
+    public float spawnRate = 8;
     public float platformMinX = 0;
     public float plartformMaxX = 0;
     public float platformMinY = -2;
@@ -14,7 +14,7 @@ public class PlatformPool : MonoBehaviour
 
     private GameObject[] platforms;
     private Vector2 objectPoolPosition;
-    private float timeSinceLastSpawned;
+    private float timeSinceLastSpawned = 0;
     private float spawnXPosition = 20f;
     private int currentPlatform = 0;
 
