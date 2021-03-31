@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
             if (hit.collider != null)
             {
                 Debug.Log("Box hit" + hit.collider.gameObject);
-                GameController.instance.LoadPlatformer();
+                GameControllerHouse.instance.LoadPlatformer();
             }
         }
     }

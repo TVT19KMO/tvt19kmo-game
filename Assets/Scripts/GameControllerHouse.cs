@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class GameControllerHouse : MonoBehaviour
 {
-    public static GameController instance;
+    public static GameControllerHouse instance;
 
     void Awake()
     {
