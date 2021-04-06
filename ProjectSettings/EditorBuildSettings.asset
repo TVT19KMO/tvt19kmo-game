@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HouseScene.unity
     guid: 52f97d4a712da8143ab0f3d4ebd46c4b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlatformerScene.unity
     guid: f90dcae164e044d49973626fde330539
+  - enabled: 1
+    path: Assets/Scenes/DemoPlatform.unity
+    guid: b1f30cf5401513545a60d5f7f5bd9fea
   m_configObjects: {}
