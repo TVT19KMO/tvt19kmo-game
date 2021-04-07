@@ -6,21 +6,18 @@ using UnityEngine.SceneManagement;
 public class GameControllerHouse : MonoBehaviour
 {
     public static GameControllerHouse instance;
-    public bool gamePaused = true;
+    public bool gamePaused = false;
+    public GameObject PauseMenu;
     public GameObject UI;
 
     void Awake()
     {
-        if (instance == null)
-        {
+        if (instance == null) {
             instance = this;
         }
-        else if (instance != this)
-        {
+        else if (instance != this) {
             Destroy(gameObject);
         }
-
-        PauseGame();
     }
 
     // Update is called once per frame
@@ -28,13 +25,11 @@ public class GameControllerHouse : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && !gamePaused)
         {
-            gamePaused = true;
-            PauseGame();
+            OpenMenu(PauseMenu);
         }
         else if (Input.GetKeyDown(KeyCode.Z) && gamePaused)
         {
-            gamePaused = false;
-            PauseGame();
+            CloseMenu(PauseMenu);
         }
     }
 
@@ -45,13 +40,25 @@ public class GameControllerHouse : MonoBehaviour
 
     void PauseGame()
     {
-        if (gamePaused)
-        {
-            UI.SetActive(true);
+        if (gamePaused) {
+            PauseMenu.SetActive(true);
         }
-        else
-        {
-            UI.SetActive(false);
+        else {
+            PauseMenu.SetActive(false);
         }
+    }
+
+    public void OpenMenu(GameObject menu)
+    {
+        gamePaused = true;
+        menu.SetActive(true);
+        UI.SetActive(false);
+    }
+
+    public void CloseMenu(GameObject menu)
+    {
+        gamePaused = false;
+        menu.SetActive(false);
+        UI.SetActive(true);
     }
 }

@@ -56,10 +56,9 @@ public class PlayerHouse : MonoBehaviour
                 if (hit.collider != null)
                 {
                     Debug.Log("Box hit" + hit.collider.gameObject);
-                    GameControllerHouse.instance.LoadPlatformer();
+                    //GameControllerHouse.instance.LoadPlatformer();
                 }
             }
-
         }
     }
 
@@ -68,9 +67,7 @@ public class PlayerHouse : MonoBehaviour
         if (GameControllerHouse.instance.gamePaused == false)
         {
             Vector2 position = rigidbody2d.position;
-
             position = position + currentInput * speed * Time.deltaTime;
-
             rigidbody2d.MovePosition(position);
         }
     }
