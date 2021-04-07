@@ -5,19 +5,17 @@ using UnityEngine;
 public class PlayerHouse : MonoBehaviour
 {
     // ========= MOVEMENT =================
-    public float speed = 4;
-
-    // =========== MOVEMENT ==============
+    public float speed = 5;
     Rigidbody2D rigidbody2d;
     Vector2 currentInput;
-    Vector2 lookDirection = new Vector2(1, 0);
+    Vector2 lookDirection;
+    private Vector2 newPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
-
+        newPosition = transform.position;
     }
    
     // Update is called once per frame
@@ -37,6 +35,19 @@ public class PlayerHouse : MonoBehaviour
                 lookDirection.Normalize();
             }
             currentInput = move;
+
+            if (Input.GetMouseButton(0))
+            {
+                newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+            }
+
+            //Mobile movement
+            if (Input.touchCount > 0)
+            {
+                newPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+            }
 
             // ======== INTERACT ==========
             if (Input.GetKeyDown(KeyCode.X))
