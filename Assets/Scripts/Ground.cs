@@ -10,7 +10,7 @@ public class Ground : MonoBehaviour
 
         if (player != null)
         {
-            GameControllerPlatformer.instance.GameOver();
+            //GameControllerPlatformer.instance.GameOver();
         }
     }
 }
