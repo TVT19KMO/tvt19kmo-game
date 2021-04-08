@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameControllerPlatformer : MonoBehaviour
 {
     public static GameControllerPlatformer instance;
-    public bool gameOver = false;
-    public float scrollSpeed = -1.5f;
+
+    public bool gamePaused = false;
+    public GameObject PauseMenu;
+    public GameObject UI;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,19 +27,39 @@ public class GameControllerPlatformer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameOver && Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Z) && !gamePaused)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            OpenMenu(PauseMenu);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z) && gamePaused)
+        {
+            CloseMenu(PauseMenu);
         }
     }
 
-    public void Addpoint()
+    void PauseGame()
     {
-
+        if (gamePaused)
+        {
+            PauseMenu.SetActive(true);
+        }
+        else
+        {
+            PauseMenu.SetActive(false);
+        }
     }
 
-    public void GameOver()
+    public void OpenMenu(GameObject menu)
     {
-        gameOver = true;
+        gamePaused = true;
+        menu.SetActive(true);
+        UI.SetActive(false);
+    }
+
+    public void CloseMenu(GameObject menu)
+    {
+        gamePaused = false;
+        menu.SetActive(false);
+        UI.SetActive(true);
     }
 }
