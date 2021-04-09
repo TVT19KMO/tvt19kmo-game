@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class PlayerPlatformer : MonoBehaviour
 {
+    //HEALTH
+    public int maxHealth = 3;
+    public float timeInvincible = 2.0f;
+    int currentHealth;
+    float invincibleTimer;
+    bool isInvincible;
+
+    //MOVEMENT
     public float speed;
     private float moveInput;
     public float jumpForce;
@@ -24,50 +32,98 @@ public class PlayerPlatformer : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+
+        //HEALTH
+        invincibleTimer = -1.0f;
+        currentHealth = maxHealth;
     }
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        if (GameControllerPlatformer.instance.gamePaused == false)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+            rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        }
+        else
+        {
+            rb2d.velocity = Vector2.zero;
+        }
+
     }
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, ground);
 
-        if (moveInput > 0)
+        if (GameControllerPlatformer.instance.gamePaused == false)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if (moveInput < 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            isJumping = true;
-            jumptimeCounter = jumptime;
-            rb2d.velocity = Vector2.up * jumpForce;
-        }
-
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
-            if (jumptimeCounter > 0) 
+            if (isInvincible)
             {
-                rb2d.velocity = Vector2.up * jumpForce;
-                jumptimeCounter -= Time.deltaTime;
+                invincibleTimer -= Time.deltaTime;
+                if (invincibleTimer < 0)
+                    isInvincible = false;
             }
-            else
+
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, ground);
+
+            if (moveInput > 0)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (moveInput < 0)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
+            if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+            {
+                isJumping = true;
+                jumptimeCounter = jumptime;
+                rb2d.velocity = Vector2.up * jumpForce;
+            }
+
+            if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            {
+                if (jumptimeCounter > 0)
+                {
+                    rb2d.velocity = Vector2.up * jumpForce;
+                    jumptimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
         }
+    }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+    public void ChangeHealth(int amount)
+    {
+        if (GameControllerPlatformer.instance.gamePaused == false)
         {
-            isJumping = false;
+            if (amount < 0)
+            {
+                if (isInvincible)
+                    return;
+
+                isInvincible = true;
+                invincibleTimer = timeInvincible;
+            }
+
+            currentHealth = currentHealth + amount;
+
+            Debug.Log("Health: " + currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                GameControllerPlatformer.instance.GameOver();
+            }
+
         }
     }
 }
