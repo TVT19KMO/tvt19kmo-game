@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class PlayerPlatformer : MonoBehaviour
 {
+    //HEALTH
+    public int maxHealth = 3;
+    public float timeInvincible = 2.0f;
+    int currentHealth;
+    float invincibleTimer;
+    bool isInvincible;
+
+    // MOVEMENT
     public float speed;
     private float moveInput;
     public float jumpForce;
@@ -24,6 +32,9 @@ public class PlayerPlatformer : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        //HEALTH
+        invincibleTimer = -1.0f;
+        currentHealth = maxHealth;
     }
 
     void FixedUpdate()
@@ -70,4 +81,29 @@ public class PlayerPlatformer : MonoBehaviour
             isJumping = false;
         }
     }
+    public void ChangeHealth(int amount)
+    {
+        if (GameControllerPlatformer.instance.gamePaused == false)
+        {
+            if (amount < 0)
+            {
+                if (isInvincible)
+                    return;
+
+                isInvincible = true;
+                invincibleTimer = timeInvincible;
+            }
+
+            currentHealth = currentHealth + amount;
+
+            Debug.Log("Health: " + currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                GameControllerPlatformer.instance.GameOver();
+            }
+
+        }
+    }
 }
+

@@ -10,6 +10,11 @@ public class GameControllerPlatformer : MonoBehaviour
     public bool gamePaused = false;
     public GameObject PauseMenu;
     public GameObject UI;
+    public GameObject GameOverMenu;
+
+    public AudioSource BackgroundMusic;
+
+    public int coins = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -41,11 +46,18 @@ public class GameControllerPlatformer : MonoBehaviour
     {
         if (gamePaused)
         {
+            BackgroundMusic.Pause();
             PauseMenu.SetActive(true);
+         /*   AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach(AudioSource a in audios)
+            {
+                a.Pause();
+            }*/
         }
         else
         {
             PauseMenu.SetActive(false);
+            BackgroundMusic.Play();
         }
     }
 
@@ -61,5 +73,22 @@ public class GameControllerPlatformer : MonoBehaviour
         gamePaused = false;
         menu.SetActive(false);
         UI.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        gamePaused = true;
+        GameOverMenu.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void AddCoin()
+    {
+        coins++;
+        Debug.Log("Coins: " + coins);
     }
 }
