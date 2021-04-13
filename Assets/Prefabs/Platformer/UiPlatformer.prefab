@@ -351,7 +351,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1101, y: 576}
+  m_SizeDelta: {x: 271.741, y: 277.4668}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &2927022358781352288
 CanvasRenderer:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handleRange: 1
   deadZone: 0
-  axisOptions: 0
+  axisOptions: 1
   snapX: 0
   snapY: 0
   background: {fileID: 2927022359053026590}
@@ -763,7 +763,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1374643545813300871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovementScript, Assembly-CSharp
+        m_MethodName: JumpOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3955886726974977625
 MonoBehaviour:
   m_ObjectHideFlags: 0

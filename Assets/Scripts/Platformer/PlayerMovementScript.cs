@@ -90,17 +90,17 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (isGrounded)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            //rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
     public void OnPointerDown()
     {
-        //buttonDown = true;
+        buttonDown = true;
     }
 
     public void OnPointerUp()
     {
-        //buttonDown = false;
+        buttonDown = false;
     }
 }
