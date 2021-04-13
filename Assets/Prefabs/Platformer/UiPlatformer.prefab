@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 1314340728328158067}
   - component: {fileID: 1374643545813300871}
   - component: {fileID: 7599762131594096986}
-  - component: {fileID: 770218178}
+  - component: {fileID: 3955886726974977625}
   m_Layer: 5
   m_Name: JumpButton
   m_TagString: Untagged
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &770218178
+--- !u!114 &3955886726974977625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
