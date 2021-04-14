@@ -30,7 +30,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //jumpButton.onClick.AddListener(JumpOnClick);
+        jumpButton.onClick.AddListener(JumpOnClick);
     }
 
     void Update()
@@ -86,11 +86,11 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
-    public void JumpOnClick()
+    void JumpOnClick()
     {
         if (isGrounded)
         {
-            //rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
