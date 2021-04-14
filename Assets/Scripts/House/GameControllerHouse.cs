@@ -35,7 +35,7 @@ public class GameControllerHouse : MonoBehaviour
 
     public void LoadPlatformer()
     {
-        SceneManager.LoadScene("PlatformerScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("DemoScene", LoadSceneMode.Single);
     }
 
     void PauseGame()
