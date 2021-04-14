@@ -77,6 +77,11 @@ public class GameControllerPlatformer : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void ReturnToHouse()
+    {
+        SceneManager.LoadScene("HouseScene", LoadSceneMode.Single);
+    }
+
     public void AddCoin()
     {
         coins++;
