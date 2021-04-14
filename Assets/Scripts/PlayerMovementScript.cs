@@ -26,7 +26,7 @@ public class PlayerMovementScript : MonoBehaviour
     public void FixedUpdate()
     {
       //  Vector2 dire = variableJoystick.Vertical * Vector2.up + variableJoystick.Horizontal * Vector2.right;
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.6f, collisionlayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.4f, collisionlayer);
         if(isGrounded)
         {
             rb.velocity = new Vector2(variableJoystick.Horizontal * speed, rb.velocity.y);
