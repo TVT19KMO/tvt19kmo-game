@@ -42,23 +42,32 @@ public class GameControllerPlatformer : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
-        if (gamePaused)
+        BackgroundMusic.Pause();
+        Time.timeScale = 0;
+        PauseMenu.SetActive(true);
+    /*    if (gamePaused)
         {
             BackgroundMusic.Pause();
             PauseMenu.SetActive(true);
+            Time.timeScale = 0;
          /*   AudioSource[] audios = FindObjectsOfType<AudioSource>();
             foreach(AudioSource a in audios)
             {
                 a.Pause();
-            }*/
+            }
         }
         else
         {
             PauseMenu.SetActive(false);
-            BackgroundMusic.Play();
-        }
+        }*/
+    }
+    public void unPauseGame()
+    {
+        PauseMenu.SetActive(false);
+        BackgroundMusic.UnPause();
+        Time.timeScale = 1;
     }
 
     public void OpenMenu(GameObject menu)
@@ -70,6 +79,7 @@ public class GameControllerPlatformer : MonoBehaviour
 
     public void CloseMenu(GameObject menu)
     {
+        unPauseGame();
         gamePaused = false;
         menu.SetActive(false);
         UI.SetActive(true);
