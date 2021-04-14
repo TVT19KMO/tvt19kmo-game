@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine.UI;
 
 public class CharacterEditor : MonoBehaviour
@@ -28,7 +28,7 @@ public class CharacterEditor : MonoBehaviour
 
     public void SaveCharacter()
     {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/SpritesPlayer/Character/Character.prefab");
+       // PrefabUtility.SaveAsPrefabAsset(character, "Assets/SpritesPlayer/Character/Character.prefab");
     }
 
     // Start is called before the first frame update
