@@ -6,6 +6,7 @@ public class PlayerHouse : MonoBehaviour
 {
     // ========= MOVEMENT =================
     public float speed = 5;
+    public SpriteRenderer head;
     Rigidbody2D rigidbody2d;
     Vector2 currentInput;
     Vector2 lookDirection;
@@ -16,6 +17,12 @@ public class PlayerHouse : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         newPosition = transform.position;
+        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
+        Color headclr;
+        if(ColorUtility.TryParseHtmlString(headColor, out headclr))
+        {
+            head.color = headclr;
+        }
     }
    
     // Update is called once per frame

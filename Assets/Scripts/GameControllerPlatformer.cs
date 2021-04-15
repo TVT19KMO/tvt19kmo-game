@@ -12,16 +12,22 @@ public class GameControllerPlatformer : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject UI;
     public GameObject GameOverMenu;
+    public GameObject CompletedMenu;
 
     public AudioSource BackgroundMusic;
     public Text coinText;
     public Text gameOverText;
+    public Text timerText;
+    public Text completedText;
+    private float timeValue = 0;
+    private bool timerIsRunning = false;
 
     public int coins = 0;
 
     // Start is called before the first frame update
     void Awake()
     {
+        timerIsRunning = true;
         if (instance == null)
         {
             instance = this;
@@ -43,6 +49,14 @@ public class GameControllerPlatformer : MonoBehaviour
         {
             CloseMenu(PauseMenu);
         }
+        if(timerIsRunning)
+        {
+            timeValue += Time.deltaTime;
+        }
+        float minutes = Mathf.FloorToInt(timeValue / 60);
+        float secs = Mathf.FloorToInt(timeValue % 60);
+        string currentTime = string.Format("{0:00}:{1:00}", minutes, secs);
+        timerText.text = "Aika: " + currentTime;
     }
 
     public void PauseGame()
@@ -60,10 +74,6 @@ public class GameControllerPlatformer : MonoBehaviour
             {
                 a.Pause();
             }
-        }
-        else
-        {
-            PauseMenu.SetActive(false);
         }*/
     }
     public void unPauseGame()
@@ -96,6 +106,17 @@ public class GameControllerPlatformer : MonoBehaviour
         GameOverMenu.SetActive(true);
         gameOverText.text = "Peli ohi!\nKokonaispisteesi: " + coins;
     }
+        public void GameCompleted()
+    {
+        gamePaused = true;
+        Time.timeScale = 0;
+        BackgroundMusic.Pause();
+        CompletedMenu.SetActive(true);
+        float minutes = Mathf.FloorToInt(timeValue / 60);
+        float secs = Mathf.FloorToInt(timeValue % 60);
+        string competeTime = string.Format("{0:00}:{1:00}", minutes, secs);
+        completedText.text = "Kenttä läpäisty!\nKokonaispisteet: " + coins + "\nAika: " + competeTime;
+    }
 
     public void Restart()
     {
@@ -114,5 +135,13 @@ public class GameControllerPlatformer : MonoBehaviour
         coins++;
         Debug.Log("Coins: " + coins);
         coinText.text = "Pisteet: " + coins;
+    }
+    public void StartTimer()
+    {
+        timerIsRunning = true;
+    }
+    public void StopTimer()
+    {
+        timerIsRunning = false;
     }
 }

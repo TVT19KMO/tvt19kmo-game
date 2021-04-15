@@ -2465,6 +2465,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!212 &302652425 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3848687153512223505, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+  m_PrefabInstance: {fileID: 3848687154374281857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &315548112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4218,30 @@ PrefabInstance:
     - target: {fileID: 3848687153512223498, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848687153512223501, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 302652425}
+    - target: {fileID: 3848687153512223502, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848687153512223502, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2.1466668
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848687153512223502, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848687153512223502, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.1466668
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848687153512223502, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 3848687153512223504, guid: e727ade7998aec741b8a42b3c04b69e2, type: 3}
       propertyPath: m_RootOrder

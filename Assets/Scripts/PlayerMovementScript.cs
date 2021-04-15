@@ -9,6 +9,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     public VariableJoystick variableJoystick;
     public Rigidbody2D rb;
+    public SpriteRenderer head;
     public float JumpForce;
     public float MovementSpeed;
     public float MaxSpeed;
@@ -21,6 +22,12 @@ public class PlayerMovementScript : MonoBehaviour
     public void Start()
     {
         jumpButton.onClick.AddListener(JumpOnClick);
+        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
+        Color headclr;
+        if(ColorUtility.TryParseHtmlString(headColor, out headclr))
+        {
+            head.color = headclr;
+        }
     }
 
     public void FixedUpdate()
