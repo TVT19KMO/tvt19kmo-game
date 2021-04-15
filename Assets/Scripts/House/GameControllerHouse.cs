@@ -7,8 +7,6 @@ public class GameControllerHouse : MonoBehaviour
 {
     public static GameControllerHouse instance;
     public bool gamePaused = false;
-    public GameObject PauseMenu;
-    public GameObject UI;
 
     void Awake()
     {
@@ -20,40 +18,34 @@ public class GameControllerHouse : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z) && !gamePaused)
-        {
-            OpenMenu(PauseMenu);
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && gamePaused)
-        {
-            CloseMenu(PauseMenu);
-        }
-    }
-
     public void LoadPlatformer()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("DemoScene", LoadSceneMode.Single);
     }
 
     public void LoadCharacterEditor()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("CharacterEditor", LoadSceneMode.Single);
+    }
+
+    public void ReturnToTitle()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
     }
 
     public void OpenMenu(GameObject menu)
     {
         gamePaused = true;
+        Time.timeScale = 0;
         menu.SetActive(true);
-        UI.SetActive(false);
     }
 
     public void CloseMenu(GameObject menu)
     {
-        gamePaused = false;
+        Time.timeScale = 1;
         menu.SetActive(false);
-        UI.SetActive(true);
     }
 }

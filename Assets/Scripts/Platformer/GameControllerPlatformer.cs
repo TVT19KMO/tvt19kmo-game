@@ -9,7 +9,6 @@ public class GameControllerPlatformer : MonoBehaviour
     public static GameControllerPlatformer instance;
 
     public bool gamePaused = false;
-    public GameObject PauseMenu;
     public GameObject UI;
     public GameObject GameOverMenu;
 
@@ -29,19 +28,6 @@ public class GameControllerPlatformer : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z) && !gamePaused)
-        {
-            OpenMenu(PauseMenu);
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && gamePaused)
-        {
-            CloseMenu(PauseMenu);
         }
     }
 

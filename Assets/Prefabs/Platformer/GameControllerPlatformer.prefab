@@ -47,4 +47,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 0}
   UI: {fileID: 0}
   GameOverMenu: {fileID: 0}
+  BackgroundMusic: {fileID: 0}
+  coinText: {fileID: 0}
+  gameOverText: {fileID: 0}
   coins: 0

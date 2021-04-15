@@ -23,6 +23,14 @@ public class PlayerMovementScript : MonoBehaviour
         jumpButton.onClick.AddListener(JumpOnClick);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        }
+    }
+
     void FixedUpdate()
     {
       //  Vector2 dire = variableJoystick.Vertical * Vector2.up + variableJoystick.Horizontal * Vector2.right;
