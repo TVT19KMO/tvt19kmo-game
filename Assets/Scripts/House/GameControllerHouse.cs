@@ -38,14 +38,9 @@ public class GameControllerHouse : MonoBehaviour
         SceneManager.LoadScene("DemoScene", LoadSceneMode.Single);
     }
 
-    void PauseGame()
+    public void LoadCharacterEditor()
     {
-        if (gamePaused) {
-            PauseMenu.SetActive(true);
-        }
-        else {
-            PauseMenu.SetActive(false);
-        }
+        SceneManager.LoadScene("CharacterEditor", LoadSceneMode.Single);
     }
 
     public void OpenMenu(GameObject menu)

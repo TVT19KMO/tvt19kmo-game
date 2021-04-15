@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Box : MonoBehaviour
+public class BoxPlatformer : MonoBehaviour
 {
     public GameObject GameMenu;
 
@@ -10,7 +10,6 @@ public class Box : MonoBehaviour
     {
         if (other.gameObject.name == "PlayerHouse")
         {
-            Debug.Log("Box Collision");
             GameControllerHouse.instance.OpenMenu(GameMenu);
         }
     }

@@ -256,7 +256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Paused
+  m_Text: "Peli pys\xE4ytetty"
 --- !u!1 &679579500066294673
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: POISTU
 --- !u!1 &1917605194744188625
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume
+  m_Text: JATKA
 --- !u!1 &6345051165584348493
 GameObject:
   m_ObjectHideFlags: 0

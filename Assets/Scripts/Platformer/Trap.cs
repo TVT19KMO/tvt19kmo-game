@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerPlatformer player = other.GetComponent<PlayerPlatformer>();
-
-        if (player != null)
+        if (collision.gameObject.name == "PlayerPlatformer")
         {
-            //the controller will take care of ignoring the damage during the invincibility time.
-            player.ChangeHealth(-1);
+            Debug.Log("It's a trap!");
+            GameControllerPlatformer.instance.GameOver();
         }
     }
 }
