@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameControllerPlatformer : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GameControllerPlatformer : MonoBehaviour
     public GameObject GameOverMenu;
 
     public AudioSource BackgroundMusic;
+    public Text coinText;
+    public Text gameOverText;
 
     public int coins = 0;
 
@@ -88,17 +91,28 @@ public class GameControllerPlatformer : MonoBehaviour
     public void GameOver()
     {
         gamePaused = true;
+        Time.timeScale = 0;
+        BackgroundMusic.Pause();
         GameOverMenu.SetActive(true);
+        gameOverText.text = "Peli ohi!\nKokonaispisteesi: " + coins;
     }
 
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    }
+
+    public void toHouse()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("HouseScene");
     }
 
     public void AddCoin()
     {
         coins++;
         Debug.Log("Coins: " + coins);
+        coinText.text = "Pisteet: " + coins;
     }
 }
