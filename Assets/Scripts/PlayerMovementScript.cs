@@ -22,12 +22,6 @@ public class PlayerMovementScript : MonoBehaviour
     public void Start()
     {
         jumpButton.onClick.AddListener(JumpOnClick);
-        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
-        Color headclr;
-        if(ColorUtility.TryParseHtmlString(headColor, out headclr))
-        {
-            head.color = headclr;
-        }
     }
 
     public void FixedUpdate()

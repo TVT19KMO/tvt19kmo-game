@@ -36,12 +36,12 @@ public class CharacterEditor : MonoBehaviour
         panel.SetActive(state);
     }
 
-    public void SaveCharacter()
+ /*   public void SaveCharacter()
     {
         Debug.Log("Add save here");
         PlayerPrefs.SetString("headColor", ColorUtility.ToHtmlStringRGBA(head.color));
         Debug.Log(ColorUtility.ToHtmlStringRGBA(head.color));
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
