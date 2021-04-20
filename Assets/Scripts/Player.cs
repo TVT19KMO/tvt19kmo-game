@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int headColor;
     public GameObject LSneaker;
     public GameObject RSneaker;
     public SpriteRenderer head;
@@ -13,11 +14,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
+        headColor = PlayerPrefs.GetInt("HeadColor", 0);
+        string HColor = Data.HeadColors[headColor];
+        Debug.Log("head color: " + headColor);
         int SneakersColor = PlayerPrefs.GetInt("SneakersColor", 1);
 
         Color headclr;
-        if(ColorUtility.TryParseHtmlString(headColor, out headclr))
+        if(ColorUtility.TryParseHtmlString(HColor, out headclr))
         {
             head.color = headclr;
         }

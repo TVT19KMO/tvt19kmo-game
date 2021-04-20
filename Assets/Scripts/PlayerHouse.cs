@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHouse : MonoBehaviour
 {
+    public int headColor;
     // ========= MOVEMENT =================
     public float speed = 5;
     public SpriteRenderer head;
@@ -17,9 +18,11 @@ public class PlayerHouse : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         newPosition = transform.position;
-        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
+        headColor = PlayerPrefs.GetInt("HeadColor", 0);
+        string HColor = Data.HeadColors[headColor];
+        Debug.Log("head color: " + headColor);
         Color headclr;
-        if(ColorUtility.TryParseHtmlString(headColor, out headclr))
+        if(ColorUtility.TryParseHtmlString(HColor, out headclr))
         {
             head.color = headclr;
         }

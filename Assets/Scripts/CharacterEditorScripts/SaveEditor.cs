@@ -6,17 +6,18 @@ public class SaveEditor : MonoBehaviour
 {
     public SpriteRenderer head;
     public ChangeSneakers changeSneakers;
+    public CharacterEditor characterEditor;
     void Start()
     {
         changeSneakers = GameObject.Find("EditorManager").GetComponent<ChangeSneakers>();
+        characterEditor = GameObject.Find("EditorManager").GetComponent<CharacterEditor>();
     }
 
     public void SaveCharacter()
     {
-        Debug.Log("Add save here");
-        PlayerPrefs.SetString("headColor", ColorUtility.ToHtmlStringRGBA(head.color));
+        PlayerPrefs.SetInt("HeadColor", characterEditor.ChosenHeadColor);
         PlayerPrefs.SetInt("SneakersColor", changeSneakers.ChosenSneaker);
-        Debug.Log(ColorUtility.ToHtmlStringRGBA(head.color));
+        Debug.Log("saved head color: " + characterEditor.ChosenHeadColor);
     }
     void Update()
     {

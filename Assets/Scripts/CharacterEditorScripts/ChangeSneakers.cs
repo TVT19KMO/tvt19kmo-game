@@ -69,9 +69,4 @@ public class ChangeSneakers : MonoBehaviour
         right_sneaker.sprite = spriteArray_right[ChosenSneaker-1];
         Debug.Log(ChosenSneaker);
     }
-
-    void Update()
-    {
-        
-    }
 }
