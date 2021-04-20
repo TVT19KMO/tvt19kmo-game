@@ -211,15 +211,15 @@ MonoBehaviour:
   spriteArray_left:
   - {fileID: 21300000, guid: 77558ee3df9a9cc48b8494e02eae47e1, type: 3}
   - {fileID: 21300000, guid: 77558ee3df9a9cc48b8494e02eae47e1, type: 3}
-  - {fileID: 21300000, guid: 776cfcb4680fa6346b2f8d8e3acd7de6, type: 3}
   - {fileID: 21300000, guid: a41f84a87f48cdb48a5529c170fb3eea, type: 3}
   - {fileID: 21300000, guid: e33fb078137686e4b8204a740ba9b95f, type: 3}
+  - {fileID: 21300000, guid: 776cfcb4680fa6346b2f8d8e3acd7de6, type: 3}
   spriteArray_right:
   - {fileID: 21300000, guid: 8e6f0eb6021e81041b8ecdcabc43ab61, type: 3}
   - {fileID: 21300000, guid: 8e6f0eb6021e81041b8ecdcabc43ab61, type: 3}
-  - {fileID: 21300000, guid: a8b9e98a26378cd4ba9bfa6aebcfac1c, type: 3}
   - {fileID: 21300000, guid: c3aa18fa86282cf4dbe2ea82fab79d54, type: 3}
   - {fileID: 21300000, guid: 55e50c87b79b5994cafc29ff7489e828, type: 3}
+  - {fileID: 21300000, guid: a8b9e98a26378cd4ba9bfa6aebcfac1c, type: 3}
   ChosenSneaker: 1
 --- !u!1 &1778373
 GameObject:

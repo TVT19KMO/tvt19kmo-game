@@ -24,6 +24,8 @@ public class ChangeSneakers : MonoBehaviour
             left_sneaker.sprite = spriteArray_left[ChosenSneaker-1];
             right_sneaker.sprite = spriteArray_right[ChosenSneaker-1];
         }
+        Data.LeftSneakers = spriteArray_left;
+        Data.RightSneakers = spriteArray_right;
     }
     public void NextSneakers()
     {
