@@ -19,8 +19,6 @@ public class ChangeSneakers : MonoBehaviour
         ChosenSneaker = PlayerPrefs.GetInt("SneakersColor", 1);
         if(ChosenSneaker != 1)
         {
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
             left_sneaker.sprite = spriteArray_left[ChosenSneaker-1];
             right_sneaker.sprite = spriteArray_right[ChosenSneaker-1];
         }
@@ -33,14 +31,10 @@ public class ChangeSneakers : MonoBehaviour
         if(ChosenSneaker < SneakerCount)
         {
             ChosenSneaker++;
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
         }
         else
         {
             ChosenSneaker = 1;
-            LSneaker.SetActive(false);
-            RSneaker.SetActive(false);
         }
         left_sneaker.sprite = spriteArray_left[ChosenSneaker-1];
         right_sneaker.sprite = spriteArray_right[ChosenSneaker-1];
@@ -53,17 +47,10 @@ public class ChangeSneakers : MonoBehaviour
         if(ChosenSneaker > 1)
         {
             ChosenSneaker--;
-            if(ChosenSneaker == 1)
-            {
-                LSneaker.SetActive(false);
-                RSneaker.SetActive(false);
-            }
         }
         else
         {
             ChosenSneaker = SneakerCount;
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
         }
         left_sneaker.sprite = spriteArray_left[ChosenSneaker-1];
         right_sneaker.sprite = spriteArray_right[ChosenSneaker-1];
