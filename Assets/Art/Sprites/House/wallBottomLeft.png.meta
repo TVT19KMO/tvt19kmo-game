@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 8ca088d381281cc44a18ac7012f5d364
+guid: 01e83373b14fc7141b6fdbc67b5e5855
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4752630108371935690
-    second: laundry_0
-  - first:
-      213: -5206473286881289300
-    second: laundry_1
-  - first:
-      213: 3580067909074491668
-    second: laundry_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 90
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,70 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: laundry_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 14
-        width: 117
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63e1aa1d8144b0eb0800000000000000
-      internalID: -4752630108371935690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_1
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 70
-        width: 148
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cab51e27124eeb7b0800000000000000
-      internalID: -5206473286881289300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: laundry_2
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 15
-        width: 67
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41919289bc4fea130800000000000000
-      internalID: 3580067909074491668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
