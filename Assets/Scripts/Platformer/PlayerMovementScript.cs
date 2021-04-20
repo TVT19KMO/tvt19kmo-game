@@ -20,7 +20,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Start()
     {
-        jumpButton.onClick.AddListener(JumpOnClick);
+        //jumpButton.onClick.AddListener(JumpOnClick);
     }
 
     void Update()
@@ -49,7 +49,8 @@ public class PlayerMovementScript : MonoBehaviour
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
         }
     }
-    void JumpOnClick()
+
+    public void JumpOnClick()
     {
         if(isGrounded)
         {
