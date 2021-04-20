@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxCharacterEditor : MonoBehaviour
+public class Wardrobe : MonoBehaviour
 {
     public GameObject CharacterMenu;
 

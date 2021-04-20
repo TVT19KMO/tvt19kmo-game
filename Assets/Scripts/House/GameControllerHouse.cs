@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerHouse : MonoBehaviour
 {
     public static GameControllerHouse instance;
-    public bool gamePaused = false;
+    public GameObject UI;
 
     void Awake()
     {
@@ -38,14 +38,15 @@ public class GameControllerHouse : MonoBehaviour
 
     public void OpenMenu(GameObject menu)
     {
-        gamePaused = true;
         Time.timeScale = 0;
+        UI.SetActive(false);
         menu.SetActive(true);
     }
 
     public void CloseMenu(GameObject menu)
     {
-        Time.timeScale = 1;
         menu.SetActive(false);
+        UI.SetActive(true);
+        Time.timeScale = 1;
     }
 }
