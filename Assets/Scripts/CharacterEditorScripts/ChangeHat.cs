@@ -4,50 +4,44 @@ using UnityEngine;
 
 public class ChangeHat : MonoBehaviour
 {
-    public GameObject cap;
+    public GameObject hairSlot;
     public SpriteRenderer caprenderer;
-    public Sprite[] caps;
-    public int ChosenCap;
+    public Sprite[] hats;
+    public int ChosenHat;
     // Start is called before the first frame update
     void Start()
     {
-        ChosenCap = PlayerPrefs.GetInt("Cap", 0);
-        if(ChosenCap != 0)
+        ChosenHat = PlayerPrefs.GetInt("Hat", 0);
+        if(ChosenHat != 0)
         {
-            caprenderer.sprite = caps[ChosenCap];
+            caprenderer.sprite = hats[ChosenHat];
         }
-        Data.Caps = caps;
+        Data.Hats = hats;
     }
-    public void nextCap()
+    public void nextHat()
     {
-        int capCount = caps.Length;
-        if(ChosenCap < capCount-1)
+        int hatCount = hats.Length;
+        if(ChosenHat < hatCount-1)
         {
-            ChosenCap++;
+            ChosenHat++;
         }
         else
         {
-            ChosenCap = 0;
+            ChosenHat = 0;
         }
-        caprenderer.sprite = caps[ChosenCap];
+        caprenderer.sprite = hats[ChosenHat];
     }
-    public void prevCap()
+    public void prevHat()
     {
-        int capCount = caps.Length;
-        if(ChosenCap > 0)
+        int capCount = hats.Length;
+        if(ChosenHat > 0)
         {
-            ChosenCap--;
+            ChosenHat--;
         }
         else
         {
-            ChosenCap = capCount-1;
+            ChosenHat = capCount-1;
         }
-        caprenderer.sprite = caps[ChosenCap];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        caprenderer.sprite = hats[ChosenHat];
     }
 }

@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 228016}
   - component: {fileID: 228017}
   - component: {fileID: 228018}
+  - component: {fileID: 228019}
+  - component: {fileID: 228020}
   m_Layer: 0
   m_Name: EditorManager
   m_TagString: Untagged
@@ -194,6 +196,8 @@ MonoBehaviour:
   head: {fileID: 1951825645}
   changeSneakers: {fileID: 0}
   changeHat: {fileID: 0}
+  changeJacket: {fileID: 0}
+  changePants: {fileID: 0}
   characterEditor: {fileID: 0}
 --- !u!114 &228017
 MonoBehaviour:
@@ -236,15 +240,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6615f875108bbf24ca7b518cab6ca02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cap: {fileID: 581153905}
+  hairSlot: {fileID: 0}
   caprenderer: {fileID: 581153907}
-  caps:
+  hats:
   - {fileID: -3010218184041424332, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
   - {fileID: -4678958772718428666, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
   - {fileID: 1193178739711625474, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
   - {fileID: -6249378842078586024, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
   - {fileID: 3251456996623605910, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
-  ChosenCap: 0
+  - {fileID: 8777248148721259261, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
+  - {fileID: 2107404667530140832, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
+  - {fileID: -1571381846520245946, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
+  - {fileID: -2699824785766893810, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
+  - {fileID: 8351116946294693374, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
+  - {fileID: -8641324620806899164, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
+  - {fileID: -1225531102025069899, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
+  - {fileID: -3758650476846579895, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
+  ChosenHat: 0
+--- !u!114 &228019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700a5ec074668034e92dd5a17a49691a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftArm: {fileID: 113844689}
+  RightArm: {fileID: 835465092}
+  Top: {fileID: 2001850382}
+  larms:
+  - {fileID: 8919046510080858712, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: -635786951678377178, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -893598526990203306, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -3402184983803674746, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 852406532757984458, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -2506313818479553514, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: 3167703238364451641, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: 5657480054514556857, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: -3244209399350306769, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  rarms:
+  - {fileID: -3947299412893279836, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: 8062038632080222711, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -3823087069678208743, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 6679064706817976550, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -5352166336681787876, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 1307863563581847630, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: 8567465720437790652, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: -4903377477366179134, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: -3252574589414849276, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  tops:
+  - {fileID: -6796085502442231238, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: -894967034920394842, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 1949062446031193874, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: -2052836410041479597, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
+  - {fileID: 1598376239736250545, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: 4032059017175250507, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: -2028574823761980249, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  - {fileID: -7883315471559780940, guid: 7c88436b00b075740a994332e440dedb, type: 3}
+  ChosenJacket: 0
+--- !u!114 &228020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ab49c7b993eb240a773847c1fe8f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftLeg: {fileID: 1547056677}
+  RightLeg: {fileID: 984528343}
+  Bottom: {fileID: 2068370985}
+  LeftLegs:
+  - {fileID: -2048163736357222904, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: -5213736225766107966, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 1778495745541916285, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 6159646743902499554, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: -353160575951561974, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 7540540420438685315, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: -2453215095391238187, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: -1355709254968128136, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: 7040888629529053950, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  RightLegs:
+  - {fileID: -2427947923139131464, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: 4303492702523705550, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: -5091526601486579408, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 519523472987302529, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 8586216748956986914, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 6687619804740121330, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: -4620092260144989074, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: 6839949943110982027, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: -3598140724135745783, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  Bottoms:
+  - {fileID: 1991798887789871252, guid: 3c517fb53842e754d80329873cdadd73, type: 3}
+  - {fileID: 111648954039052082, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 2425370133987659017, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 1872297914089251990, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: 7675136321776371872, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
+  - {fileID: -5693902186511285166, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: 4673553735903774404, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: -1441530550809970264, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  - {fileID: 1720521365801393485, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
+  ChosenPants: 0
 --- !u!1 &9863826
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +513,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228018}
         m_TargetAssemblyTypeName: ChangeHat, Assembly-CSharp
-        m_MethodName: prevCap
+        m_MethodName: prevHat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -577,6 +681,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &113844689 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404520044243621, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &118163369
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +698,7 @@ GameObject:
   - component: {fileID: 118163372}
   - component: {fileID: 118163371}
   m_Layer: 5
-  m_Name: PantsText
+  m_Name: BottomsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pants
+  m_Text: Bottoms
 --- !u!222 &118163372
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -901,7 +1010,7 @@ GameObject:
   - component: {fileID: 346636231}
   - component: {fileID: 346636230}
   m_Layer: 5
-  m_Name: Pants
+  m_Name: Bottoms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1264,7 +1373,7 @@ GameObject:
   - component: {fileID: 494687415}
   - component: {fileID: 494687414}
   m_Layer: 5
-  m_Name: Jackets
+  m_Name: Tops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,11 +1438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494687412}
   m_CullTransparentMesh: 1
---- !u!1 &581153905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4219404521006649556, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
-  m_PrefabInstance: {fileID: 4219404519406858805}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &581153907 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4219404521006649559, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
@@ -1750,11 +1854,11 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 40
   m_ChildAlignment: 8
   m_StartCorner: 3
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 35}
+  m_CellSize: {x: 150, y: 30}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1841,9 +1945,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 228017}
-        m_TargetAssemblyTypeName: ChangeSneakers, Assembly-CSharp
-        m_MethodName: PrevSneakers
+      - m_Target: {fileID: 228020}
+        m_TargetAssemblyTypeName: ChangePants, Assembly-CSharp
+        m_MethodName: prevPants
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2024,6 +2128,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828259554}
   m_CullTransparentMesh: 1
+--- !u!212 &835465092 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404519096750045, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &883326180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,7 +2218,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228018}
         m_TargetAssemblyTypeName: ChangeHat, Assembly-CSharp
-        m_MethodName: nextCap
+        m_MethodName: nextHat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2450,6 +2559,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966374289}
   m_CullTransparentMesh: 1
+--- !u!212 &984528343 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404520580947283, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990654971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,9 +2726,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 228017}
-        m_TargetAssemblyTypeName: ChangeSneakers, Assembly-CSharp
-        m_MethodName: PrevSneakers
+      - m_Target: {fileID: 228019}
+        m_TargetAssemblyTypeName: ChangeJacket, Assembly-CSharp
+        m_MethodName: prevJacket
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3229,9 +3343,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 228017}
-        m_TargetAssemblyTypeName: ChangeSneakers, Assembly-CSharp
-        m_MethodName: NextSneakers
+      - m_Target: {fileID: 228019}
+        m_TargetAssemblyTypeName: ChangeJacket, Assembly-CSharp
+        m_MethodName: nextJacket
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3370,7 +3484,7 @@ GameObject:
   - component: {fileID: 1510694073}
   - component: {fileID: 1510694072}
   m_Layer: 5
-  m_Name: JacketsText
+  m_Name: TopsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3428,7 +3542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jackets
+  m_Text: Tops
 --- !u!222 &1510694073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3437,6 +3551,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510694070}
   m_CullTransparentMesh: 1
+--- !u!212 &1547056677 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404521056044863, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1596818928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3607,7 +3726,7 @@ GameObject:
   - component: {fileID: 1838247172}
   - component: {fileID: 1838247171}
   m_Layer: 5
-  m_Name: Caps
+  m_Name: Hats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3760,9 +3879,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 228017}
-        m_TargetAssemblyTypeName: ChangeSneakers, Assembly-CSharp
-        m_MethodName: NextSneakers
+      - m_Target: {fileID: 228020}
+        m_TargetAssemblyTypeName: ChangePants, Assembly-CSharp
+        m_MethodName: nextPants
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3810,6 +3929,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974367033}
   m_CullTransparentMesh: 1
+--- !u!212 &2001850382 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404521019499081, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2006883842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +4025,7 @@ GameObject:
   - component: {fileID: 2017741955}
   - component: {fileID: 2017741954}
   m_Layer: 5
-  m_Name: CapsTexts
+  m_Name: HatsTexts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3959,7 +4083,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Caps
+  m_Text: Hair slot
 --- !u!222 &2017741955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3976,6 +4100,11 @@ GameObject:
 --- !u!212 &2025808637 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4219404519374688995, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
+  m_PrefabInstance: {fileID: 4219404519406858805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2068370985 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4219404519707342113, guid: 387767aa7d1479443a9e89c049b628cf, type: 3}
   m_PrefabInstance: {fileID: 4219404519406858805}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100967621

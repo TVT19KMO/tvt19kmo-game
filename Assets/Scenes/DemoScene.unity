@@ -4825,13 +4825,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headColor: 0
-  LSneaker: {fileID: 351787718}
-  RSneaker: {fileID: 2139526818}
-  hair: {fileID: 274130355}
   head: {fileID: 341755628}
   sneakerRight: {fileID: 2139526820}
   sneakerLeft: {fileID: 351787720}
   hairRenderer: {fileID: 274130357}
+  topRenderer: {fileID: 1845963934}
+  leftArmRenderer: {fileID: 333823747}
+  rightArmRenderer: {fileID: 1108945025}
+  bottomRenderer: {fileID: 1392431743}
+  leftLegRenderer: {fileID: 441679997}
+  RightLegRenderer: {fileID: 806930595}
 --- !u!4 &1834261672
 Transform:
   m_ObjectHideFlags: 0

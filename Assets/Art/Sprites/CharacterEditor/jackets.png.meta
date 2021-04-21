@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 3f2c086f43f6a48409794a8b91024daa
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -635786951678377178
+    second: jackets_0
+  - first:
+      213: -893598526990203306
+    second: jackets_1
+  - first:
+      213: -3402184983803674746
+    second: jackets_2
+  - first:
+      213: 852406532757984458
+    second: jackets_3
+  - first:
+      213: -894967034920394842
+    second: jackets_4
+  - first:
+      213: 1949062446031193874
+    second: jackets_5
+  - first:
+      213: -2052836410041479597
+    second: jackets_6
+  - first:
+      213: 846772600512404385
+    second: jackets_7
+  - first:
+      213: 8062038632080222711
+    second: jackets_8
+  - first:
+      213: -3823087069678208743
+    second: jackets_9
+  - first:
+      213: 6679064706817976550
+    second: jackets_10
+  - first:
+      213: -5352166336681787876
+    second: jackets_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,7 +137,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jackets_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 970
+        width: 154
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623c160d22b3d27f0800000000000000
+      internalID: -635786951678377178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 689
+        width: 154
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656cfeacfdc4993f0800000000000000
+      internalID: -893598526990203306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 382
+        width: 154
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fb63468c209c0d0800000000000000
+      internalID: -3402184983803674746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 82
+        width: 154
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4134da93b54db00800000000000000
+      internalID: 852406532757984458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_4
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 913
+        width: 192
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af92e539307493f0800000000000000
+      internalID: -894967034920394842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 633
+        width: 192
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2174eb4d7f57c0b10800000000000000
+      internalID: 1949062446031193874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 324
+        width: 192
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e4d75592cd283e0800000000000000
+      internalID: -2052836410041479597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_7
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 27
+        width: 192
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab531b913750cb00800000000000000
+      internalID: 846772600512404385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_8
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 982
+        width: 135
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f92e9edb6d12ef60800000000000000
+      internalID: 8062038632080222711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_9
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 703
+        width: 135
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919f072d09aa1fac0800000000000000
+      internalID: -3823087069678208743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_10
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 392
+        width: 135
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8ebb1b6fdc0bc50800000000000000
+      internalID: 6679064706817976550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackets_11
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 95
+        width: 135
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e3743e21949b5b0800000000000000
+      internalID: -5352166336681787876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
