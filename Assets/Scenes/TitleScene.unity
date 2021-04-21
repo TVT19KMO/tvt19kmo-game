@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1790147901}
         m_TargetAssemblyTypeName: ControllerTitle, Assembly-CSharp
-        m_MethodName: LoadHouse
+        m_MethodName: LoadCharacterEditor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

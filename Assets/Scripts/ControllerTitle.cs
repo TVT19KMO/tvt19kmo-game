@@ -19,17 +19,8 @@ public class ControllerTitle : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadCharacterEditor()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            LoadHouse();
-        }
-    }
-
-    public void LoadHouse()
-    {
-        SceneManager.LoadScene("HouseScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("CharacterEditor", LoadSceneMode.Single);
     }
 }

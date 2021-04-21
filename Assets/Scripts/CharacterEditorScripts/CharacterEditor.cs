@@ -9,18 +9,12 @@ public class CharacterEditor : MonoBehaviour
 {
     public static CharacterEditor instance;
 
-    public GameObject panel;
     public GameObject character;
 
-    public SpriteRenderer head;
-    public Image squareHeadDisplay;
+    public string[] headColors;
 
-    public Color color1;
-    public Color color2;
-    public Color color3;
-    public Color color4;
-    public Color color5;
-    public int whatColor;
+    public SpriteRenderer head;
+    public int ChosenHeadColor;
 
     public GameObject LSneaker;
     public GameObject RSneaker;
@@ -28,8 +22,12 @@ public class CharacterEditor : MonoBehaviour
     public SpriteRenderer right_sneaker;
     public Sprite[] spriteArray_left;
     public Sprite[] spriteArray_right;
-
     public int ChosenSneaker;
+
+    public GameObject cap;
+    public SpriteRenderer caprenderer;
+    public Sprite[] caps;
+    public int ChosenCap;
 
     void Awake()
     {
@@ -45,61 +43,75 @@ public class CharacterEditor : MonoBehaviour
 
     public void Start()
     {
-        string headColor = "#" + PlayerPrefs.GetString("headColor", null);
-        Color headclr;
-        if (ColorUtility.TryParseHtmlString(headColor, out headclr))
+        ChosenHeadColor = PlayerPrefs.GetInt("HeadColor", 1);
+        Debug.Log(ChosenHeadColor);
+        Color HColor;
+        if (ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
         {
-            head.color = headclr;
+            Debug.Log("toimii");
+            head.color = HColor;
         }
+        Data.HeadColors = headColors;
 
         ChosenSneaker = PlayerPrefs.GetInt("SneakersColor", 1);
         if (ChosenSneaker != 1)
         {
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
             left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
             right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
         }
-    }
+        Data.LeftSneakers = spriteArray_left;
+        Data.RightSneakers = spriteArray_right;
 
-    public void ChangePanelState(bool state)
-    {
-        panel.SetActive(state);
+        ChosenCap = PlayerPrefs.GetInt("Cap", 0);
+        if (ChosenCap != 0)
+        {
+            caprenderer.sprite = caps[ChosenCap];
+        }
+        Data.Caps = caps;
     }
 
     public void SaveCharacter()
     {
-        PlayerPrefs.SetString("headColor", ColorUtility.ToHtmlStringRGBA(head.color));
+        PlayerPrefs.SetInt("HeadColor", ChosenHeadColor);
         PlayerPrefs.SetInt("SneakersColor", ChosenSneaker);
-        Debug.Log(ColorUtility.ToHtmlStringRGBA(head.color));
+        PlayerPrefs.SetInt("Cap", ChosenCap);
     }
 
-    public void ChangeHeadColor(int color)
+    public void prevHeadColor()
     {
-        whatColor = color;
+        if (ChosenHeadColor > 0)
+        {
+            ChosenHeadColor--;
+            setHeadColor();
+        }
+        else
+        {
+            ChosenHeadColor = headColors.Length - 1;
+            setHeadColor();
+        }
+    }
+    public void nextHeadColor()
+    {
+        if (ChosenHeadColor < headColors.Length - 1)
+        {
+            ChosenHeadColor++;
+            setHeadColor();
+        }
+        else
+        {
+            ChosenHeadColor = 0;
+            setHeadColor();
+        }
+    }
 
-        if (whatColor == 1)
+    public void setHeadColor()
+    {
+        Color HColor;
+        if (ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
         {
-            head.color = color1;
+            Debug.Log(ChosenHeadColor);
+            head.color = HColor;
         }
-        else if (whatColor == 2)
-        {
-            head.color = color2;
-        }
-        else if (whatColor == 3)
-        {
-            head.color = color3;
-        }
-        else if (whatColor == 4)
-        {
-            head.color = color4;
-        }
-        else if (whatColor == 5)
-        {
-            head.color = color5;
-        }
-
-        squareHeadDisplay.color = head.color;
     }
 
     public void NextSneakers()
@@ -108,14 +120,10 @@ public class CharacterEditor : MonoBehaviour
         if (ChosenSneaker < SneakerCount)
         {
             ChosenSneaker++;
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
         }
         else
         {
             ChosenSneaker = 1;
-            LSneaker.SetActive(false);
-            RSneaker.SetActive(false);
         }
         left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
         right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
@@ -128,20 +136,41 @@ public class CharacterEditor : MonoBehaviour
         if (ChosenSneaker > 1)
         {
             ChosenSneaker--;
-            if (ChosenSneaker == 1)
-            {
-                LSneaker.SetActive(false);
-                RSneaker.SetActive(false);
-            }
         }
         else
         {
             ChosenSneaker = SneakerCount;
-            LSneaker.SetActive(true);
-            RSneaker.SetActive(true);
         }
         left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
         right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
         Debug.Log(ChosenSneaker);
+    }
+
+    public void nextCap()
+    {
+        int capCount = caps.Length;
+        if (ChosenCap < capCount - 1)
+        {
+            ChosenCap++;
+        }
+        else
+        {
+            ChosenCap = 0;
+        }
+        caprenderer.sprite = caps[ChosenCap];
+    }
+
+    public void prevCap()
+    {
+        int capCount = caps.Length;
+        if (ChosenCap > 0)
+        {
+            ChosenCap--;
+        }
+        else
+        {
+            ChosenCap = capCount - 1;
+        }
+        caprenderer.sprite = caps[ChosenCap];
     }
 }
