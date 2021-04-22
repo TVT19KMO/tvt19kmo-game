@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TV : MonoBehaviour
+public class GameLauncher : MonoBehaviour
 {
     public GameObject GameMenu;
 
