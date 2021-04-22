@@ -357,7 +357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1145582454}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1043924756
 SpriteRenderer:
@@ -398,7 +398,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1198541107
   m_SortingLayer: 3
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1991798887789871252, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -419,6 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145582454}
+  - component: {fileID: 9022518359195738445}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -444,14 +445,37 @@ Transform:
   - {fileID: 1621828323}
   - {fileID: 705058961}
   - {fileID: 312278505}
-  - {fileID: 1876260107}
   - {fileID: 1043924757}
+  - {fileID: 1876260107}
   - {fileID: 1242296167}
   - {fileID: 1900843146}
   - {fileID: 65921239}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9022518359195738445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145582453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264a40c1a48d9d4aa96f9ef9777aad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headColor: 0
+  head: {fileID: 1951825645}
+  sneakerRight: {fileID: 65921238}
+  sneakerLeft: {fileID: 1900843145}
+  hairRenderer: {fileID: 1621828322}
+  topRenderer: {fileID: 1642532988}
+  leftArmRenderer: {fileID: 705058960}
+  rightArmRenderer: {fileID: 312278504}
+  bottomRenderer: {fileID: 1043924756}
+  leftLegRenderer: {fileID: 1876260106}
+  RightLegRenderer: {fileID: 1242296166}
 --- !u!1 &1242296165
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1145582454}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1876260106
 SpriteRenderer:
@@ -932,7 +956,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1198541107
   m_SortingLayer: 3
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: -2428608352925763270, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

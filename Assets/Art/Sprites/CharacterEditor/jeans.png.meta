@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 7c962308e5a910d4c8eb5f72d560dde3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5693902186511285166
+    second: jeans_0
+  - first:
+      213: 4673553735903774404
+    second: jeans_1
+  - first:
+      213: -1441530550809970264
+    second: jeans_2
+  - first:
+      213: 1720521365801393485
+    second: jeans_3
+  - first:
+      213: 7540540420438685315
+    second: jeans_4
+  - first:
+      213: 7040888629529053950
+    second: jeans_5
+  - first:
+      213: -1355709254968128136
+    second: jeans_6
+  - first:
+      213: -2453215095391238187
+    second: jeans_7
+  - first:
+      213: 6687619804740121330
+    second: jeans_8
+  - first:
+      213: -4620092260144989074
+    second: jeans_9
+  - first:
+      213: -3598140724135745783
+    second: jeans_10
+  - first:
+      213: 6839949943110982027
+    second: jeans_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +77,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +111,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jeans_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 368
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254cc2301223bf0b0800000000000000
+      internalID: -5693902186511285166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 487
+        width: 158
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c68e3b7c5ccbd040800000000000000
+      internalID: 4673553735903774404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 371
+        width: 80
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a939120a97aefbe0800000000000000
+      internalID: -1441530550809970264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_3
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 369
+        width: 87
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ddf05011580e710800000000000000
+      internalID: 1720521365801393485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 489
+        width: 158
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386f8b69f8165a860800000000000000
+      internalID: 7540540420438685315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_5
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 373
+        width: 80
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa8a2287e246b160800000000000000
+      internalID: 7040888629529053950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_6
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 69
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d4aee8d9d8f2de0800000000000000
+      internalID: -1355709254968128136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 188
+        width: 158
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d744915edd64fdd0800000000000000
+      internalID: -2453215095391238187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 72
+        width: 80
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2f666a7c23fcc50800000000000000
+      internalID: 6687619804740121330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_9
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 70
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cb684519222efb0800000000000000
+      internalID: -4620092260144989074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 189
+        width: 158
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907a50e3316d01ec0800000000000000
+      internalID: -3598140724135745783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeans_11
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 73
+        width: 80
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b895590db326cee50800000000000000
+      internalID: 6839949943110982027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
