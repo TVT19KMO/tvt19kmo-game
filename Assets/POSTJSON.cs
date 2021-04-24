@@ -6,15 +6,19 @@ using System.Net;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
 
 public class POSTJSON : MonoBehaviour
 {
     string DeviceID;
+    public GameObject inputPanel;
     public InputField codefield;
     public Text inputhelptext;
     public Text InfoText;
+    public GameObject saveButton;
     void Start()
     {
+        GET();
         DeviceID = SystemInfo.deviceUniqueIdentifier;
         Debug.Log(DeviceID);
     }
@@ -50,18 +54,23 @@ public class POSTJSON : MonoBehaviour
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                var result = streamReader.ReadToEnd();
+                string result = streamReader.ReadToEnd();
                 Debug.Log(result);
-                InfoText.text = result;
+                int resultLen = result.Length;
+                int tokenLen = resultLen - 12;
+                string token = result.Remove(0,10).Remove(tokenLen, 2);
+                Debug.Log("Tallennettu token: " + token);
+                PlayerPrefs.SetString("ParentToken", token);
+                InfoText.text = "Hallintasovellukseen yhdistäminen onnistui!";
             }
         }
         catch(WebException e)
         {
             if (e.Status == WebExceptionStatus.ProtocolError)
             {
-                Debug.Log(new StreamReader(e.Response.GetResponseStream()).ReadToEnd());
-                Debug.Log(e.Message);
-                InfoText.text = e.Message;
+                string response = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                InfoText.text = "Virheellinen koodi, yritä uudestaan!";
+                Debug.Log(response);
             }
         }
     Debug.Log("httpresponse done");
@@ -70,5 +79,33 @@ public class POSTJSON : MonoBehaviour
     {
         SceneManager.LoadScene("HouseScene");
     }
+    public void GET()
+    {
+        string url = "http://game-management-api.herokuapp.com/api/assigned-tasks";
+        string token = PlayerPrefs.GetString("ParentToken", "");
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        request.Headers.Add("Authorization", "bearer " + token);
+        Debug.Log(request.Headers.ToString());
+        try
+        {
+            WebResponse response = request.GetResponse();
+            Stream datastream = response.GetResponseStream();
+            StreamReader streamReader = new StreamReader(datastream);
+            string msg = streamReader.ReadToEnd();
+            Debug.Log(msg);
+            InfoText.text = "Laite yhdistetty onnistuneesti vanhemman tiliin!";
+            inputPanel.SetActive(false);
+            saveButton.SetActive(false);
+        }
+        catch(WebException e)
+        {
+            if (e.Status == WebExceptionStatus.ProtocolError)
+            {
+                string response = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                Debug.Log(response);
+                InfoText.text = "Yhdistä laite vanhemman hallintasovellukseen.\nLisätietoa osoitteesta https://tvt19kmo.github.io/tvt19kmo-app/";
+            }
+        }
+
+    }
 }
-//{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RlIjo2MjQ0NTc0OCwiaWQiOiI2MDgzMDM2ODYzNzM5MDAwMDQwM2FmN2IiLCJpYXQiOjE2MTkxOTg4MzN9.lC3mJNkjdYHYo9J4nba54REc3hx65eTlQxyQh2flYKI"}
