@@ -96,6 +96,7 @@ public class POSTJSON : MonoBehaviour
             InfoText.text = "Laite yhdistetty onnistuneesti vanhemman tiliin!";
             inputPanel.SetActive(false);
             saveButton.SetActive(false);
+            ToTasks();
         }
         catch(WebException e)
         {
@@ -106,6 +107,9 @@ public class POSTJSON : MonoBehaviour
                 InfoText.text = "Yhdistä laite vanhemman hallintasovellukseen.\nLisätietoa osoitteesta https://tvt19kmo.github.io/tvt19kmo-app/";
             }
         }
-
+    }
+    public void ToTasks()
+    {
+        SceneManager.LoadScene("TaskScene");
     }
 }

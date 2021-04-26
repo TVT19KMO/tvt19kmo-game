@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterEditor.unity
     guid: 3e6eb5c0aac1eba4fafb13dc5088a1a5
+  - enabled: 1
+    path: Assets/Scenes/TaskScene.unity
+    guid: a0db3a00db509524e913e215471a6aea
   m_configObjects: {}
