@@ -21,7 +21,7 @@ public class GameControllerHouse : MonoBehaviour
     public void LoadPlatformer()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("DemoScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level1Scene", LoadSceneMode.Single);
     }
 
     public void LoadCharacterEditor()
