@@ -7,12 +7,15 @@ public class ChangeJacket : MonoBehaviour
     public SpriteRenderer LeftArm;
     public SpriteRenderer RightArm;
     public SpriteRenderer Top;
-    public Sprite[] larms;
-    public Sprite[] rarms;
-    public Sprite[] tops;
+    Sprite[] larms;
+    Sprite[] rarms;
+    Sprite[] tops;
     public int ChosenJacket;
     void Start()
     {
+        tops = Data.Tops;
+        larms = Data.LeftArms;
+        rarms = Data.RightArms;
         ChosenJacket = PlayerPrefs.GetInt("Jacket", 0);
         if(ChosenJacket != 0)
         {
@@ -20,9 +23,6 @@ public class ChangeJacket : MonoBehaviour
             RightArm.sprite = rarms[ChosenJacket];
             Top.sprite = tops[ChosenJacket];
         }
-        Data.Tops = tops;
-        Data.LeftArms = larms;
-        Data.RightArms = rarms;
     }
     public void nextJacket()
     {

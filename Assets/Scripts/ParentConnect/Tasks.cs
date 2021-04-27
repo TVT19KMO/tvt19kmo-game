@@ -30,12 +30,14 @@ public class Tasks : MonoBehaviour
         string token = PlayerPrefs.GetString("ParentToken", "");
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
         request.Headers.Add("Authorization", "bearer " + token);
+        Debug.Log("get called");
         try
         {
             WebResponse response = request.GetResponse();
             Stream datastream = response.GetResponseStream();
             StreamReader streamReader = new StreamReader(datastream);
             string msg = streamReader.ReadToEnd();
+            Debug.Log(msg);
             var root = JsonConvert.DeserializeObject<List<Root>>(msg);
             foreach(Root r in root)
             {
