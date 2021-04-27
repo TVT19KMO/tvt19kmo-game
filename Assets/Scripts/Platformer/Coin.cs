@@ -6,9 +6,8 @@ public class Coin : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerPlatformer player = other.GetComponent<PlayerPlatformer>();
 
-        if (player != null)
+        if (other.gameObject.name == "PlayerPlatformer")
         {
             GameControllerPlatformer.instance.AddCoin();
             Destroy(gameObject);
