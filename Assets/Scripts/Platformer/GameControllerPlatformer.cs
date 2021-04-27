@@ -15,10 +15,13 @@ public class GameControllerPlatformer : MonoBehaviour
     public AudioSource BackgroundMusic;
     public Text coinText;
     public Text gameOverText;
+    public Text timeText;
 
     public int coins = 0;
 
-    // Start is called before the first frame update
+    public float maxtime;
+    private float timer = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -29,6 +32,20 @@ public class GameControllerPlatformer : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Update()
+    {
+        if (gamePaused == false)
+        {
+            timer += Time.deltaTime;
+            timeText.text = "Aika: " + Mathf.Round(timer) + " / " + maxtime;
+            if (timer >= maxtime)
+            {
+                GameOver();
+            }
+        }
+        
     }
 
     public void OpenMenu(GameObject menu)
@@ -52,7 +69,7 @@ public class GameControllerPlatformer : MonoBehaviour
         gamePaused = true;
         Time.timeScale = 0;
         BackgroundMusic.Pause();
-        gameOverText.text = "Peli ohi!\nKokonaispisteesi: " + coins;
+        gameOverText.text = "Kokonaispisteesi: " + coins + "\nAika: " + timer;
         GameOverMenu.SetActive(true);
     }
 

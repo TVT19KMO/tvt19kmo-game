@@ -184,7 +184,7 @@ MonoBehaviour:
   minDistance: 1
   followDistance: 1
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0.5, y: 0, z: 0}
 --- !u!82 &1864360000516187624
 AudioSource:
   m_ObjectHideFlags: 0

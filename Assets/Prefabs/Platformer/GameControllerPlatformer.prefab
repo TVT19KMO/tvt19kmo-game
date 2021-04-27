@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePaused: 0
-  PauseMenu: {fileID: 0}
   UI: {fileID: 0}
   GameOverMenu: {fileID: 0}
   BackgroundMusic: {fileID: 0}
   coinText: {fileID: 0}
   gameOverText: {fileID: 0}
+  timeText: {fileID: 0}
   coins: 0
+  maxtime: 300
