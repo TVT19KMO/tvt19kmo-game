@@ -14,7 +14,7 @@ public class Shop : MonoBehaviour
     }
 
     [System.Serializable]
-    public class MyClass
+    public class TopsClass
     {
         public int _id;
         public string name;
@@ -22,6 +22,7 @@ public class Shop : MonoBehaviour
         public int price;
         public int __v;
     }
+    [SerializeField] List<TopsClass> TopItemsList;
 
     [SerializeField] List<ShopItem> ShopItemsList;
 
@@ -36,9 +37,9 @@ public class Shop : MonoBehaviour
 
     void Start ()
     {
-        ItemTemplate = ShopScrollView.GetChild(0).gameObject;
+        //ItemTemplate = ShopScrollView.GetChild(0).gameObject;
 
-        int len = ShopItemsList.Count;
+        /*int len = ShopItemsList.Count;
         for (int i = 0; i <= 3; i++)
         {
             g = Instantiate(ItemTemplate, ShopScrollView);
@@ -47,19 +48,33 @@ public class Shop : MonoBehaviour
             buyBtn = g.transform.GetChild(2).GetComponent<Button>();
             buyBtn.interactable = !ShopItemsList[i].IsPurchased;
             buyBtn.AddEventListener(i, OnShopItemBtnClicked);
-        }
+        }*/
 
         StartCoroutine(GetTopsRequest( result =>{
-            //Debug.Log(result);
-            dataString = result;
-            Debug.Log(dataString);
+            ItemTemplate = ShopScrollView.GetChild(0).gameObject;
+            dataString = result;            
+            
+            string jsonString = fixJson(dataString);
+            TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
+            
+            /*for (int i = 0; i<9; i++)
+            {
+                Debug.Log(tops[i].name + " " + tops[i].color);                
+            }*/
+
+            for (int i = 0; i <= 9; i++)
+            {
+                g = Instantiate(ItemTemplate, ShopScrollView);
+                g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = tops[i].price.ToString();
+                buyBtn = g.transform.GetChild(2).GetComponent<Button>();
+                buyBtn.interactable = !ShopItemsList[i].IsPurchased;
+                buyBtn.AddEventListener(i, OnShopItemBtnClicked);
+            }
+            Destroy(ItemTemplate);
         }));
-        Debug.Log("dataString: " + dataString);
-        /*var tops = new MyClass();
-        tops.name = "Jacket";
-        //Debug.Log(tops.name);
-        Debug.Log("From start: " + dataString);*/
-        Destroy(ItemTemplate);
+        //Debug.Log("dataString: " + dataString);        
+        //Destroy(ItemTemplate);
     }
 
     void OnShopItemBtnClicked(int itemIndex)
@@ -96,7 +111,7 @@ public class Shop : MonoBehaviour
                 result(www.downloadHandler.text);            
             
             //string jsonString = fixJson(dataString);            
-            /*MyClass[] tops = JsonHelper.FromJson<MyClass>(jsonString);
+            /*TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
             
             for (int i = 0; i<5; i++)
             {
