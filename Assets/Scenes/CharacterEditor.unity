@@ -1046,7 +1046,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 104480809}
         m_TargetAssemblyTypeName: EditorToMapTransition, Assembly-CSharp
-        m_MethodName: EditorToMap
+        m_MethodName: ToMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

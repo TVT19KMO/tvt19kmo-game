@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class EditorToMapTransition : MonoBehaviour
 {
-    public void EditorToMap()
+    public void ToMap()
     {
-        SceneManager.LoadScene("HouseScene");
+        SceneManager.LoadScene("TitleScene");
     }
 }

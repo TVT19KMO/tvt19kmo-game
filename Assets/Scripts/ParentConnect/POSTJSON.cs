@@ -16,6 +16,7 @@ public class POSTJSON : MonoBehaviour
     public Text inputhelptext;
     public Text InfoText;
     public GameObject saveButton;
+    public GameObject taskButton;
     void Start()
     {
         GET();
@@ -96,7 +97,7 @@ public class POSTJSON : MonoBehaviour
             InfoText.text = "Laite yhdistetty onnistuneesti vanhemman tiliin!";
             inputPanel.SetActive(false);
             saveButton.SetActive(false);
-            ToTasks();
+            taskButton.SetActive(true);
         }
         catch(WebException e)
         {

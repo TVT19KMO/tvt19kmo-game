@@ -43,8 +43,8 @@ public class ShopPanels : MonoBehaviour
         BottomsPanel.SetActive(false);
         TopsPanel.SetActive(true);
     }
-    public void toEditor()
+    public void goBack()
     {
-        SceneManager.LoadScene("CharacterEditor");
+        SceneManager.LoadScene("TitleScene");
     }
 }
