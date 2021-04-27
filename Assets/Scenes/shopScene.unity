@@ -2115,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.3502502, y: -14.701691}
+  m_AnchoredPosition: {x: 7.350281, y: -14.701691}
   m_SizeDelta: {x: -146.25793, y: -49.9862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683337242
@@ -2361,34 +2361,34 @@ MonoBehaviour:
   - {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
   TopItemsList: []
   ShopItemsList:
-  - Image: {fileID: -2506313818479553514, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 1598376239736250545, guid: 7c88436b00b075740a994332e440dedb, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: 3167703238364451641, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 4032059017175250507, guid: 7c88436b00b075740a994332e440dedb, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: 5657480054514556857, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: -2028574823761980249, guid: 7c88436b00b075740a994332e440dedb, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: -7883315471559780940, guid: 7c88436b00b075740a994332e440dedb, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: -894967034920394842, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 1949062446031193874, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: -2052836410041479597, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
+  - Image: {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
     Price: 0
     IsPurchased: 0
   ShopScrollView: {fileID: 838163626}
