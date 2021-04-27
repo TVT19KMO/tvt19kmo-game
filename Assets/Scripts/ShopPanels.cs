@@ -7,6 +7,8 @@ public class ShopPanels : MonoBehaviour
 {
     public GameObject TopsPanel;
     public GameObject BottomsPanel;
+    public GameObject HatsPanel;
+    public GameObject ShoesPanel;
     
     public Button NextButton;
     public Button PreviousButton;
@@ -24,8 +26,10 @@ public class ShopPanels : MonoBehaviour
 
     public void MainPanel()
     {
-        TopsPanel.SetActive(true);
+        TopsPanel.SetActive(false);
         BottomsPanel.SetActive(false);
+        HatsPanel.SetActive(false);
+        ShoesPanel.SetActive(true);
     }
 
     public void NextButtonClicked()

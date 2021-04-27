@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class Shop : MonoBehaviour
+public class ShopHats : MonoBehaviour
 {
-    [System.Serializable] class ShopItem
+    [System.Serializable]
+    class ShopItem
     {
         public Sprite Image;
         public int Price;
@@ -14,7 +15,7 @@ public class Shop : MonoBehaviour
     }
 
     [System.Serializable]
-    public class TopsClass
+    public class HatsClass
     {
         public int _id;
         public string name;
@@ -22,20 +23,18 @@ public class Shop : MonoBehaviour
         public int price;
         public int __v;
     }
-    [SerializeField] List<TopsClass> TopItemsList;
+    [SerializeField] List<HatsClass> HatItemsList;
 
     [SerializeField] List<ShopItem> ShopItemsList;
 
     GameObject ItemTemplate;
     GameObject g;
-    [SerializeField ]Transform ShopScrollView;
+    [SerializeField] Transform ShopScrollView;
     Button buyBtn;
-    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/tops";
+    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/hats";
     public string dataString;
-    
-    
 
-    void Start ()
+    void Start()
     {
         //ItemTemplate = ShopScrollView.GetChild(0).gameObject;
 
@@ -50,23 +49,24 @@ public class Shop : MonoBehaviour
             buyBtn.AddEventListener(i, OnShopItemBtnClicked);
         }*/
 
-        StartCoroutine(GetTopsRequest( result =>{
+        StartCoroutine(GetHatsRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
-            dataString = result;            
-            
+            dataString = result;
+
             string jsonString = fixJson(dataString);
-            TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
-            
+            HatsClass[] hats = JsonHelper.FromJson<HatsClass>(jsonString);
+
             /*for (int i = 0; i<9; i++)
             {
-                Debug.Log(tops[i].name + " " + tops[i].color);                
+                Debug.Log(hats[i].name + " " + hats[i].color);                
             }*/
 
-            for (int i = 0; i <= 9; i++)
+            for (int i = 0; i <= 3; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
-                g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;                
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = tops[i].price.ToString();
+                //g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
+                g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = hats[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
                 buyBtn.interactable = !ShopItemsList[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
@@ -81,7 +81,7 @@ public class Shop : MonoBehaviour
     {
         //Debug.Log(itemIndex);
         ShopItemsList[itemIndex].IsPurchased = true;
-        
+
         //Disable the buy button
         buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
         buyBtn.interactable = false;
@@ -89,9 +89,9 @@ public class Shop : MonoBehaviour
 
     }
 
-    IEnumerator GetTopsRequest( System.Action<string> result)
+    IEnumerator GetHatsRequest(System.Action<string> result)
     {
-        
+
         UnityWebRequest www = UnityWebRequest.Get(getURL);
 
         yield return www.SendWebRequest();
@@ -108,14 +108,14 @@ public class Shop : MonoBehaviour
             //Debug.Log("From IEnumerator: " + dataString);
             Debug.Log(www.downloadHandler.text);
             if (result != null)
-                result(www.downloadHandler.text);            
-            
+                result(www.downloadHandler.text);
+
             //string jsonString = fixJson(dataString);            
-            /*TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
+            /*BottomsClass[] bottoms = JsonHelper.FromJson<BottomsClass>(jsonString);
             
             for (int i = 0; i<5; i++)
             {
-                Debug.Log(tops[i].name + " " + tops[i].color);                
+                Debug.Log(bottoms[i].name + " " + bottoms[i].color);                
             }*/
             //Debug.Log(top[0].color);
             //Debug.Log(top[1].color);            
@@ -134,31 +134,4 @@ public class Shop : MonoBehaviour
     }
 }
 
-public static class JsonHelper
-{
-    public static T[] FromJson<T>(string json)
-    {
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
-        return wrapper.Items;
-    }
 
-    public static string ToJson<T>(T[] array)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper);
-    }
-
-    public static string ToJson<T>(T[] array, bool prettyPrint)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper, prettyPrint);
-    }
-
-    [System.Serializable]
-    private class Wrapper<T>
-    {
-        public T[] Items;
-    }
-}
