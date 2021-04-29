@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,10 +142,10 @@ TextureImporter:
       name: jackets_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 11
         y: 970
-        width: 154
-        height: 141
+        width: 153
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: jackets_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 689
-        width: 154
-        height: 141
+        x: 225
+        y: 914
+        width: 193
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: jackets_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 382
-        width: 154
-        height: 141
+        x: 512
+        y: 982
+        width: 135
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: jackets_3
       rect:
         serializedVersion: 2
-        x: 22
-        y: 82
+        x: 19
+        y: 690
         width: 154
-        height: 141
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: jackets_4
       rect:
         serializedVersion: 2
-        x: 226
-        y: 913
-        width: 192
-        height: 255
+        x: 233
+        y: 634
+        width: 193
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: jackets_5
       rect:
         serializedVersion: 2
-        x: 234
-        y: 633
-        width: 192
-        height: 255
+        x: 519
+        y: 702
+        width: 136
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: jackets_6
       rect:
         serializedVersion: 2
-        x: 234
-        y: 324
-        width: 192
-        height: 255
+        x: 19
+        y: 381
+        width: 154
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,10 +289,10 @@ TextureImporter:
       name: jackets_7
       rect:
         serializedVersion: 2
-        x: 236
-        y: 27
-        width: 192
-        height: 255
+        x: 233
+        y: 325
+        width: 193
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,9 +310,9 @@ TextureImporter:
       name: jackets_8
       rect:
         serializedVersion: 2
-        x: 511
-        y: 982
-        width: 135
+        x: 519
+        y: 393
+        width: 136
         height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: jackets_9
       rect:
         serializedVersion: 2
-        x: 518
-        y: 703
-        width: 135
-        height: 129
+        x: 22
+        y: 83
+        width: 153
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: jackets_10
       rect:
         serializedVersion: 2
-        x: 519
-        y: 392
-        width: 135
-        height: 129
+        x: 236
+        y: 27
+        width: 193
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,7 +373,7 @@ TextureImporter:
       name: jackets_11
       rect:
         serializedVersion: 2
-        x: 521
+        x: 523
         y: 95
         width: 135
         height: 129

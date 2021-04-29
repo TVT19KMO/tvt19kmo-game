@@ -118,12 +118,12 @@ TextureImporter:
       name: Caps_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 518
-        width: 396
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 98
+        y: 471
+        width: 397
+        height: 257
+      alignment: 9
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,12 +139,12 @@ TextureImporter:
       name: Caps_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 185
-        width: 398
-        height: 209
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 607
+        y: 478
+        width: 397
+        height: 257
+      alignment: 9
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: Caps_2
       rect:
         serializedVersion: 2
-        x: 634
-        y: 181
-        width: 399
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 110
+        y: 139
+        width: 397
+        height: 257
+      alignment: 9
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: Caps_3
       rect:
         serializedVersion: 2
-        x: 605
-        y: 525
-        width: 399
-        height: 214
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 635
+        y: 133
+        width: 397
+        height: 257
+      alignment: 9
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

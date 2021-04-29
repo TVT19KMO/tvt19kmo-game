@@ -142,12 +142,12 @@ TextureImporter:
       name: pants_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 448
-        width: 165
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 54
+        y: 323
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: pants_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 322
-        width: 110
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 88
+        y: 446
+        width: 161
+        height: 84
+      alignment: 9
+      pivot: {x: 0.47, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: pants_2
       rect:
         serializedVersion: 2
-        x: 237
-        y: 325
-        width: 88
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 417
+        y: 329
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: pants_3
       rect:
         serializedVersion: 2
-        x: 394
-        y: 327
-        width: 120
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 451
+        y: 452
+        width: 161
+        height: 84
+      alignment: 9
+      pivot: {x: 0.47, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: pants_4
       rect:
         serializedVersion: 2
-        x: 590
-        y: 329
-        width: 100
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 602
+        y: 337
+        width: 80
+        height: 120
+      alignment: 9
+      pivot: {x: 0.43, y: 0.61}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: pants_5
       rect:
         serializedVersion: 2
-        x: 438
-        y: 456
-        width: 181
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 239
+        y: 331
+        width: 80
+        height: 119
+      alignment: 9
+      pivot: {x: 0.43, y: 0.61}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: pants_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 164
-        width: 168
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 66
+        y: 42
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: pants_7
       rect:
         serializedVersion: 2
-        x: 50
-        y: 34
-        width: 104
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 99
+        y: 165
+        width: 161
+        height: 84
+      alignment: 9
+      pivot: {x: 0.47, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,12 +310,12 @@ TextureImporter:
       name: pants_8
       rect:
         serializedVersion: 2
-        x: 247
-        y: 43
-        width: 100
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 430
+        y: 48
+        width: 87
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,12 +331,12 @@ TextureImporter:
       name: pants_9
       rect:
         serializedVersion: 2
-        x: 422
-        y: 37
-        width: 95
-        height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 465
+        y: 171
+        width: 161
+        height: 84
+      alignment: 9
+      pivot: {x: 0.47, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,12 +352,12 @@ TextureImporter:
       name: pants_10
       rect:
         serializedVersion: 2
-        x: 466
-        y: 171
-        width: 161
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 615
+        y: 56
+        width: 80
+        height: 120
+      alignment: 9
+      pivot: {x: 0.43, y: 0.61}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -373,12 +373,12 @@ TextureImporter:
       name: pants_11
       rect:
         serializedVersion: 2
-        x: 613
-        y: 43
-        width: 86
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 252
+        y: 50
+        width: 80
+        height: 120
+      alignment: 9
+      pivot: {x: 0.43, y: 0.61}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

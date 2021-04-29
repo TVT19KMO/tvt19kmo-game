@@ -119,9 +119,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 90
-        y: 447
-        width: 373
-        height: 226
+        y: 445
+        width: 374
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Beanies_1
       rect:
         serializedVersion: 2
-        x: 540
+        x: 539
         y: 460
-        width: 373
-        height: 230
+        width: 374
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
         x: 94
         y: 113
         width: 374
-        height: 230
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Beanies_3
       rect:
         serializedVersion: 2
-        x: 551
-        y: 120
-        width: 375
-        height: 228
+        x: 552
+        y: 121
+        width: 374
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

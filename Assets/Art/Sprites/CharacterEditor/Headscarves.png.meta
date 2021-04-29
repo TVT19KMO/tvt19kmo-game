@@ -3,17 +3,17 @@ guid: 7cd35c6b53f29e84c96458e7db1fbae0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8351116946294693374
-    second: Headscarves_0
-  - first:
       213: -8641324620806899164
     second: Headscarves_1
   - first:
-      213: -1225531102025069899
-    second: Headscarves_2
-  - first:
       213: -3758650476846579895
     second: Headscarves_3
+  - first:
+      213: 3488383875329856216
+    second: Headscarves_13
+  - first:
+      213: -706470437582081234
+    second: Headscarves_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,36 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Headscarves_0
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 508
-        width: 389
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efdd3a5dd9025e370800000000000000
-      internalID: 8351116946294693374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Headscarves_1
       rect:
         serializedVersion: 2
-        x: 530
-        y: 512
-        width: 389
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 51
+        y: 509
+        width: 388
+        height: 344
+      alignment: 9
+      pivot: {x: 0.53, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,36 +136,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Headscarves_2
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 105
-        width: 389
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ba4a92b4f90efee0800000000000000
-      internalID: -1225531102025069899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Headscarves_3
       rect:
         serializedVersion: 2
         x: 531
-        y: 93
+        y: 512
         width: 388
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 344
+      alignment: 9
+      pivot: {x: 0.53, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,6 +152,48 @@ TextureImporter:
       bones: []
       spriteID: 94ff4b43e4796dbc0800000000000000
       internalID: -3758650476846579895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Headscarves_13
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 104
+        width: 388
+        height: 343
+      alignment: 9
+      pivot: {x: 0.53, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d29c3107aa396030800000000000000
+      internalID: 3488383875329856216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Headscarves_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 94
+        width: 387
+        height: 343
+      alignment: 9
+      pivot: {x: 0.53, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23fa9b41ec1236f0800000000000000
+      internalID: -706470437582081234
       vertices: []
       indices: 
       edges: []

@@ -5,28 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scripts/Scenes/HouseScene.unity
+    guid: 52f97d4a712da8143ab0f3d4ebd46c4b
+  - enabled: 1
+    path: Assets/Scripts/Scenes/DemoScene.unity
+    guid: fa2b2fc97df45ce4da20b38b24b1e350
+  - enabled: 1
+    path: Assets/Scripts/Scenes/TitleScene.unity
+    guid: b7231a5bd968a3b4db7319932b5d113d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/ParentConnectScene.unity
-    guid: de9f579dae400cd4b964c4e6509b1c20
+    path: Assets/Scripts/Scenes/Level1Scene.unity
+    guid: af508b74939044a4dab2ff0dd0945d93
   - enabled: 1
-    path: Assets/Scenes/HouseScene.unity
-    guid: 52f97d4a712da8143ab0f3d4ebd46c4b
+    path: Assets/Scripts/Scenes/Level2Scene.unity
+    guid: 3ca94ee354ec346478bd28a904c4de32
   - enabled: 1
-    path: Assets/Scenes/DemoScene.unity
-    guid: f90dcae164e044d49973626fde330539
+    path: Assets/Scripts/Scenes/Level3Scene.unity
+    guid: d80a6469daa617845832121645fc82bb
   - enabled: 1
-    path: Assets/Scenes/CharacterEditor.unity
-    guid: 3e6eb5c0aac1eba4fafb13dc5088a1a5
-  - enabled: 1
-    path: Assets/Scenes/TaskScene.unity
+    path: Assets/Scripts/Scenes/TaskScene.unity
     guid: a0db3a00db509524e913e215471a6aea
   - enabled: 1
-    path: Assets/Scenes/shopScene.unity
+    path: Assets/Scripts/Scenes/shopScene.unity
     guid: ea377f01342b9ab49831c808127772f4
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
-    guid: b7231a5bd968a3b4db7319932b5d113d
+    path: Assets/Scripts/Scenes/ParentConnectScene.unity
+    guid: de9f579dae400cd4b964c4e6509b1c20
+  - enabled: 1
+    path: Assets/Scripts/Scenes/CharacterEditor.unity
+    guid: 3e6eb5c0aac1eba4fafb13dc5088a1a5
   m_configObjects: {}

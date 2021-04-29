@@ -70,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 130
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,9 +130,9 @@ TextureImporter:
       name: sneakers_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 415
-        width: 90
+        x: 34
+        y: 414
+        width: 86
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,9 +152,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 163
-        y: 420
-        width: 89
-        height: 60
+        y: 422
+        width: 88
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +172,7 @@ TextureImporter:
       name: sneakers_2
       rect:
         serializedVersion: 2
-        x: 42
+        x: 43
         y: 299
         width: 86
         height: 64
@@ -194,9 +194,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 172
-        y: 305
+        y: 307
         width: 89
-        height: 60
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: sneakers_4
       rect:
         serializedVersion: 2
-        x: 172
-        y: 183
-        width: 88
-        height: 59
+        x: 43
+        y: 175
+        width: 86
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: sneakers_5
       rect:
         serializedVersion: 2
-        x: 41
-        y: 175
-        width: 86
-        height: 67
+        x: 172
+        y: 183
+        width: 89
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: sneakers_6
       rect:
         serializedVersion: 2
-        x: 49
-        y: 46
+        x: 50
+        y: 47
         width: 86
-        height: 66
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,7 +280,7 @@ TextureImporter:
         x: 179
         y: 55
         width: 88
-        height: 60
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

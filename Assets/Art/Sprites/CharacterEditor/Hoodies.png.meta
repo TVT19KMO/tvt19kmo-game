@@ -24,11 +24,11 @@ TextureImporter:
       213: 4032059017175250507
     second: Hoodies_6
   - first:
-      213: 1598376239736250545
-    second: Hoodies_8
-  - first:
       213: 1307863563581847630
     second: Hoodies_7
+  - first:
+      213: 1598376239736250545
+    second: Hoodies_8
   - first:
       213: 8567465720437790652
     second: Hoodies_9
@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -143,9 +143,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 943
-        width: 152
-        height: 137
+        y: 947
+        width: 150
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: Hoodies_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 648
-        width: 152
-        height: 137
+        x: 244
+        y: 894
+        width: 212
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Hoodies_2
       rect:
         serializedVersion: 2
-        x: 55
-        y: 352
-        width: 152
-        height: 137
+        x: 535
+        y: 961
+        width: 128
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Hoodies_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 70
-        width: 152
-        height: 137
+        x: 53
+        y: 651
+        width: 151
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Hoodies_4
       rect:
         serializedVersion: 2
-        x: 275
-        y: 20
-        width: 215
-        height: 244
+        x: 261
+        y: 599
+        width: 212
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Hoodies_5
       rect:
         serializedVersion: 2
-        x: 262
-        y: 302
-        width: 215
-        height: 244
+        x: 552
+        y: 666
+        width: 128
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: Hoodies_6
       rect:
         serializedVersion: 2
-        x: 258
-        y: 599
-        width: 215
-        height: 244
+        x: 55
+        y: 355
+        width: 150
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,34 +286,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_8
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 894
-        width: 215
-        height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b067e2b8b29e2610800000000000000
-      internalID: 1598376239736250545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Hoodies_7
       rect:
         serializedVersion: 2
-        x: 533
-        y: 959
-        width: 130
-        height: 128
+        x: 262
+        y: 303
+        width: 212
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,13 +307,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Hoodies_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 370
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b067e2b8b29e2610800000000000000
+      internalID: 1598376239736250545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Hoodies_9
       rect:
         serializedVersion: 2
-        x: 550
-        y: 664
-        width: 130
-        height: 128
+        x: 70
+        y: 73
+        width: 151
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Hoodies_10
       rect:
         serializedVersion: 2
-        x: 553
-        y: 368
-        width: 130
-        height: 128
+        x: 278
+        y: 20
+        width: 211
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: Hoodies_11
       rect:
         serializedVersion: 2
-        x: 567
-        y: 85
-        width: 130
-        height: 128
+        x: 569
+        y: 87
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
