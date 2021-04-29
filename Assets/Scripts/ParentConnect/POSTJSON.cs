@@ -6,7 +6,6 @@ using System.Net;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Newtonsoft.Json;
 
 public class POSTJSON : MonoBehaviour
 {
