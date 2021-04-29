@@ -18,10 +18,10 @@ public class GameControllerHouse : MonoBehaviour
         }
     }
 
-    public void LoadPlatformer()
+    public void LoadPlatformer(int level)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level1Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene($"Level{level}Scene", LoadSceneMode.Single);
     }
 
     public void LoadCharacterEditor()
