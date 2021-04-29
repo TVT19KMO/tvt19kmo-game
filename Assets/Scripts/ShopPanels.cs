@@ -13,7 +13,9 @@ public class ShopPanels : MonoBehaviour
     public Button NextButton;
     public Button PreviousButton;
 
-    public GameObject[] PanelsList;  
+    public GameObject[] PanelsList;   
+        
+    [SerializeField] public Text CoinsText;
 
     void Start()
     {
@@ -22,7 +24,9 @@ public class ShopPanels : MonoBehaviour
         NextBtn.onClick.AddListener(NextButtonClicked);
         Button PrevBtn = PreviousButton.GetComponent<Button>();
         PrevBtn.onClick.AddListener(PreviousButtonClicked);
+        SetCoinsUI();
         MainPanel();
+        
     }
 
 
@@ -83,5 +87,10 @@ public class ShopPanels : MonoBehaviour
             PanelsList[1].SetActive(false);
             PanelsList[0].SetActive(true);
         }
+    }
+
+    public void SetCoinsUI()
+    {
+        CoinsText.text = CoinManager.Instance.Coins.ToString();
     }
 }

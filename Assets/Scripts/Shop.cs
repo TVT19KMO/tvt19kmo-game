@@ -6,15 +6,14 @@ using UnityEngine.Networking;
 
 public class Shop : MonoBehaviour
 {
-    [System.Serializable] class ShopItem
+    [System.Serializable]
+    class TopImage
     {
         public Sprite Image;
-        public int Price;
-        public bool IsPurchased = false;
     }
 
     [System.Serializable]
-    public class TopsClass
+    public class ItemsClass
     {
         public string type;
         public string name;
@@ -22,69 +21,96 @@ public class Shop : MonoBehaviour
         public int price;
         public string id;
     }
-    [SerializeField] List<TopsClass> TopItemsList;
 
-    [SerializeField] List<ShopItem> ShopItemsList;
+    [System.Serializable]
+    public class Top
+    {
+        public Sprite Image;
+        public string type;
+        public string name;
+        public string color;
+        public int price;
+        public string id;
+        public bool IsPurchased = false;
+    }
+
+    [SerializeField] List<Top> Tops = new List<Top>();
+    [SerializeField] List<TopImage> TopImageList;
 
     GameObject ItemTemplate;
     GameObject g;
     [SerializeField ]Transform ShopScrollView;
-    Button buyBtn;
-    //readonly string getURL = "https://game-management-api.herokuapp.com/api/store/tops";
+    Button buyBtn;    
     readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
 
     void Start ()
     {
-        //ItemTemplate = ShopScrollView.GetChild(0).gameObject;
+        GetTops();        
+        
+    }
 
-        /*int len = ShopItemsList.Count;
-        for (int i = 0; i <= 3; i++)
-        {
-            g = Instantiate(ItemTemplate, ShopScrollView);
-            g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-            g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = ShopItemsList[i].Price.ToString();            
-            buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-            buyBtn.interactable = !ShopItemsList[i].IsPurchased;
-            buyBtn.AddEventListener(i, OnShopItemBtnClicked);
-        }*/
-
-        StartCoroutine(GetTopsRequest( result =>{
+    public void GetTops()
+    {
+        StartCoroutine(GetTopsRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
-            dataString = result;            
-            
-            string jsonString = fixJson(dataString);
-            TopsClass[] items = JsonHelper.FromJson<TopsClass>(jsonString);
-            
-            /*for (int i = 0; i<9; i++)
-            {
-                Debug.Log(tops[i].name + " " + tops[i].color);                
-            }*/
+            dataString = result;
 
-            for (int i = 0; i <= 9; i++)
+            string jsonString = fixJson(dataString);
+            ItemsClass[] items = JsonHelper.FromJson<ItemsClass>(jsonString);
+
+            int q = items.Length - 1;
+
+            for (int i = 0; i < q; i++)
+            {
+                if (items[i].type == "top")
+                {
+                    Tops.Add(new Top
+                    {
+                        type = items[i].type,
+                        name = items[i].name,
+                        color = items[i].color,
+                        price = items[i].price,
+                        id = items[i].id
+                    });
+                }
+
+            }
+
+            foreach (var t in Tops)
+            {
+                //Debug.Log("Item: " + t.type + " " + t.name + " " + t.color + " " + t.price + " " + t.id);
+            }
+
+            int x = TopImageList.Count;
+            for (int i = 0; i < x; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
-                g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;                
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = items[i].price.ToString();
+                g.transform.GetChild(0).GetComponent<Image>().sprite = TopImageList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Tops[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-                buyBtn.interactable = !ShopItemsList[i].IsPurchased;
+                buyBtn.interactable = !Tops[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
             }
             Destroy(ItemTemplate);
         }));
-        //Debug.Log("dataString: " + dataString);        
-        //Destroy(ItemTemplate);
     }
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        //Debug.Log(itemIndex);
-        ShopItemsList[itemIndex].IsPurchased = true;
-        
-        //Disable the buy button
-        buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
-        buyBtn.interactable = false;
-        buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
+        if (CoinManager.Instance.HasEnoughCoins(Tops[itemIndex].price))
+        {
+            CoinManager.Instance.UseCoins(Tops[itemIndex].price);
+            Tops[itemIndex].IsPurchased = true;
+            buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
+            buyBtn.interactable = false;
+            buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
+            Debug.Log(Tops[itemIndex].id);
+        }
+        else
+        {
+            Debug.Log("Ei tarpeeksi kolikoita");
+        }
 
     }
 
@@ -102,33 +128,17 @@ public class Shop : MonoBehaviour
                 result(www.error);
         }
         else
-        {
-            //dataString = www.downloadHandler.text;
-            //Debug.Log("From IEnumerator: " + dataString);
+        {            
             Debug.Log(www.downloadHandler.text);
             if (result != null)
-                result(www.downloadHandler.text);            
-            
-            //string jsonString = fixJson(dataString);            
-            /*TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
-            
-            for (int i = 0; i<5; i++)
-            {
-                Debug.Log(tops[i].name + " " + tops[i].color);                
-            }*/
-            //Debug.Log(top[0].color);
-            //Debug.Log(top[1].color);            
+                result(www.downloadHandler.text); 
         }
 
     }
 
-
-
     string fixJson(string value)
-    {
-        //Debug.Log(value);
-        value = "{\"Items\":" + value + "}";
-        //Debug.Log(value);
+    {        
+        value = "{\"Items\":" + value + "}";        
         return value;
     }
 }

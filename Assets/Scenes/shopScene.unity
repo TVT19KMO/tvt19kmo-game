@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50709918
 GameObject:
@@ -1055,7 +1055,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.62352943, g: 0.53333336, b: 0.101960786, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.8392157, g: 0.7058824, b: 0.06666667, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1380,17 +1380,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422123061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1580261157}
-  m_Father: {fileID: 2142293595}
-  m_RootOrder: 7
+  m_Father: {fileID: 1885132899}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.5, y: -20.390015}
+  m_AnchoredPosition: {x: 24, y: -19.848}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422123063
@@ -1668,7 +1668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663047205
 GameObject:
@@ -1884,7 +1884,7 @@ RectTransform:
   m_Children:
   - {fileID: 2142293595}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2169,9 +2169,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.8392157, g: 0.7058824, b: 0.06666667, a: 1}
     m_HighlightedColor: {r: 0.62352943, g: 0.53333336, b: 0.101960786, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_PressedColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0.49803922}
+    m_SelectedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0.68235296}
+    m_DisabledColor: {r: 0.8392157, g: 0.7058824, b: 0.06666667, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2576,7 +2576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.350891, y: -14.701691}
+  m_AnchoredPosition: {x: 7.350891, y: -14.701721}
   m_SizeDelta: {x: -146.25671, y: -49.9862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016672065
@@ -2940,7 +2940,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.6226415, g: 0.53292173, b: 0.10279457, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.8392157, g: 0.7058824, b: 0.06666667, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3519,7 +3519,7 @@ GameObject:
   - component: {fileID: 1580261159}
   - component: {fileID: 1580261158}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3577,7 +3577,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1500
+  m_Text: 
 --- !u!222 &1580261159
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3990,6 +3990,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683337240}
   m_CullTransparentMesh: 1
+--- !u!1 &1705203539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705203541}
+  - component: {fileID: 1705203540}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1705203540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705203539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454ab3a93e37c8847973dea1a9562cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins: 2000
+--- !u!4 &1705203541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705203539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.392971, y: -9.20244, z: -907.79065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802975536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,6 +4188,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814204653}
   m_CullTransparentMesh: 1
+--- !u!1 &1885132898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885132899}
+  m_Layer: 5
+  m_Name: CoinsHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1885132899
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885132898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 422123062}
+  m_Father: {fileID: 2142293595}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 89.799805, y: -19.899963}
+  m_SizeDelta: {x: 149.5998, y: 39.695984}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1915235538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,7 +4364,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.62352943, g: 0.53333336, b: 0.101960786, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.8392157, g: 0.7058824, b: 0.06666667, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4726,6 +4806,7 @@ GameObject:
   - component: {fileID: 2142293600}
   - component: {fileID: 2142293601}
   - component: {fileID: 2142293602}
+  - component: {fileID: 2142293603}
   m_Layer: 5
   m_Name: Panel_ShopHolder
   m_TagString: Untagged
@@ -4751,7 +4832,7 @@ RectTransform:
   - {fileID: 1683337241}
   - {fileID: 564551313}
   - {fileID: 119128414}
-  - {fileID: 422123062}
+  - {fileID: 1885132899}
   m_Father: {fileID: 805075732}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4810,38 +4891,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba2e8e305e97484a88a713e4998a93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopItemsList: []
-  ShopItemsList:
+  Tops: []
+  TopImageList:
   - Image: {fileID: -2506313818479553514, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 3167703238364451641, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 5657480054514556857, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3244209399350306769, guid: b080a23965661024f99badd96548a351, type: 3}
-    Price: 0
-    IsPurchased: 0
   ShopScrollView: {fileID: 838163626}
   dataString: 
 --- !u!114 &2142293599
@@ -4867,6 +4922,7 @@ MonoBehaviour:
   - {fileID: 1683337240}
   - {fileID: 564551312}
   - {fileID: 119128413}
+  CoinsText: {fileID: 1580261158}
 --- !u!114 &2142293600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4879,20 +4935,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fc5729754a13c4d91f5c6aec6e4260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopItemsList: []
-  ShopItemsList:
+  Bottoms: []
+  BottomImageList:
   - Image: {fileID: -5693902186511285166, guid: dd9668753914fef499a5036f910575dd, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 4673553735903774404, guid: dd9668753914fef499a5036f910575dd, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: -1441530550809970264, guid: dd9668753914fef499a5036f910575dd, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 1720521365801393485, guid: dd9668753914fef499a5036f910575dd, type: 3}
-    Price: 0
-    IsPurchased: 0
   ShopScrollView: {fileID: 1587110065}
   dataString: 
 --- !u!114 &2142293601
@@ -4907,20 +4955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d6069691d22544a9f0c101807400b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HatItemsList: []
-  ShopItemsList:
+  Hats: []
+  HatImageList:
   - Image: {fileID: -4678958772718428666, guid: f32cf83121a852144b4539c59c54d87f, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 1193178739711625474, guid: f32cf83121a852144b4539c59c54d87f, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: -6249378842078586024, guid: f32cf83121a852144b4539c59c54d87f, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 3251456996623605910, guid: f32cf83121a852144b4539c59c54d87f, type: 3}
-    Price: 0
-    IsPurchased: 0
   ShopScrollView: {fileID: 2005454972}
   dataString: 
 --- !u!114 &2142293602
@@ -4935,36 +4975,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e0c71c381f3d24c80a8f6f692ab158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShoeItemsList: []
-  ShopItemsList:
+  Shoes: []
+  ShoeImageList:
   - Image: {fileID: -8461923687830504554, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: -3483716528031372846, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 1241711049622971775, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
   - Image: {fileID: 4692739660858796247, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -8461923687830504554, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -3483716528031372846, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: 1241711049622971775, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: 4692739660858796247, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  - Image: {fileID: -8461923687830504554, guid: 5f920d69e28ce6d4581ce3021501a640, type: 3}
-    Price: 0
-    IsPurchased: 0
-  ShoeItems: []
   ShopScrollView: {fileID: 375168345}
+  coins: 0
   dataString: 
   itemType: 
+--- !u!114 &2142293603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142293594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa91bf4b2bf7e0409a77e5ebc0eeb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataString: 

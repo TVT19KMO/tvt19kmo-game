@@ -7,15 +7,13 @@ using UnityEngine.Networking;
 public class ShopHats : MonoBehaviour
 {
     [System.Serializable]
-    class ShopItem
+    class HatImage
     {
         public Sprite Image;
-        public int Price;
-        public bool IsPurchased = false;
     }
 
     [System.Serializable]
-    public class HatsClass
+    public class ItemsClass
     {
         public string type;
         public string name;
@@ -23,9 +21,21 @@ public class ShopHats : MonoBehaviour
         public int price;
         public string id;
     }
-    [SerializeField] List<HatsClass> HatItemsList;
 
-    [SerializeField] List<ShopItem> ShopItemsList;
+    [System.Serializable]
+    public class Hat
+    {
+        public Sprite Image;
+        public string type;
+        public string name;
+        public string color;
+        public int price;
+        public string id;
+        public bool IsPurchased = false;
+    }
+
+    [SerializeField] List<Hat> Hats = new List<Hat>();
+    [SerializeField] List<HatImage> HatImageList;
 
     GameObject ItemTemplate;
     GameObject g;
@@ -36,56 +46,70 @@ public class ShopHats : MonoBehaviour
 
     void Start()
     {
-        //ItemTemplate = ShopScrollView.GetChild(0).gameObject;
+        GetHats();
+              
+    }
 
-        /*int len = ShopItemsList.Count;
-        for (int i = 0; i <= 3; i++)
-        {
-            g = Instantiate(ItemTemplate, ShopScrollView);
-            g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-            g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = ShopItemsList[i].Price.ToString();            
-            buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-            buyBtn.interactable = !ShopItemsList[i].IsPurchased;
-            buyBtn.AddEventListener(i, OnShopItemBtnClicked);
-        }*/
-
+    void GetHats()
+    {
         StartCoroutine(GetHatsRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
             dataString = result;
 
             string jsonString = fixJson(dataString);
-            HatsClass[] hats = JsonHelper.FromJson<HatsClass>(jsonString);
+            ItemsClass[] items = JsonHelper.FromJson<ItemsClass>(jsonString);
 
-            /*for (int i = 0; i<9; i++)
+            int q = items.Length - 1;
+
+            for (int i = 0; i < q; i++)
             {
-                Debug.Log(hats[i].name + " " + hats[i].color);                
+                if (items[i].type == "hat")
+                {
+                    Hats.Add(new Hat
+                    {
+                        type = items[i].type,
+                        name = items[i].name,
+                        color = items[i].color,
+                        price = items[i].price,
+                        id = items[i].id
+                    });
+                }
+            }
+
+            /*foreach (var h in Hats)
+            {
+                //Debug.Log("Item: " + h.type + " " + h.name + " " + h.color + " " + h.price + " " + h.id);
             }*/
 
-            for (int i = 0; i <= 3; i++)
+            int x = HatImageList.Count;
+            for (int i = 0; i < x; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
-                //g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-                g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = hats[i].price.ToString();
+                g.transform.GetChild(0).GetComponent<Image>().sprite = HatImageList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Hats[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-                buyBtn.interactable = !ShopItemsList[i].IsPurchased;
+                buyBtn.interactable = !Hats[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
             }
             Destroy(ItemTemplate);
         }));
-        //Debug.Log("dataString: " + dataString);        
-        //Destroy(ItemTemplate);
     }
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        //Debug.Log(itemIndex);
-        ShopItemsList[itemIndex].IsPurchased = true;
-
-        //Disable the buy button
-        buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
-        buyBtn.interactable = false;
-        buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
+        if (CoinManager.Instance.HasEnoughCoins(Hats[itemIndex].price))
+        {
+            CoinManager.Instance.UseCoins(Hats[itemIndex].price);
+            Hats[itemIndex].IsPurchased = true;
+            buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
+            buyBtn.interactable = false;
+            buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";            
+            Debug.Log(Hats[itemIndex].id);
+        }
+        else
+        {
+            Debug.Log("Ei tarpeeksi kolikoita");
+        }
 
     }
 
@@ -103,33 +127,17 @@ public class ShopHats : MonoBehaviour
                 result(www.error);
         }
         else
-        {
-            //dataString = www.downloadHandler.text;
-            //Debug.Log("From IEnumerator: " + dataString);
+        {            
             Debug.Log(www.downloadHandler.text);
             if (result != null)
-                result(www.downloadHandler.text);
-
-            //string jsonString = fixJson(dataString);            
-            /*BottomsClass[] bottoms = JsonHelper.FromJson<BottomsClass>(jsonString);
-            
-            for (int i = 0; i<5; i++)
-            {
-                Debug.Log(bottoms[i].name + " " + bottoms[i].color);                
-            }*/
-            //Debug.Log(top[0].color);
-            //Debug.Log(top[1].color);            
+                result(www.downloadHandler.text);                      
         }
 
     }
 
-
-
     string fixJson(string value)
-    {
-        //Debug.Log(value);
-        value = "{\"Items\":" + value + "}";
-        //Debug.Log(value);
+    {        
+        value = "{\"Items\":" + value + "}";        
         return value;
     }
 }
