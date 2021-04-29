@@ -41,15 +41,15 @@ public class CharacterEditor : MonoBehaviour
     public void Start()
     {
         // Haetaan ensin data.cs tiedostosta spritet
-        hats = Data.Hats;
-        tops = Data.Tops;
-        larms = Data.LeftArms;
-        rarms = Data.RightArms;
-        Bottoms = Data.Bottoms;
-        RightLegs = Data.RightLegs;
-        LeftLegs = Data.LeftLegs;
-        leftSneakers = Data.LeftSneakers;
-        rightSneakers = Data.RightSneakers;
+        hats = Data.OwnedHats;
+        tops = Data.OwnedTops;
+        larms = Data.OwnedLeftArms;
+        rarms = Data.OwnedRightArms;
+        Bottoms = Data.OwnedBottoms;
+        RightLegs = Data.OwnedRightLegs;
+        LeftLegs = Data.OwnedLeftLegs;
+        leftSneakers = Data.OwnedLeftSneakers;
+        rightSneakers = Data.OwnedRightSneakers;
         // Tarkistetaan onko laitteella tallennettua hahmoa, ellei ole niin käytetään oletusarvoja
         ChosenHeadColor = PlayerPrefs.GetInt("HeadColor", 1);
         ChosenHat = PlayerPrefs.GetInt("Hat", 0);
