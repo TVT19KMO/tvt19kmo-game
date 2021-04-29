@@ -121,6 +121,10 @@ public class Tasks : MonoBehaviour
             Debug.Log(e.ToString());
         }
     }
+    public void goBack()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
         public class Assignee
     {
         public int balance { get; set; }

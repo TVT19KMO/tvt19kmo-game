@@ -1,55 +1,31 @@
 fileFormatVersion: 2
-guid: d8426f4dce20fb54f9118b76e1d90b46
+guid: 5f920d69e28ce6d4581ce3021501a640
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5600456472141597053
-    second: head
+      213: -8461923687830504554
+    second: sneakers_0
   - first:
-      213: 8919046510080858712
-    second: mouth
+      213: -5126334319753454693
+    second: sneakers_1
   - first:
-      213: -6796085502442231238
-    second: eyes
+      213: -3483716528031372846
+    second: sneakers_2
   - first:
-      213: -3947299412893279836
-    second: sprite1_3
+      213: 8483397505160567099
+    second: sneakers_3
   - first:
-      213: 4400784058098924111
-    second: sprite1_4
+      213: 1241711049622971775
+    second: sneakers_4
   - first:
-      213: -5781116940083297520
-    second: sprite1_5
+      213: -5646316958524099373
+    second: sneakers_5
   - first:
-      213: -3010218184041424332
-    second: sprite1_6
+      213: 4692739660858796247
+    second: sneakers_6
   - first:
-      213: -2427947923139131464
-    second: l-arm
-  - first:
-      213: -7582420806546205588
-    second: top
-  - first:
-      213: -8141543143071777719
-    second: r-arm
-  - first:
-      213: -2048163736357222904
-    second: l-leg
-  - first:
-      213: 1991798887789871252
-    second: bottom
-  - first:
-      213: -2467444553674921849
-    second: r-leg
-  - first:
-      213: -8091161636268029857
-    second: hair
-  - first:
-      213: -2428608352925763270
-    second: l-foot
-  - first:
-      213: 7119942388361565254
-    second: r-foot
+      213: -3578747363009060578
+    second: sneakers_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,34 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: head
+      name: sneakers_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 667
-        width: 322
-        height: 327
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38676f5d28e2742b0800000000000000
-      internalID: -5600456472141597053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouth
-      rect:
-        serializedVersion: 2
-        x: 746
-        y: 672
-        width: 49
-        height: 23
+        x: 0
+        y: 390
+        width: 156
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a9e88bb81d6cb70800000000000000
-      internalID: 8919046510080858712
+      spriteID: 69b36663d35319a80800000000000000
+      internalID: -8461923687830504554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eyes
+      name: sneakers_1
       rect:
         serializedVersion: 2
-        x: 644
-        y: 791
-        width: 226
-        height: 97
+        x: 156
+        y: 390
+        width: 156
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,197 +162,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3aafb32e347fa1a0800000000000000
-      internalID: -6796085502442231238
+      spriteID: b9b933fb81a9bd8b0800000000000000
+      internalID: -5126334319753454693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: l-arm
+      name: sneakers_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 513
-        width: 142
-        height: 125
+        x: 0
+        y: 260
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b7052c4a323e4ed0800000000000000
-      internalID: -2427947923139131464
+      spriteID: 2d96888764a57afc0800000000000000
+      internalID: -3483716528031372846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top
+      name: sneakers_3
       rect:
         serializedVersion: 2
-        x: 225
-        y: 417
-        width: 172
-        height: 214
+        x: 156
+        y: 260
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6458482374d5c690800000000000000
-      internalID: -7582420806546205588
+      spriteID: b39d78f75151bb570800000000000000
+      internalID: 8483397505160567099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-arm
+      name: sneakers_4
       rect:
         serializedVersion: 2
-        x: 435
-        y: 524
-        width: 108
-        height: 117
+        x: 0
+        y: 130
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94c70b9a5ad630f80800000000000000
-      internalID: -8141543143071777719
+      spriteID: f75647aee917b3110800000000000000
+      internalID: 1241711049622971775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: l-leg
+      name: sneakers_5
       rect:
         serializedVersion: 2
-        x: 151
-        y: 174
-        width: 76
-        height: 144
+        x: 156
+        y: 130
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8064794fee57393e0800000000000000
-      internalID: -2048163736357222904
+      spriteID: 3d438e544a044a1b0800000000000000
+      internalID: -5646316958524099373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottom
+      name: sneakers_6
       rect:
         serializedVersion: 2
-        x: 250
-        y: 293
-        width: 140
-        height: 74
+        x: 0
+        y: 0
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490cbb2198a44ab10800000000000000
-      internalID: 1991798887789871252
+      spriteID: 7d820ecbbd5ff1140800000000000000
+      internalID: 4692739660858796247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-leg
+      name: sneakers_7
       rect:
         serializedVersion: 2
-        x: 385
-        y: 170
-        width: 75
-        height: 148
+        x: 156
+        y: 0
+        width: 156
+        height: 130
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 788eb336040e1cdd0800000000000000
-      internalID: -2467444553674921849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hair
-      rect:
-        serializedVersion: 2
-        x: 523
-        y: 179
-        width: 402
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f58c9f15c5b66bf80800000000000000
-      internalID: -8091161636268029857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: l-foot
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 92
-        width: 84
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3930510299db4ed0800000000000000
-      internalID: -2428608352925763270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-foot
-      rect:
-        serializedVersion: 2
-        x: 403
-        y: 99
-        width: 86
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 644998f01ed1fc260800000000000000
-      internalID: 7119942388361565254
+      spriteID: e11aafefb3cb55ec0800000000000000
+      internalID: -3578747363009060578
       vertices: []
       indices: 
       edges: []

@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class Shop : MonoBehaviour
+public class ShopHats : MonoBehaviour
 {
     [System.Serializable]
-    class TopImage
+    class HatImage
     {
         public Sprite Image;
     }
@@ -23,7 +23,7 @@ public class Shop : MonoBehaviour
     }
 
     [System.Serializable]
-    public class Top
+    public class Hat
     {
         public Sprite Image;
         public string type;
@@ -34,25 +34,25 @@ public class Shop : MonoBehaviour
         public bool IsPurchased = false;
     }
 
-    [SerializeField] List<Top> Tops = new List<Top>();
-    [SerializeField] List<TopImage> TopImageList;
+    [SerializeField] List<Hat> Hats = new List<Hat>();
+    [SerializeField] List<HatImage> HatImageList;
 
     GameObject ItemTemplate;
     GameObject g;
-    [SerializeField ]Transform ShopScrollView;
-    Button buyBtn;    
+    [SerializeField] Transform ShopScrollView;
+    Button buyBtn;
     readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
 
-    void Start ()
+    void Start()
     {
-        GetTops();        
-        
+        GetHats();
+              
     }
 
-    public void GetTops()
+    void GetHats()
     {
-        StartCoroutine(GetTopsRequest(result => {
+        StartCoroutine(GetHatsRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
             dataString = result;
 
@@ -63,9 +63,9 @@ public class Shop : MonoBehaviour
 
             for (int i = 0; i < q; i++)
             {
-                if (items[i].type == "top")
+                if (items[i].type == "hat")
                 {
-                    Tops.Add(new Top
+                    Hats.Add(new Hat
                     {
                         type = items[i].type,
                         name = items[i].name,
@@ -74,22 +74,21 @@ public class Shop : MonoBehaviour
                         id = items[i].id
                     });
                 }
-
             }
 
-            foreach (var t in Tops)
+            /*foreach (var h in Hats)
             {
-                //Debug.Log("Item: " + t.type + " " + t.name + " " + t.color + " " + t.price + " " + t.id);
-            }
+                //Debug.Log("Item: " + h.type + " " + h.name + " " + h.color + " " + h.price + " " + h.id);
+            }*/
 
-            int x = TopImageList.Count;
+            int x = HatImageList.Count;
             for (int i = 0; i < x; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
-                g.transform.GetChild(0).GetComponent<Image>().sprite = TopImageList[i].Image;
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Tops[i].price.ToString();
+                g.transform.GetChild(0).GetComponent<Image>().sprite = HatImageList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Hats[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-                buyBtn.interactable = !Tops[i].IsPurchased;
+                buyBtn.interactable = !Hats[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
             }
             Destroy(ItemTemplate);
@@ -98,14 +97,14 @@ public class Shop : MonoBehaviour
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (CoinManager.Instance.HasEnoughCoins(Tops[itemIndex].price))
+        if (CoinManager.Instance.HasEnoughCoins(Hats[itemIndex].price))
         {
-            CoinManager.Instance.UseCoins(Tops[itemIndex].price);
-            Tops[itemIndex].IsPurchased = true;
+            CoinManager.Instance.UseCoins(Hats[itemIndex].price);
+            Hats[itemIndex].IsPurchased = true;
             buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
             buyBtn.interactable = false;
-            buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
-            Debug.Log(Tops[itemIndex].id);
+            buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";            
+            Debug.Log(Hats[itemIndex].id);
         }
         else
         {
@@ -114,9 +113,9 @@ public class Shop : MonoBehaviour
 
     }
 
-    IEnumerator GetTopsRequest( System.Action<string> result)
+    IEnumerator GetHatsRequest(System.Action<string> result)
     {
-        
+
         UnityWebRequest www = UnityWebRequest.Get(getURL);
 
         yield return www.SendWebRequest();
@@ -131,7 +130,7 @@ public class Shop : MonoBehaviour
         {            
             Debug.Log(www.downloadHandler.text);
             if (result != null)
-                result(www.downloadHandler.text); 
+                result(www.downloadHandler.text);                      
         }
 
     }
@@ -143,31 +142,4 @@ public class Shop : MonoBehaviour
     }
 }
 
-public static class JsonHelper
-{
-    public static T[] FromJson<T>(string json)
-    {
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
-        return wrapper.Items;
-    }
 
-    public static string ToJson<T>(T[] array)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper);
-    }
-
-    public static string ToJson<T>(T[] array, bool prettyPrint)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper, prettyPrint);
-    }
-
-    [System.Serializable]
-    private class Wrapper<T>
-    {
-        public T[] Items;
-    }
-}

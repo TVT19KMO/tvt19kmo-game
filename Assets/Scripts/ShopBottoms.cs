@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class Shop : MonoBehaviour
+public class ShopBottoms : MonoBehaviour
 {
     [System.Serializable]
-    class TopImage
+    class BottomImage
     {
         public Sprite Image;
     }
@@ -23,7 +23,7 @@ public class Shop : MonoBehaviour
     }
 
     [System.Serializable]
-    public class Top
+    public class Bottom
     {
         public Sprite Image;
         public string type;
@@ -34,25 +34,27 @@ public class Shop : MonoBehaviour
         public bool IsPurchased = false;
     }
 
-    [SerializeField] List<Top> Tops = new List<Top>();
-    [SerializeField] List<TopImage> TopImageList;
+    [SerializeField] List<Bottom> Bottoms = new List<Bottom>();
+    [SerializeField] List<BottomImage> BottomImageList;
 
     GameObject ItemTemplate;
     GameObject g;
-    [SerializeField ]Transform ShopScrollView;
-    Button buyBtn;    
+    [SerializeField] Transform ShopScrollView;
+    Button buyBtn;
     readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
 
-    void Start ()
+
+
+    void Start()
     {
-        GetTops();        
-        
+        GetBottoms();
+               
     }
 
-    public void GetTops()
+    void GetBottoms()
     {
-        StartCoroutine(GetTopsRequest(result => {
+        StartCoroutine(GetBottomsRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
             dataString = result;
 
@@ -63,9 +65,9 @@ public class Shop : MonoBehaviour
 
             for (int i = 0; i < q; i++)
             {
-                if (items[i].type == "top")
+                if (items[i].type == "bottom")
                 {
-                    Tops.Add(new Top
+                    Bottoms.Add(new Bottom
                     {
                         type = items[i].type,
                         name = items[i].name,
@@ -74,22 +76,21 @@ public class Shop : MonoBehaviour
                         id = items[i].id
                     });
                 }
-
             }
 
-            foreach (var t in Tops)
+            foreach (var b in Bottoms)
             {
-                //Debug.Log("Item: " + t.type + " " + t.name + " " + t.color + " " + t.price + " " + t.id);
+                //Debug.Log("Item: " + b.type + " " + b.name + " " + b.color + " " + b.price + " " + b.id);
             }
 
-            int x = TopImageList.Count;
+            int x = BottomImageList.Count;
             for (int i = 0; i < x; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
-                g.transform.GetChild(0).GetComponent<Image>().sprite = TopImageList[i].Image;
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Tops[i].price.ToString();
+                g.transform.GetChild(0).GetComponent<Image>().sprite = BottomImageList[i].Image;
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Bottoms[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
-                buyBtn.interactable = !Tops[i].IsPurchased;
+                buyBtn.interactable = !Bottoms[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
             }
             Destroy(ItemTemplate);
@@ -98,25 +99,25 @@ public class Shop : MonoBehaviour
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (CoinManager.Instance.HasEnoughCoins(Tops[itemIndex].price))
+        if (CoinManager.Instance.HasEnoughCoins(Bottoms[itemIndex].price))
         {
-            CoinManager.Instance.UseCoins(Tops[itemIndex].price);
-            Tops[itemIndex].IsPurchased = true;
+            CoinManager.Instance.UseCoins(Bottoms[itemIndex].price);
+            Bottoms[itemIndex].IsPurchased = true;
             buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
             buyBtn.interactable = false;
             buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
-            Debug.Log(Tops[itemIndex].id);
+            Debug.Log(Bottoms[itemIndex].id);
         }
         else
         {
             Debug.Log("Ei tarpeeksi kolikoita");
-        }
+        };
 
     }
 
-    IEnumerator GetTopsRequest( System.Action<string> result)
+    IEnumerator GetBottomsRequest(System.Action<string> result)
     {
-        
+
         UnityWebRequest www = UnityWebRequest.Get(getURL);
 
         yield return www.SendWebRequest();
@@ -131,19 +132,20 @@ public class Shop : MonoBehaviour
         {            
             Debug.Log(www.downloadHandler.text);
             if (result != null)
-                result(www.downloadHandler.text); 
+                result(www.downloadHandler.text);
+                        
         }
 
     }
 
     string fixJson(string value)
     {        
-        value = "{\"Items\":" + value + "}";        
+        value = "{\"Items\":" + value + "}";
         return value;
     }
 }
 
-public static class JsonHelper
+/*public static class JsonHelper
 {
     public static T[] FromJson<T>(string json)
     {
@@ -170,4 +172,4 @@ public static class JsonHelper
     {
         public T[] Items;
     }
-}
+}*/
