@@ -15,40 +15,85 @@ public class ShopShoes : MonoBehaviour
     }
 
     [System.Serializable]
-    public class ShoesClass
+    public class ItemsClass
     {
-        public int _id;
+        public string type;
         public string name;
         public string color;
         public int price;
-        public int __v;
+        public string id;
     }
-    [SerializeField] List<ShoesClass> ShoeItemsList;
 
+    [System.Serializable]
+    public class ShoesClass
+    {        
+        public string type;
+        public string name;
+        public string color;
+        public int price;
+        public string id;
+    }
+    
+
+    [SerializeField] List<ShoesClass> ShoeItemsList;
     [SerializeField] List<ShopItem> ShopItemsList;
+    [SerializeField] List<ItemsClass> ShoeItems;
 
     GameObject ItemTemplate;
     GameObject g;
     [SerializeField] Transform ShopScrollView;
     Button buyBtn;
-    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/shoes";
+    
+    //readonly string getURL = "https://game-management-api.herokuapp.com/api/store/shoes";
+    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
+    public string itemType;
+    int k = 0;
+    //ItemsClass[] shoes = new ItemsClass[10];
 
     void Start()
-    {
+    {        
         StartCoroutine(GetShoesRequest(result => {
             ItemTemplate = ShopScrollView.GetChild(0).gameObject;
             dataString = result;
 
-            string jsonString = fixJson(dataString);
-            ShoesClass[] shoes = JsonHelper.FromJson<ShoesClass>(jsonString);
+            string jsonString = fixJson(dataString);            
+            ItemsClass[] items = JsonHelper.FromJson<ItemsClass>(jsonString);
+            ItemsClass[] shoes = JsonHelper.FromJson<ItemsClass>(jsonString);
+            int len = items.Length - 1;
 
-            for (int i = 0; i<9; i++)
-            {
-                Debug.Log(shoes[i].name + " " + shoes[i].color);                
+            for (int i = 0; i < len; i++)
+            {                
+                //Debug.Log(i + " id: " + shoes[i].id + " " + shoes[i].price);
+                if (items[i].type == "shoe")
+                {                    
+                    shoes[k].type = items[i].type;
+                    shoes[k].name = items[i].name;
+                    shoes[k].color = items[i].color;
+                    shoes[k].price = items[i].price;
+                    shoes[k].id = items[i].id;
+                    Debug.Log("Shoe item: " + k + " " + shoes[k].type + " " + shoes[k].name + " " + shoes[i].color + " " + shoes[i].price + " " + shoes[i].id);
+                    k += 1;
+                                        
+                }
+                else if (items[i].type == "hat")
+                {
+                    //Debug.Log("This is a hat");
+                    Debug.Log(items[i].type + " " + items[i].name + " " + items[i].color + " " + items[i].price + " " + items[i].id);
+                }
+                else if (items[i].type == "top")
+                {
+                    //Debug.Log("This is a top");
+                    Debug.Log(items[i].type + " " + items[i].name + " " + items[i].color + " " + items[i].price + " " + items[i].id);
+                }
+                else if (items[i].type == "bottom")
+                {
+                    //Debug.Log("This is a bottom");
+                    Debug.Log(items[i].type + " " + items[i].name + " " + items[i].color + " " + items[i].price + " " + items[i].id);
+                }                   
             }
 
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 8; i++)
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);                
                 g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
@@ -57,15 +102,18 @@ public class ShopShoes : MonoBehaviour
                 buyBtn.interactable = !ShopItemsList[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);
             }
+            
             Destroy(ItemTemplate);
-        }));        
+        }));
+
+        //ItemHandler();
     }
 
     void OnShopItemBtnClicked(int itemIndex)
     {
         //Debug.Log(itemIndex);
         ShopItemsList[itemIndex].IsPurchased = true;
-
+        Debug.Log("Hello from outside scope: " + itemType);
         //Disable the buy button
         buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
         buyBtn.interactable = false;
@@ -75,7 +123,6 @@ public class ShopShoes : MonoBehaviour
 
     IEnumerator GetShoesRequest(System.Action<string> result)
     {
-
         UnityWebRequest www = UnityWebRequest.Get(getURL);
 
         yield return www.SendWebRequest();
@@ -92,7 +139,6 @@ public class ShopShoes : MonoBehaviour
             if (result != null)
                 result(www.downloadHandler.text);                        
         }
-
     }
 
 
@@ -104,4 +150,12 @@ public class ShopShoes : MonoBehaviour
         //Debug.Log(value);
         return value;
     }
+
+    void ItemHandler(string result)
+    {
+        Debug.Log("Item handler called");
+        Debug.Log("This is the result " + result);
+    }
 }
+
+

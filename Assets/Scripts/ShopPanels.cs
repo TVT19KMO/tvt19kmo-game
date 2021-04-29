@@ -13,37 +13,75 @@ public class ShopPanels : MonoBehaviour
     public Button NextButton;
     public Button PreviousButton;
 
-    
+    public GameObject[] PanelsList;  
+
     void Start()
     {
+        
+        Button NextBtn = NextButton.GetComponent<Button>();
+        NextBtn.onClick.AddListener(NextButtonClicked);
+        Button PrevBtn = PreviousButton.GetComponent<Button>();
+        PrevBtn.onClick.AddListener(PreviousButtonClicked);
         MainPanel();
-        //Button NextBtn = NextButton.GetComponent<Button>();
-        //NextBtn.onClick.AddListener(NextButtonClicked);
-        //Button PrevBtn = PreviousButton.GetComponent<Button>();
-        //PrevBtn.onClick.AddListener(PreviousButtonClicked);
     }
 
 
     public void MainPanel()
     {
-        TopsPanel.SetActive(false);
-        BottomsPanel.SetActive(false);
-        HatsPanel.SetActive(false);
-        ShoesPanel.SetActive(true);
+        PanelsList[0].SetActive(true);
+        PanelsList[1].SetActive(false);
+        PanelsList[2].SetActive(false);
+        PanelsList[3].SetActive(false);        
     }
 
     public void NextButtonClicked()
     {
-        Debug.Log("You pushed next button");
-        BottomsPanel.SetActive(true);
-        TopsPanel.SetActive(false);
-        
+        Debug.Log("You pushed next button");        
+        if (PanelsList[0].activeSelf == true)
+        {
+            PanelsList[0].SetActive(false);
+            PanelsList[1].SetActive(true);
+        }
+        else if (PanelsList[1].activeSelf == true)
+        {
+            PanelsList[1].SetActive(false);
+            PanelsList[2].SetActive(true);
+        }
+        else if (PanelsList[2].activeSelf == true)
+        {
+            PanelsList[2].SetActive(false);
+            PanelsList[3].SetActive(true);
+        }
+        else if (PanelsList[3].activeSelf == true)
+        {
+            PanelsList[3].SetActive(false);
+            PanelsList[0].SetActive(true);
+        }
+
     }
 
     public void PreviousButtonClicked()
     {
-        Debug.Log("You pushed previous button");
-        BottomsPanel.SetActive(false);
-        TopsPanel.SetActive(true);
+        Debug.Log("You pushed previous button");        
+        if (PanelsList[0].activeSelf == true)
+        {
+            PanelsList[0].SetActive(false);
+            PanelsList[3].SetActive(true);
+        }
+        else if (PanelsList[3].activeSelf == true)
+        {
+            PanelsList[3].SetActive(false);
+            PanelsList[2].SetActive(true);
+        }
+        else if (PanelsList[2].activeSelf == true)
+        {
+            PanelsList[2].SetActive(false);
+            PanelsList[1].SetActive(true);
+        }
+        else if (PanelsList[1].activeSelf == true)
+        {
+            PanelsList[1].SetActive(false);
+            PanelsList[0].SetActive(true);
+        }
     }
 }

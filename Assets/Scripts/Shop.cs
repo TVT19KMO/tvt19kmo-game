@@ -16,11 +16,11 @@ public class Shop : MonoBehaviour
     [System.Serializable]
     public class TopsClass
     {
-        public int _id;
+        public string type;
         public string name;
         public string color;
         public int price;
-        public int __v;
+        public string id;
     }
     [SerializeField] List<TopsClass> TopItemsList;
 
@@ -30,10 +30,9 @@ public class Shop : MonoBehaviour
     GameObject g;
     [SerializeField ]Transform ShopScrollView;
     Button buyBtn;
-    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/tops";
+    //readonly string getURL = "https://game-management-api.herokuapp.com/api/store/tops";
+    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
-    
-    
 
     void Start ()
     {
@@ -55,7 +54,7 @@ public class Shop : MonoBehaviour
             dataString = result;            
             
             string jsonString = fixJson(dataString);
-            TopsClass[] tops = JsonHelper.FromJson<TopsClass>(jsonString);
+            TopsClass[] items = JsonHelper.FromJson<TopsClass>(jsonString);
             
             /*for (int i = 0; i<9; i++)
             {
@@ -66,7 +65,7 @@ public class Shop : MonoBehaviour
             {
                 g = Instantiate(ItemTemplate, ShopScrollView);
                 g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;                
-                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = tops[i].price.ToString();
+                g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = items[i].price.ToString();
                 buyBtn = g.transform.GetChild(2).GetComponent<Button>();
                 buyBtn.interactable = !ShopItemsList[i].IsPurchased;
                 buyBtn.AddEventListener(i, OnShopItemBtnClicked);

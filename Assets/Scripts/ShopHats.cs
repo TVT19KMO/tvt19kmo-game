@@ -17,11 +17,11 @@ public class ShopHats : MonoBehaviour
     [System.Serializable]
     public class HatsClass
     {
-        public int _id;
+        public string type;
         public string name;
         public string color;
         public int price;
-        public int __v;
+        public string id;
     }
     [SerializeField] List<HatsClass> HatItemsList;
 
@@ -31,7 +31,7 @@ public class ShopHats : MonoBehaviour
     GameObject g;
     [SerializeField] Transform ShopScrollView;
     Button buyBtn;
-    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/hats";
+    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
 
     void Start()

@@ -17,11 +17,11 @@ public class ShopBottoms : MonoBehaviour
     [System.Serializable]
     public class BottomsClass
     {
-        public int _id;
+        public string type;
         public string name;
         public string color;
         public int price;
-        public int __v;
+        public string id;
     }
     [SerializeField] List<BottomsClass> TopItemsList;
 
@@ -31,7 +31,7 @@ public class ShopBottoms : MonoBehaviour
     GameObject g;
     [SerializeField] Transform ShopScrollView;
     Button buyBtn;
-    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/bottoms";
+    readonly string getURL = "https://game-management-api.herokuapp.com/api/store/items";
     public string dataString;
 
 
