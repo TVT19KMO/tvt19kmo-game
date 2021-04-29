@@ -57,4 +57,12 @@ public class PlayerMovementScript : MonoBehaviour
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Platform")
+        {
+            transform.parent = other.gameObject.transform;
+        }
+    }
 }

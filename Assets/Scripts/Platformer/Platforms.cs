@@ -2,13 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platforms : MonoBehaviour
+public class Platforms: MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public Transform pos1, pos2;
+    public float speed;
+    public Transform startPos;
+
+    Vector3 nextPos;
+
+    void Start()
     {
-        if (other.GetComponent<PlayerPlatformer>() != null)
+        nextPos = startPos.position;
+    }
+
+    void Update()
+    {
+        if (transform.position == pos1.position)
         {
-            //GameControllerPlatformer.instance.AddPoint();
+            nextPos = pos2.position;
         }
+        else if (transform.position == pos2.position)
+        {
+            nextPos = pos1.position;
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
 }
