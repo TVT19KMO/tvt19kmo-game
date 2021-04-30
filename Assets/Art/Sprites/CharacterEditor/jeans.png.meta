@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5693902186511285166
-    second: jeans_0
+    second: jeans_leftleg_yellow
   - first:
       213: 4673553735903774404
-    second: jeans_1
+    second: jeans_yellow
   - first:
       213: -1441530550809970264
-    second: jeans_2
+    second: jeans_rightleg_yellow
   - first:
       213: 1720521365801393485
-    second: jeans_3
+    second: jeans_leftleg_red
   - first:
       213: 7540540420438685315
-    second: jeans_4
+    second: jeans_red
   - first:
       213: 7040888629529053950
-    second: jeans_5
+    second: jeans_rightleg_red
   - first:
       213: -1355709254968128136
-    second: jeans_6
+    second: jeans_leftleg_blue
   - first:
       213: -2453215095391238187
-    second: jeans_7
+    second: jeans_blue
   - first:
       213: 6687619804740121330
-    second: jeans_8
+    second: jeans_rightleg_blue
   - first:
       213: -4620092260144989074
-    second: jeans_9
+    second: jeans_leftleg_black
   - first:
       213: -3598140724135745783
-    second: jeans_10
+    second: jeans_black
   - first:
       213: 6839949943110982027
-    second: jeans_11
+    second: jeans_rightleg_black
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jeans_0
+      name: jeans_leftleg_yellow
       rect:
         serializedVersion: 2
         x: 69
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_1
+      name: jeans_yellow
       rect:
         serializedVersion: 2
         x: 105
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_2
+      name: jeans_rightleg_yellow
       rect:
         serializedVersion: 2
         x: 252
@@ -202,10 +202,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_3
+      name: jeans_leftleg_red
       rect:
         serializedVersion: 2
-        x: 427
+        x: 426
         y: 369
         width: 87
         height: 133
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_4
+      name: jeans_red
       rect:
         serializedVersion: 2
         x: 463
@@ -244,11 +244,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_5
+      name: jeans_rightleg_red
       rect:
         serializedVersion: 2
         x: 610
-        y: 373
+        y: 372
         width: 80
         height: 124
       alignment: 9
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_6
+      name: jeans_leftleg_blue
       rect:
         serializedVersion: 2
         x: 76
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_7
+      name: jeans_blue
       rect:
         serializedVersion: 2
         x: 112
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_8
+      name: jeans_rightleg_blue
       rect:
         serializedVersion: 2
         x: 259
@@ -328,11 +328,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_9
+      name: jeans_leftleg_black
       rect:
         serializedVersion: 2
         x: 443
-        y: 70
+        y: 69
         width: 87
         height: 132
       alignment: 9
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_10
+      name: jeans_black
       rect:
         serializedVersion: 2
         x: 479
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeans_11
+      name: jeans_rightleg_black
       rect:
         serializedVersion: 2
         x: 626

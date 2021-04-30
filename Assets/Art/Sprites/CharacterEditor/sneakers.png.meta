@@ -4,28 +4,28 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8461923687830504554
-    second: sneakers_0
+    second: sneakers_left_black
   - first:
       213: -5126334319753454693
-    second: sneakers_1
+    second: sneakers_right_black
   - first:
       213: -3483716528031372846
-    second: sneakers_2
+    second: sneakers_left_yellow
   - first:
       213: 8483397505160567099
-    second: sneakers_3
+    second: sneakers_right_yellow
   - first:
       213: 1241711049622971775
-    second: sneakers_4
+    second: sneakers_left_red
   - first:
       213: -5646316958524099373
-    second: sneakers_5
+    second: sneakers_right_red
   - first:
       213: 4692739660858796247
-    second: sneakers_6
+    second: sneakers_left_blue
   - first:
       213: -3578747363009060578
-    second: sneakers_7
+    second: sneakers_right_blue
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sneakers_0
+      name: sneakers_left_black
       rect:
         serializedVersion: 2
         x: 34
@@ -135,7 +135,7 @@ TextureImporter:
         width: 86
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,7 +148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_1
+      name: sneakers_right_black
       rect:
         serializedVersion: 2
         x: 163
@@ -156,7 +156,7 @@ TextureImporter:
         width: 88
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,15 +169,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_2
+      name: sneakers_left_yellow
       rect:
         serializedVersion: 2
-        x: 43
+        x: 44
         y: 299
         width: 86
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,7 +190,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_3
+      name: sneakers_right_yellow
       rect:
         serializedVersion: 2
         x: 172
@@ -198,7 +198,7 @@ TextureImporter:
         width: 89
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,15 +211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_4
+      name: sneakers_left_red
       rect:
         serializedVersion: 2
         x: 43
-        y: 175
+        y: 173
         width: 86
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -232,7 +232,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_5
+      name: sneakers_right_red
       rect:
         serializedVersion: 2
         x: 172
@@ -240,7 +240,7 @@ TextureImporter:
         width: 89
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,15 +253,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_6
+      name: sneakers_left_blue
       rect:
         serializedVersion: 2
-        x: 50
+        x: 49
         y: 47
         width: 86
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -274,7 +274,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sneakers_7
+      name: sneakers_right_blue
       rect:
         serializedVersion: 2
         x: 179
@@ -282,7 +282,7 @@ TextureImporter:
         width: 88
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4678958772718428666
-    second: Caps_0
+    second: Caps_yellow
   - first:
       213: 1193178739711625474
-    second: Caps_1
+    second: Caps_red
   - first:
       213: -6249378842078586024
-    second: Caps_2
+    second: Caps_blue
   - first:
       213: 3251456996623605910
-    second: Caps_3
+    second: Caps_black
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Caps_0
+      name: Caps_yellow
       rect:
         serializedVersion: 2
         x: 98
@@ -136,7 +136,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Caps_1
+      name: Caps_red
       rect:
         serializedVersion: 2
         x: 607
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Caps_2
+      name: Caps_blue
       rect:
         serializedVersion: 2
         x: 110
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Caps_3
+      name: Caps_black
       rect:
         serializedVersion: 2
         x: 635

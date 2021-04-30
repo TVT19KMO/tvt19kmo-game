@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        headColor = PlayerPrefs.GetInt("HeadColor", 0);
+        headColor = PlayerPrefs.GetInt("HeadColor", 1);
         string HColor = Data.HeadColors[headColor];
         Debug.Log("head color: " + headColor);
         int SneakersColor = PlayerPrefs.GetInt("SneakersColor", 1);
@@ -35,24 +35,24 @@ public class Player : MonoBehaviour
 
         if(SneakersColor != 1)
         {
-            sneakerLeft.sprite = Data.LeftSneakers[SneakersColor-1];
-            sneakerRight.sprite = Data.RightSneakers[SneakersColor-1];
+            sneakerLeft.sprite = Data.OwnedLeftSneakers[SneakersColor-1];
+            sneakerRight.sprite = Data.OwnedRightSneakers[SneakersColor-1];
         }
         if(ChosenHat != 0)
         {
-            hairRenderer.sprite = Data.Hats[ChosenHat];
+            hairRenderer.sprite = Data.OwnedHats[ChosenHat];
         }
         if(ChosenJacket != 0)
         {
-            topRenderer.sprite = Data.Tops[ChosenJacket];
-            leftArmRenderer.sprite = Data.LeftArms[ChosenJacket];
-            rightArmRenderer.sprite = Data.RightArms[ChosenJacket];
+            topRenderer.sprite = Data.OwnedTops[ChosenJacket];
+            leftArmRenderer.sprite = Data.OwnedLeftArms[ChosenJacket];
+            rightArmRenderer.sprite = Data.OwnedRightArms[ChosenJacket];
         }
         if(ChosenPants != 0)
         {
-            bottomRenderer.sprite = Data.Bottoms[ChosenPants];
-            leftLegRenderer.sprite = Data.LeftLegs[ChosenPants];
-            RightLegRenderer.sprite = Data.RightLegs[ChosenPants];
+            bottomRenderer.sprite = Data.OwnedBottoms[ChosenPants];
+            leftLegRenderer.sprite = Data.OwnedLeftLegs[ChosenPants];
+            RightLegRenderer.sprite = Data.OwnedRightLegs[ChosenPants];
         }
     }
 

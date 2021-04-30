@@ -7,132 +7,103 @@ using UnityEngine.UI;
 
 public class CharacterEditor : MonoBehaviour
 {
-    public static CharacterEditor instance;
-
+    // Hahmon määritys, jotta voidaan vaihdella editorissa näkyvän hahmon vaatteita
     public GameObject character;
-
-    public string[] headColors;
-
     public SpriteRenderer head;
-    public int ChosenHeadColor;
-
-    public GameObject LSneaker;
-    public GameObject RSneaker;
-    public SpriteRenderer left_sneaker;
-    public SpriteRenderer right_sneaker;
-    public Sprite[] spriteArray_left;
-    public Sprite[] spriteArray_right;
-    public int ChosenSneaker;
-
-    public GameObject hairSlot;
     public SpriteRenderer caprenderer;
-    public Sprite[] hats;
-    public int ChosenHat;
-
     public SpriteRenderer LeftArm;
     public SpriteRenderer RightArm;
     public SpriteRenderer Top;
-    public Sprite[] larms;
-    public Sprite[] rarms;
-    public Sprite[] tops;
-    public int ChosenJacket;
-
     public SpriteRenderer LeftLeg;
     public SpriteRenderer RightLeg;
     public SpriteRenderer Bottom;
-    public Sprite[] LeftLegs;
-    public Sprite[] RightLegs;
-    public Sprite[] Bottoms;
+    public SpriteRenderer left_sneaker;
+    public SpriteRenderer right_sneaker;
+    // Arrayt, joihin haetaan datasta spritet. Hakee nyt kaikki, myöhemmin dataan lisättävä arrayt joissa vain omistetut itemit
+    public string[] headColors;
+    Sprite[] hats;
+    Sprite[] larms;
+    Sprite[] rarms;
+    Sprite[] tops;
+    Sprite[] LeftLegs;
+    Sprite[] RightLegs;
+    Sprite[] Bottoms;
+    Sprite[] leftSneakers;
+    Sprite[] rightSneakers;
+    public Image squareHeadDisplay;
+    // Playerpreffeihin tallennettavat arvot, jotta muokattu hahmo säilyy samanlaisena pelisessioiden välillä
+    public int ChosenHeadColor;
+    public int ChosenHat;
+    public int ChosenJacket;
     public int ChosenPants;
-    
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+    public int ChosenSneaker;
 
     public void Start()
     {
+        // Haetaan ensin data.cs tiedostosta spritet
+        hats = Data.OwnedHats;
+        tops = Data.OwnedTops;
+        larms = Data.OwnedLeftArms;
+        rarms = Data.OwnedRightArms;
+        Bottoms = Data.OwnedBottoms;
+        RightLegs = Data.OwnedRightLegs;
+        LeftLegs = Data.OwnedLeftLegs;
+        leftSneakers = Data.OwnedLeftSneakers;
+        rightSneakers = Data.OwnedRightSneakers;
+        // Tarkistetaan onko laitteella tallennettua hahmoa, ellei ole niin käytetään oletusarvoja
         ChosenHeadColor = PlayerPrefs.GetInt("HeadColor", 1);
-        Debug.Log(ChosenHeadColor);
+        ChosenHat = PlayerPrefs.GetInt("Hat", 0);
+        ChosenJacket = PlayerPrefs.GetInt("Jacket", 0);
+        ChosenPants = PlayerPrefs.GetInt("Pants", 0);
+        ChosenSneaker = PlayerPrefs.GetInt("SneakersColor", 1);
         Color HColor;
-        if (ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
+        // Rakennetaan hahmoeditoriin hahmo tallennetuilla / oletusarvoilla
+        if(ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
         {
             Debug.Log("toimii");
             head.color = HColor;
         }
-        Data.HeadColors = headColors;
-
-        ChosenSneaker = PlayerPrefs.GetInt("SneakersColor", 1);
-        if (ChosenSneaker != 1)
-        {
-            left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
-            right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
-        }
-        Data.LeftSneakers = spriteArray_left;
-        Data.RightSneakers = spriteArray_right;
-
-        ChosenHat = PlayerPrefs.GetInt("Hat", 0);
-        if (ChosenHat != 0)
+        if(ChosenHat != 0)
         {
             caprenderer.sprite = hats[ChosenHat];
         }
-        Data.Hats = hats;
-
-        ChosenJacket = PlayerPrefs.GetInt("Jacket", 0);
-        if (ChosenJacket != 0)
+        if(ChosenJacket != 0)
         {
             LeftArm.sprite = larms[ChosenJacket];
             RightArm.sprite = rarms[ChosenJacket];
             Top.sprite = tops[ChosenJacket];
         }
-        Data.Tops = tops;
-        Data.LeftArms = larms;
-        Data.RightArms = rarms;
-
-        ChosenPants = PlayerPrefs.GetInt("Pants", 0);
-        if (ChosenPants != 0)
+        if(ChosenPants != 0)
         {
             LeftLeg.sprite = LeftLegs[ChosenPants];
             RightLeg.sprite = RightLegs[ChosenPants];
             Bottom.sprite = Bottoms[ChosenPants];
         }
-        Data.Bottoms = Bottoms;
-        Data.LeftLegs = LeftLegs;
-        Data.RightLegs = RightLegs;
+        if(ChosenSneaker != 1)
+        {
+            left_sneaker.sprite = leftSneakers[ChosenSneaker-1];
+            right_sneaker.sprite = rightSneakers[ChosenSneaker-1];
+        }
+        Data.HeadColors = headColors;
     }
-
-    public void SaveCharacter()
-    {
-        PlayerPrefs.SetInt("HeadColor", ChosenHeadColor);
-        PlayerPrefs.SetInt("SneakersColor", ChosenSneaker);
-        PlayerPrefs.SetInt("Hat", ChosenHat);
-        PlayerPrefs.SetInt("Jacket", ChosenJacket);
-        PlayerPrefs.SetInt("Pants", ChosenPants);
-    }
-
+    /* Hahmoeditorien napeille omat metodit, nappien painelu siis looppaa datasta haettua arraytä läpi ja vaihtaa
+    scenessä näkyvän hahmon vaatteita*/ 
     public void prevHeadColor()
     {
-        if (ChosenHeadColor > 0)
+        if(ChosenHeadColor > 0)
         {
             ChosenHeadColor--;
             setHeadColor();
         }
         else
         {
-            ChosenHeadColor = headColors.Length - 1;
+            ChosenHeadColor = headColors.Length-1;
             setHeadColor();
         }
     }
     public void nextHeadColor()
     {
-        if (ChosenHeadColor < headColors.Length - 1)
+        if(ChosenHeadColor < headColors.Length-1)
         {
             ChosenHeadColor++;
             setHeadColor();
@@ -147,49 +118,16 @@ public class CharacterEditor : MonoBehaviour
     public void setHeadColor()
     {
         Color HColor;
-        if (ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
+        if(ColorUtility.TryParseHtmlString(headColors[ChosenHeadColor], out HColor))
         {
             Debug.Log(ChosenHeadColor);
             head.color = HColor;
         }
     }
-
-    public void NextSneakers()
-    {
-        int SneakerCount = spriteArray_left.Length;
-        if (ChosenSneaker < SneakerCount)
-        {
-            ChosenSneaker++;
-        }
-        else
-        {
-            ChosenSneaker = 1;
-        }
-        left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
-        right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
-        Debug.Log(ChosenSneaker);
-    }
-
-    public void PrevSneakers()
-    {
-        int SneakerCount = spriteArray_left.Length;
-        if (ChosenSneaker > 1)
-        {
-            ChosenSneaker--;
-        }
-        else
-        {
-            ChosenSneaker = SneakerCount;
-        }
-        left_sneaker.sprite = spriteArray_left[ChosenSneaker - 1];
-        right_sneaker.sprite = spriteArray_right[ChosenSneaker - 1];
-        Debug.Log(ChosenSneaker);
-    }
-
     public void nextHat()
     {
         int hatCount = hats.Length;
-        if (ChosenHat < hatCount - 1)
+        if(ChosenHat < hatCount-1)
         {
             ChosenHat++;
         }
@@ -199,24 +137,22 @@ public class CharacterEditor : MonoBehaviour
         }
         caprenderer.sprite = hats[ChosenHat];
     }
-
     public void prevHat()
     {
         int capCount = hats.Length;
-        if (ChosenHat > 0)
+        if(ChosenHat > 0)
         {
             ChosenHat--;
         }
         else
         {
-            ChosenHat = capCount - 1;
+            ChosenHat = capCount-1;
         }
         caprenderer.sprite = hats[ChosenHat];
     }
-
     public void nextJacket()
     {
-        if (ChosenJacket < tops.Length - 1)
+        if(ChosenJacket < tops.Length -1)
         {
             ChosenJacket++;
         }
@@ -228,25 +164,23 @@ public class CharacterEditor : MonoBehaviour
         RightArm.sprite = rarms[ChosenJacket];
         Top.sprite = tops[ChosenJacket];
     }
-
     public void prevJacket()
     {
-        if (ChosenJacket > 0)
+        if(ChosenJacket > 0)
         {
             ChosenJacket--;
         }
         else
         {
-            ChosenJacket = tops.Length - 1;
+            ChosenJacket = tops.Length -1;
         }
         LeftArm.sprite = larms[ChosenJacket];
         RightArm.sprite = rarms[ChosenJacket];
         Top.sprite = tops[ChosenJacket];
     }
-
     public void nextPants()
     {
-        if (ChosenPants < Bottoms.Length - 1)
+        if(ChosenPants < Bottoms.Length-1)
         {
             ChosenPants++;
         }
@@ -258,19 +192,49 @@ public class CharacterEditor : MonoBehaviour
         RightLeg.sprite = RightLegs[ChosenPants];
         Bottom.sprite = Bottoms[ChosenPants];
     }
-
     public void prevPants()
     {
-        if (ChosenPants > 0)
+        if(ChosenPants > 0)
         {
             ChosenPants--;
         }
         else
         {
-            ChosenPants = Bottoms.Length - 1;
+            ChosenPants = Bottoms.Length -1;
         }
         LeftLeg.sprite = LeftLegs[ChosenPants];
         RightLeg.sprite = RightLegs[ChosenPants];
         Bottom.sprite = Bottoms[ChosenPants];
+    }
+    public void NextSneakers()
+    {
+        int SneakerCount = leftSneakers.Length;
+        if(ChosenSneaker < SneakerCount)
+        {
+            ChosenSneaker++;
+        }
+        else
+        {
+            ChosenSneaker = 1;
+        }
+        left_sneaker.sprite = leftSneakers[ChosenSneaker-1];
+        right_sneaker.sprite = rightSneakers[ChosenSneaker-1];
+        Debug.Log(ChosenSneaker);
+    }
+
+    public void PrevSneakers()
+    {
+        int SneakerCount = leftSneakers.Length;
+        if(ChosenSneaker > 1)
+        {
+            ChosenSneaker--;
+        }
+        else
+        {
+            ChosenSneaker = SneakerCount;
+        }
+        left_sneaker.sprite = leftSneakers[ChosenSneaker-1];
+        right_sneaker.sprite = rightSneakers[ChosenSneaker-1];
+        Debug.Log(ChosenSneaker);
     }
 }

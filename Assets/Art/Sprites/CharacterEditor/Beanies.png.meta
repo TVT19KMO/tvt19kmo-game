@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8777248148721259261
-    second: Beanies_0
+    second: Beanies_blue
   - first:
       213: 2107404667530140832
-    second: Beanies_1
+    second: Beanies_red
   - first:
       213: -1571381846520245946
-    second: Beanies_2
+    second: Beanies_black
   - first:
       213: -2699824785766893810
-    second: Beanies_3
+    second: Beanies_yellow
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beanies_0
+      name: Beanies_blue
       rect:
         serializedVersion: 2
         x: 90
@@ -123,7 +123,7 @@ TextureImporter:
         width: 374
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,7 +136,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beanies_1
+      name: Beanies_red
       rect:
         serializedVersion: 2
         x: 539
@@ -144,7 +144,7 @@ TextureImporter:
         width: 374
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beanies_2
+      name: Beanies_black
       rect:
         serializedVersion: 2
         x: 94
@@ -165,7 +165,7 @@ TextureImporter:
         width: 374
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beanies_3
+      name: Beanies_yellow
       rect:
         serializedVersion: 2
         x: 552
@@ -186,7 +186,7 @@ TextureImporter:
         width: 374
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
