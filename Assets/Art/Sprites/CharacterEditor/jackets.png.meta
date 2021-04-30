@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -635786951678377178
-    second: jackets_0
+    second: jackets_leftarm_yellow
   - first:
       213: -893598526990203306
-    second: jackets_1
+    second: jackets_yellow
   - first:
       213: -3402184983803674746
-    second: jackets_2
+    second: jackets_rightarm_yellow
   - first:
       213: 852406532757984458
-    second: jackets_3
+    second: jackets_leftarm_black
   - first:
       213: -894967034920394842
-    second: jackets_4
+    second: jackets_black
   - first:
       213: 1949062446031193874
-    second: jackets_5
+    second: jackets_rightarm_black
   - first:
       213: -2052836410041479597
-    second: jackets_6
+    second: jackets_leftarm_blue
   - first:
       213: 846772600512404385
-    second: jackets_7
+    second: jackets_blue
   - first:
       213: 8062038632080222711
-    second: jackets_8
+    second: jackets_rightarm_blue
   - first:
       213: -3823087069678208743
-    second: jackets_9
+    second: jackets_leftarm_red
   - first:
       213: 6679064706817976550
-    second: jackets_10
+    second: jackets_red
   - first:
       213: -5352166336681787876
-    second: jackets_11
+    second: jackets_rightarm_red
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,15 +139,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jackets_0
+      name: jackets_leftarm_yellow
       rect:
         serializedVersion: 2
         x: 11
-        y: 970
+        y: 969
         width: 153
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_1
+      name: jackets_yellow
       rect:
         serializedVersion: 2
         x: 225
@@ -168,7 +168,7 @@ TextureImporter:
         width: 193
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_2
+      name: jackets_rightarm_yellow
       rect:
         serializedVersion: 2
         x: 512
@@ -189,7 +189,7 @@ TextureImporter:
         width: 135
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_3
+      name: jackets_leftarm_black
       rect:
         serializedVersion: 2
         x: 19
@@ -210,7 +210,7 @@ TextureImporter:
         width: 154
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_4
+      name: jackets_black
       rect:
         serializedVersion: 2
         x: 233
@@ -231,7 +231,7 @@ TextureImporter:
         width: 193
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_5
+      name: jackets_rightarm_black
       rect:
         serializedVersion: 2
         x: 519
@@ -252,7 +252,7 @@ TextureImporter:
         width: 136
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_6
+      name: jackets_leftarm_blue
       rect:
         serializedVersion: 2
         x: 19
@@ -273,7 +273,7 @@ TextureImporter:
         width: 154
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_7
+      name: jackets_blue
       rect:
         serializedVersion: 2
         x: 233
@@ -294,7 +294,7 @@ TextureImporter:
         width: 193
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_8
+      name: jackets_rightarm_blue
       rect:
         serializedVersion: 2
         x: 519
@@ -315,7 +315,7 @@ TextureImporter:
         width: 136
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_9
+      name: jackets_leftarm_red
       rect:
         serializedVersion: 2
         x: 22
@@ -336,7 +336,7 @@ TextureImporter:
         width: 153
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,15 +349,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_10
+      name: jackets_red
       rect:
         serializedVersion: 2
         x: 236
-        y: 27
+        y: 26
         width: 193
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jackets_11
+      name: jackets_rightarm_red
       rect:
         serializedVersion: 2
         x: 523
@@ -378,7 +378,7 @@ TextureImporter:
         width: 135
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

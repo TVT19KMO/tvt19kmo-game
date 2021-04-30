@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8641324620806899164
-    second: Headscarves_1
+    second: Headscarves_yellow
   - first:
       213: -3758650476846579895
-    second: Headscarves_3
+    second: Headscarves_blue
   - first:
       213: 3488383875329856216
-    second: Headscarves_13
+    second: Headscarves_black
   - first:
       213: -706470437582081234
-    second: Headscarves_14
+    second: Headscarves_red
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Headscarves_1
+      name: Headscarves_yellow
       rect:
         serializedVersion: 2
         x: 51
@@ -136,11 +136,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Headscarves_3
+      name: Headscarves_blue
       rect:
         serializedVersion: 2
-        x: 531
-        y: 512
+        x: 527
+        y: 513
         width: 388
         height: 344
       alignment: 9
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Headscarves_13
+      name: Headscarves_black
       rect:
         serializedVersion: 2
         x: 55
@@ -178,11 +178,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Headscarves_14
+      name: Headscarves_red
       rect:
         serializedVersion: 2
         x: 532
-        y: 94
+        y: 95
         width: 387
         height: 343
       alignment: 9

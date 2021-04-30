@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2506313818479553514
-    second: Hoodies_0
+    second: Hoodies_leftarm_black
   - first:
       213: 3167703238364451641
-    second: Hoodies_1
+    second: Hoodies_black
   - first:
       213: 5657480054514556857
-    second: Hoodies_2
+    second: Hoodies_rightarm_black
   - first:
       213: -3244209399350306769
-    second: Hoodies_3
+    second: Hoodies_leftarm_blue
   - first:
       213: -7883315471559780940
-    second: Hoodies_4
+    second: Hoodies_blue
   - first:
       213: -2028574823761980249
-    second: Hoodies_5
+    second: Hoodies_rightarm_blue
   - first:
       213: 4032059017175250507
-    second: Hoodies_6
+    second: Hoodies_leftarm_red
   - first:
       213: 1307863563581847630
-    second: Hoodies_7
+    second: Hoodies_red
   - first:
       213: 1598376239736250545
-    second: Hoodies_8
+    second: Hoodies_redarm_red
   - first:
       213: 8567465720437790652
-    second: Hoodies_9
+    second: Hoodies_leftarm_yellow
   - first:
       213: -4903377477366179134
-    second: Hoodies_10
+    second: hoodies_yellow
   - first:
       213: -3252574589414849276
-    second: Hoodies_11
+    second: Hoodies_rightarm_yellow
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hoodies_0
+      name: Hoodies_leftarm_black
       rect:
         serializedVersion: 2
         x: 36
@@ -147,7 +147,7 @@ TextureImporter:
         width: 150
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_1
+      name: Hoodies_black
       rect:
         serializedVersion: 2
         x: 244
@@ -168,7 +168,7 @@ TextureImporter:
         width: 212
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_2
+      name: Hoodies_rightarm_black
       rect:
         serializedVersion: 2
         x: 535
@@ -189,7 +189,7 @@ TextureImporter:
         width: 128
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_3
+      name: Hoodies_leftarm_blue
       rect:
         serializedVersion: 2
         x: 53
@@ -210,7 +210,7 @@ TextureImporter:
         width: 151
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_4
+      name: Hoodies_blue
       rect:
         serializedVersion: 2
         x: 261
@@ -231,7 +231,7 @@ TextureImporter:
         width: 212
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_5
+      name: Hoodies_rightarm_blue
       rect:
         serializedVersion: 2
         x: 552
@@ -252,7 +252,7 @@ TextureImporter:
         width: 128
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_6
+      name: Hoodies_leftarm_red
       rect:
         serializedVersion: 2
         x: 55
@@ -273,7 +273,7 @@ TextureImporter:
         width: 150
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_7
+      name: Hoodies_red
       rect:
         serializedVersion: 2
         x: 262
@@ -294,7 +294,7 @@ TextureImporter:
         width: 212
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_8
+      name: Hoodies_redarm_red
       rect:
         serializedVersion: 2
         x: 554
@@ -315,7 +315,7 @@ TextureImporter:
         width: 128
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_9
+      name: Hoodies_leftarm_yellow
       rect:
         serializedVersion: 2
         x: 70
@@ -336,7 +336,7 @@ TextureImporter:
         width: 151
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_10
+      name: hoodies_yellow
       rect:
         serializedVersion: 2
         x: 278
@@ -357,7 +357,7 @@ TextureImporter:
         width: 211
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hoodies_11
+      name: Hoodies_rightarm_yellow
       rect:
         serializedVersion: 2
         x: 569
@@ -378,7 +378,7 @@ TextureImporter:
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

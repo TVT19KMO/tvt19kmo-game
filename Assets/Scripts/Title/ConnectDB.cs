@@ -185,6 +185,9 @@ public class ConnectDB : MonoBehaviour
     }
     public void saveOwnedItems()
     {
+        //Alustetaan ihonvärit myös tässä
+        string[] hcolors = new string[] {"#FFD6C4", "#E7A98D", "#CF8968", "#95593D", "#5E331F"};
+        Data.HeadColors = hcolors;
         foreach(string id in ownedItems){
             // Typerä tapa tallentaa omistetut spritet dataan, mutta en vaan keksi parempaa nyt :D
             // Eli tässä käydään läpi kaikki omistettujen itemeiden id:t, ja manuaalisesti laitettu tietty id vastaamaan tiettyä spriteä.
@@ -193,13 +196,13 @@ public class ConnectDB : MonoBehaviour
                 // Hats
                 case "6088379fbfcad20c0e8cec6b":
                 {
-                    Ownedhats.Add(hats[6]);
+                    Ownedhats.Add(hats[7]);
                     Debug.Log("blue cap");
                     break;
                 }
                 case "6088379fbfcad20c0e8cec6c":
                 {
-                    Ownedhats.Add(hats[8]);
+                    Ownedhats.Add(hats[6]);
                     Debug.Log("red cap");
                     break;
                 }
@@ -211,7 +214,7 @@ public class ConnectDB : MonoBehaviour
                 }
                 case "6088379fbfcad20c0e8cec6e":
                 {
-                    Ownedhats.Add(hats[7]);
+                    Ownedhats.Add(hats[8]);
                     Debug.Log("black cap");
                     break;
                 }
@@ -392,9 +395,9 @@ public class ConnectDB : MonoBehaviour
                 }
                 case "6088379fbfcad20c0e8cec87":
                 {
-                    Ownedbottoms.Add(bottoms[4]);
-                    OwnedleftLegs.Add(leftLegs[4]);
-                    OwnedrightLegs.Add(rightLegs[4]);
+                    Ownedbottoms.Add(bottoms[3]);
+                    OwnedleftLegs.Add(leftLegs[3]);
+                    OwnedrightLegs.Add(rightLegs[3]);
                     Debug.Log("blue jeans");
                     break;
                 }
@@ -416,9 +419,9 @@ public class ConnectDB : MonoBehaviour
                 }
                 case "6088379fbfcad20c0e8cec8a":
                 {
-                    Ownedbottoms.Add(bottoms[3]);
-                    OwnedleftLegs.Add(leftLegs[3]);
-                    OwnedrightLegs.Add(rightLegs[3]);
+                    Ownedbottoms.Add(bottoms[4]);
+                    OwnedleftLegs.Add(leftLegs[4]);
+                    OwnedrightLegs.Add(rightLegs[4]);
                     Debug.Log("black jeans");
                     break;
                 }
