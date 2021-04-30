@@ -130,9 +130,9 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
-        position: {x: 237.28177, y: 180.13232, z: 0}
-        rotation: {x: 0, y: 0, z: 0.7923842, w: 0.61002237}
-        length: 161.8555
+        position: {x: 228.01147, y: 164.31836, z: 0}
+        rotation: {x: 0, y: 0, z: 0.7417937, w: 0.67062813}
+        length: 176.36679
         parentId: -1
       spriteID: 42ab7f38a09d31880800000000000000
       internalID: -8641324620806899164
@@ -740,9 +740,9 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
-        position: {x: 237.28174, y: 180.13232, z: 0}
-        rotation: {x: 0, y: 0, z: 0.7923842, w: 0.61002237}
-        length: 161.8555
+        position: {x: 228.01147, y: 164.31836, z: 0}
+        rotation: {x: 0, y: 0, z: 0.7417937, w: 0.67062813}
+        length: 176.36679
         parentId: -1
       spriteID: 94ff4b43e4796dbc0800000000000000
       internalID: -3758650476846579895
@@ -1350,9 +1350,9 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
-        position: {x: 237.28177, y: 180.13232, z: 0}
-        rotation: {x: 0, y: 0, z: 0.7923842, w: 0.61002237}
-        length: 161.8555
+        position: {x: 228.01147, y: 164.31836, z: 0}
+        rotation: {x: 0, y: 0, z: 0.7417937, w: 0.67062813}
+        length: 176.36679
         parentId: -1
       spriteID: 8d29c3107aa396030800000000000000
       internalID: 3488383875329856216
@@ -1960,9 +1960,9 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: bone_1
-        position: {x: 237.28174, y: 180.13232, z: 0}
-        rotation: {x: 0, y: 0, z: 0.7923842, w: 0.61002237}
-        length: 161.8555
+        position: {x: 228.01147, y: 164.31836, z: 0}
+        rotation: {x: 0, y: 0, z: 0.7417937, w: 0.67062813}
+        length: 176.36679
         parentId: -1
       spriteID: e23fa9b41ec1236f0800000000000000
       internalID: -706470437582081234
