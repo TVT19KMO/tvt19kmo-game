@@ -2205,6 +2205,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 423513627}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: hitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fdcbe7dbf859ecc47a53d77399aa6b35, type: 3}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: winClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f825f09e2b14d04a85f96ffb7aa26a7, type: 3}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 423513625}
@@ -7405,10 +7413,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1430968098, guid: aa2518e13cd6337438df94c5d7981e0b, type: 3}
-      propertyPath: jumpClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d69bbd232e96abe49a69540c0ada77a8, type: 3}
     - target: {fileID: 1430968098, guid: aa2518e13cd6337438df94c5d7981e0b, type: 3}
       propertyPath: variableJoystick
       value: 

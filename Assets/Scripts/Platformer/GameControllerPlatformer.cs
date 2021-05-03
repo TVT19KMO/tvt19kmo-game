@@ -14,6 +14,8 @@ public class GameControllerPlatformer : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip coinClip;
+    public AudioClip hitClip;
+    public AudioClip winClip;
 
     public Text coinText;
     public Text gameOverText;
@@ -75,6 +77,7 @@ public class GameControllerPlatformer : MonoBehaviour
 
         if (gameFinished)
         {
+            audioSource.PlayOneShot(winClip);
             if (timer/maxtime <= 0.25)
             {
                 timerStars = 3;
@@ -93,6 +96,7 @@ public class GameControllerPlatformer : MonoBehaviour
         }
         else
         {
+            audioSource.PlayOneShot(hitClip);
             gameOverText.text = "Kolikot: " + coins +
             "\nAika: 0* / 3*";
         }

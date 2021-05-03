@@ -67,30 +67,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.02369985, y: -1.2911236}
   m_Size: {x: 2.1860836, y: 3.6317468}
   m_Direction: 0
---- !u!114 &1430968098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181470616976656108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826e03ac35e397c43b766011bce4fca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  variableJoystick: {fileID: 0}
-  rb: {fileID: 1430968099}
-  JumpForce: 11
-  MovementSpeed: 5
-  MaxSpeed: 11
-  AirSpeed: 0.2
-  groundCheck: {fileID: 1456647195}
-  collisionlayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  jumpCLip: {fileID: 8300000, guid: d69bbd232e96abe49a69540c0ada77a8, type: 3}
 --- !u!82 &1006872677522842622
 AudioSource:
   m_ObjectHideFlags: 0
@@ -187,6 +163,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1430968098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181470616976656108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826e03ac35e397c43b766011bce4fca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  variableJoystick: {fileID: 0}
+  rb: {fileID: 1430968099}
+  JumpForce: 11
+  MovementSpeed: 5
+  MaxSpeed: 11
+  AirSpeed: 0.2
+  groundCheck: {fileID: 1456647195}
+  collisionlayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  jumpClip: {fileID: 8300000, guid: d69bbd232e96abe49a69540c0ada77a8, type: 3}
 --- !u!1001 &181470617988019609
 PrefabInstance:
   m_ObjectHideFlags: 0
