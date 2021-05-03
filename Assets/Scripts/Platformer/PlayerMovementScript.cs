@@ -34,6 +34,8 @@ public class PlayerMovementScript : MonoBehaviour
         {
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         }
+
+
     }
 
     void FixedUpdate()
@@ -43,8 +45,9 @@ public class PlayerMovementScript : MonoBehaviour
         if(isGrounded)
         {
             rb.velocity = new Vector2(variableJoystick.Horizontal * speed, rb.velocity.y);
- //           rb.AddForce(Vector2.right* variableJoystick.Horizontal * MovementSpeed, ForceMode2D.Impulse);
- //           rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+            //           rb.AddForce(Vector2.right* variableJoystick.Horizontal * MovementSpeed, ForceMode2D.Impulse);
+            //           rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+
         }
         else
         {
@@ -52,6 +55,27 @@ public class PlayerMovementScript : MonoBehaviour
             rb.AddForce(Vector2.up* variableJoystick.Vertical * AirSpeed, ForceMode2D.Impulse);
             rb.velocity = new Vector2(variableJoystick.Horizontal * speed, rb.velocity.y);
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+            
+        }
+
+        if (rb.velocity.x > 0) 
+        {
+            animator.SetBool("isRunning", true);
+        }
+
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("isJumping", true);
+        }
+
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 

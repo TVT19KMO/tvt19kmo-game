@@ -11,6 +11,8 @@ public class PlayerHouse : MonoBehaviour
     Vector2 lookDirection;
     private Vector2 newPosition;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
