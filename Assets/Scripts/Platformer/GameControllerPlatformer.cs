@@ -12,7 +12,9 @@ public class GameControllerPlatformer : MonoBehaviour
     public GameObject UI;
     public GameObject GameOverMenu;
 
-    public AudioSource BackgroundMusic;
+    public AudioSource audioSource;
+    public AudioClip coinClip;
+
     public Text coinText;
     public Text gameOverText;
     public Text timeText;
@@ -69,7 +71,7 @@ public class GameControllerPlatformer : MonoBehaviour
     {
         gamePaused = true;
         Time.timeScale = 0;
-        BackgroundMusic.Pause();
+        audioSource.Pause();
 
         if (gameFinished)
         {
@@ -115,5 +117,6 @@ public class GameControllerPlatformer : MonoBehaviour
         coins++;
         Debug.Log("Coins: " + coins);
         coinText.text = "Pisteet: " + coins;
+        audioSource.PlayOneShot(coinClip);
     }
 }

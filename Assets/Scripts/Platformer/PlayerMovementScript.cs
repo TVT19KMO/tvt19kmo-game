@@ -18,9 +18,14 @@ public class PlayerMovementScript : MonoBehaviour
 
     Animator animator;
 
+    AudioSource audioSource;
+    public AudioClip jumpClip;
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -55,6 +60,7 @@ public class PlayerMovementScript : MonoBehaviour
         if(isGrounded)
         {
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            audioSource.PlayOneShot(jumpClip);
         }
     }
 

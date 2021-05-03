@@ -2205,10 +2205,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 423513627}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
-      propertyPath: maxtime
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 423513625}
@@ -2217,6 +2213,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 423513628}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1036097037}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 736655388}
@@ -2224,10 +2224,6 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 736655387}
-    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
-      propertyPath: BackgroundMusic
-      value: 
-      objectReference: {fileID: 1036097037}
     - target: {fileID: 3591002634035329814, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: m_Name
       value: GameControllerPlatformer
@@ -7409,6 +7405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1430968098, guid: aa2518e13cd6337438df94c5d7981e0b, type: 3}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d69bbd232e96abe49a69540c0ada77a8, type: 3}
     - target: {fileID: 1430968098, guid: aa2518e13cd6337438df94c5d7981e0b, type: 3}
       propertyPath: variableJoystick
       value: 
