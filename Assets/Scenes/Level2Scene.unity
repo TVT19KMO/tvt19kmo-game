@@ -196,6 +196,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1736768160}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 90490728}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 615164636}

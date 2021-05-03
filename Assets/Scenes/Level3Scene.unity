@@ -10013,6 +10013,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1733122585}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2093002967}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 1410848782}
