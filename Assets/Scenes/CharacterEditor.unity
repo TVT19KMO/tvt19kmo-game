@@ -153,116 +153,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1338378124}
+  head: {fileID: 751423874}
+  caprenderer: {fileID: 1575048120}
+  LeftArm: {fileID: 461672290}
+  RightArm: {fileID: 434453756}
+  Top: {fileID: 272241108}
+  LeftLeg: {fileID: 573381546}
+  RightLeg: {fileID: 315500793}
+  Bottom: {fileID: 983437248}
+  left_sneaker: {fileID: 294587938}
+  right_sneaker: {fileID: 1882056000}
   headColors:
   - '#FFD6C4'
   - '#E7A98D'
   - '#CF8968'
   - '#95593D'
   - '#5E331F'
-  head: {fileID: 751423874}
+  squareHeadDisplay: {fileID: 0}
   ChosenHeadColor: 0
-  LSneaker: {fileID: 294587936}
-  RSneaker: {fileID: 1882055998}
-  left_sneaker: {fileID: 294587938}
-  right_sneaker: {fileID: 1882056000}
-  spriteArray_left:
-  - {fileID: -2428608352925763270, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -8461923687830504554, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: -3483716528031372846, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: 1241711049622971775, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: 4692739660858796247, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  spriteArray_right:
-  - {fileID: 7119942388361565254, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -5126334319753454693, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: 8483397505160567099, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: -5646316958524099373, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  - {fileID: -3578747363009060578, guid: 98c64d9741345844fa89e500b6b87c83, type: 3}
-  ChosenSneaker: 0
-  hairSlot: {fileID: 1575048118}
-  caprenderer: {fileID: 1575048120}
-  hats:
-  - {fileID: -8091161636268029857, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -4678958772718428666, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
-  - {fileID: 1193178739711625474, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
-  - {fileID: -6249378842078586024, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
-  - {fileID: 3251456996623605910, guid: 280c9aa78eba6624aa9f8eb1ef2b5906, type: 3}
-  - {fileID: 8777248148721259261, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
-  - {fileID: 2107404667530140832, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
-  - {fileID: -1571381846520245946, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
-  - {fileID: -2699824785766893810, guid: ba77ddab8328eae449c57179155f0d61, type: 3}
-  - {fileID: -8641324620806899164, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
-  - {fileID: -3758650476846579895, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
-  - {fileID: 3488383875329856216, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
-  - {fileID: -706470437582081234, guid: 7cd35c6b53f29e84c96458e7db1fbae0, type: 3}
   ChosenHat: 0
-  LeftArm: {fileID: 461672290}
-  RightArm: {fileID: 434453756}
-  Top: {fileID: 272241108}
-  larms:
-  - {fileID: -2427947923139131464, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -635786951678377178, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 852406532757984458, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: -2052836410041479597, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: -3823087069678208743, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: -2506313818479553514, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: -3244209399350306769, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: 4032059017175250507, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: 8567465720437790652, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  rarms:
-  - {fileID: -8141543143071777719, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -3402184983803674746, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 1949062446031193874, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 8062038632080222711, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: -5352166336681787876, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 5657480054514556857, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: -2028574823761980249, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: 1598376239736250545, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: -3252574589414849276, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  tops:
-  - {fileID: -7582420806546205588, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -893598526990203306, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: -894967034920394842, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 846772600512404385, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 6679064706817976550, guid: 3f2c086f43f6a48409794a8b91024daa, type: 3}
-  - {fileID: 3167703238364451641, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: -7883315471559780940, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: 1307863563581847630, guid: 7c88436b00b075740a994332e440dedb, type: 3}
-  - {fileID: -4903377477366179134, guid: 7c88436b00b075740a994332e440dedb, type: 3}
   ChosenJacket: 0
-  LeftLeg: {fileID: 573381546}
-  RightLeg: {fileID: 315500793}
-  Bottom: {fileID: 983437248}
-  LeftLegs:
-  - {fileID: -2048163736357222904, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: 111648954039052082, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 4303492702523705550, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 1872297914089251990, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 519523472987302529, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: -5693902186511285166, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: 1720521365801393485, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: -1355709254968128136, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: -4620092260144989074, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  RightLegs:
-  - {fileID: -2467444553674921849, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: 2425370133987659017, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: -5091526601486579408, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 8586216748956986914, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 7675136321776371872, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: -1441530550809970264, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: 7040888629529053950, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: 6687619804740121330, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: 6839949943110982027, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  Bottoms:
-  - {fileID: 1991798887789871252, guid: d8426f4dce20fb54f9118b76e1d90b46, type: 3}
-  - {fileID: -5213736225766107966, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 1778495745541916285, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 6159646743902499554, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: -353160575951561974, guid: cb246cc8634af284e93656facc5b72fb, type: 3}
-  - {fileID: 4673553735903774404, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: 7540540420438685315, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: -2453215095391238187, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
-  - {fileID: -3598140724135745783, guid: 7c962308e5a910d4c8eb5f72d560dde3, type: 3}
   ChosenPants: 0
+  ChosenSneaker: 0
 --- !u!4 &228015
 Transform:
   m_ObjectHideFlags: 0
@@ -882,7 +794,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b9d7dae8d3514784681adb3622e8181f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4d18bf9e81e78934ea996d3f0a0ef0ae, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -985,11 +897,6 @@ Transform:
 --- !u!212 &272241108 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1642532988, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
-  m_PrefabInstance: {fileID: 1627444636}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &294587936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1900843144, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
   m_PrefabInstance: {fileID: 1627444636}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &294587938 stripped
@@ -1247,7 +1154,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 104480809}
         m_TargetAssemblyTypeName: EditorToMapTransition, Assembly-CSharp
-        m_MethodName: EditorToMap
+        m_MethodName: ToMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2277,7 +2184,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 712813be174b85242b47883a11e5f58f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c4ab1799df9a79148a445e4c9ba3356d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.513
   m_Pitch: 1
@@ -3721,11 +3628,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499331642}
   m_CullTransparentMesh: 1
---- !u!1 &1575048118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1621828321, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
-  m_PrefabInstance: {fileID: 1627444636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1575048120 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1621828322, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
@@ -4089,11 +3991,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751106854}
   m_CullTransparentMesh: 1
---- !u!1 &1882055998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 65921237, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
-  m_PrefabInstance: {fileID: 1627444636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1882056000 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 65921238, guid: 302a02c6f06998145b7d150f587c73f2, type: 3}
@@ -4798,7 +4695,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cfb6043bf43c9314aa7a8a62d52242e6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be519839e02b6184e9f02ad9211fb2be, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
