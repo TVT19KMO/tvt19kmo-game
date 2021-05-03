@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+using System;
+using System.Net;
+using System.IO;
+using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
+
 public class ShopShoes : MonoBehaviour
 {
     [System.Serializable]
@@ -56,21 +62,44 @@ public class ShopShoes : MonoBehaviour
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (CoinManager.Instance.HasEnoughCoins(Shoes[itemIndex].price))
+        string url = "http://game-management-api.herokuapp.com/api/store/purchase";
+        string token = PlayerPrefs.GetString("ParentToken", "");
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        request.Headers.Add("Authorization", "bearer " + token);
+        request.ContentType = "application/json";
+        request.Method = "POST";
+        Debug.Log("buyItem called");
+        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
         {
+            string json = "{ \"item\": \"" + Shoes[itemIndex].id + "\"}";
+            streamWriter.Write(json);
+            Debug.Log("postataan " + json);
+        }
+        try
+        {
+            WebResponse response = request.GetResponse();
+            Stream datastream = response.GetResponseStream();
+            StreamReader streamReader = new StreamReader(datastream);
+            string msg = streamReader.ReadToEnd();
+            Debug.Log(msg);
+            Debug.Log("buyItem onnistui!");
             CoinManager.Instance.UseCoins(Shoes[itemIndex].price);
             Shoes[itemIndex].IsPurchased = true;
             buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
             buyBtn.interactable = false;
             buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
-            coins -= Shoes[itemIndex].price;
             Debug.Log(Shoes[itemIndex].id);
         }
-        else
+        catch (WebException e)
         {
-            Debug.Log("Ei tarpeeksi kolikoita");
+            if (e.Status == WebExceptionStatus.ProtocolError)
+            {
+                string response = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                Debug.Log("buyItems ei onnistunut!");
+                Debug.Log(response);
+            }
         }
-        
+
     }
 
     public void GetShoes()
@@ -135,7 +164,7 @@ public class ShopShoes : MonoBehaviour
         }
         else
         {            
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
             if (result != null)
                 result(www.downloadHandler.text);                        
         }

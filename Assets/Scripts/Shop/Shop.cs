@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+using System;
+using System.Net;
+using System.IO;
+using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
+
 public class Shop : MonoBehaviour
 {
     [System.Serializable]
@@ -46,8 +52,7 @@ public class Shop : MonoBehaviour
 
     void Start ()
     {
-        GetTops();        
-        
+        GetTops();
     }
 
     public void GetTops()
@@ -74,13 +79,12 @@ public class Shop : MonoBehaviour
                         id = items[i].id
                     });
                 }
-
             }
 
-            foreach (var t in Tops)
+            /*foreach (var t in Tops)
             {
-                //Debug.Log("Item: " + t.type + " " + t.name + " " + t.color + " " + t.price + " " + t.id);
-            }
+                Debug.Log("Item: " + t.type + " " + t.name + " " + t.color + " " + t.price + " " + t.id);
+            }*/
 
             int x = TopImageList.Count;
             for (int i = 0; i < x; i++)
@@ -98,8 +102,27 @@ public class Shop : MonoBehaviour
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (CoinManager.Instance.HasEnoughCoins(Tops[itemIndex].price))
+        string url = "http://game-management-api.herokuapp.com/api/store/purchase";
+        string token = PlayerPrefs.GetString("ParentToken", "");
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        request.Headers.Add("Authorization", "bearer " + token);
+        request.ContentType = "application/json";
+        request.Method = "POST";
+        Debug.Log("buyItem called");
+        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
         {
+            string json = "{ \"item\": \"" + Tops[itemIndex].id + "\"}";
+            streamWriter.Write(json);
+            Debug.Log("postataan " + json);
+        }
+        try
+        {
+            WebResponse response = request.GetResponse();
+            Stream datastream = response.GetResponseStream();
+            StreamReader streamReader = new StreamReader(datastream);
+            string msg = streamReader.ReadToEnd();
+            Debug.Log(msg);
+            Debug.Log("buyItem onnistui!");
             CoinManager.Instance.UseCoins(Tops[itemIndex].price);
             Tops[itemIndex].IsPurchased = true;
             buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
@@ -107,9 +130,14 @@ public class Shop : MonoBehaviour
             buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
             Debug.Log(Tops[itemIndex].id);
         }
-        else
+        catch (WebException e)
         {
-            Debug.Log("Ei tarpeeksi kolikoita");
+            if (e.Status == WebExceptionStatus.ProtocolError)
+            {
+                string response = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                Debug.Log("buyItems ei onnistunut!");
+                Debug.Log(response);
+            }
         }
 
     }
@@ -129,7 +157,7 @@ public class Shop : MonoBehaviour
         }
         else
         {            
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
             if (result != null)
                 result(www.downloadHandler.text); 
         }
