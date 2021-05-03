@@ -16,6 +16,10 @@ public class Tasks : MonoBehaviour
     public Text roomtext;
     public Text difficultytext;
     List<RoomCodes> ListOfRooms = new List<RoomCodes>();
+    public Transform ShopScrollView;
+    GameObject ItemTemplate;
+    GameObject g;
+    List<Root> TaskList = new List<Root>();
     List<DifficultyCodes> ListOfDifficulties = new List<DifficultyCodes>();
     void Start()
     {
@@ -31,6 +35,7 @@ public class Tasks : MonoBehaviour
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
         request.Headers.Add("Authorization", "bearer " + token);
         Debug.Log("get called");
+        ItemTemplate = ShopScrollView.GetChild(0).gameObject;
         try
         {
             WebResponse response = request.GetResponse();
@@ -41,12 +46,16 @@ public class Tasks : MonoBehaviour
             var root = JsonConvert.DeserializeObject<List<Root>>(msg);
             foreach(Root r in root)
             {
-                Debug.Log("name: " + r.task.name);
-                nametext.text = "Tehtävä: " + r.task.name;
-                Debug.Log("note: " + r.task.note);
-                notetext.text = "Lisähuomio: " + r.task.note;
-                string roomid = r.task.room;
-                string difficultyid = r.task.difficulty;
+                TaskList.Add(r);
+            }
+            for(int i = 0; i < TaskList.Count; i++){
+                g = Instantiate(ItemTemplate, ShopScrollView);
+                g.transform.GetChild(0).GetComponent<Text>().text = TaskList[i].task.name;
+                g.transform.GetChild(1).GetComponent<Text>().text = "Lisähuomio: " + TaskList[i].task.note;
+                Debug.Log("name: " + TaskList[i].task.name);
+                Debug.Log("note: " + TaskList[i].task.note);
+                string roomid = TaskList[i].task.room;
+                string difficultyid = TaskList[i].task.difficulty;
                 string roomname ="";
                 string difficultyname = "";
                 foreach(RoomCodes rc in ListOfRooms)
@@ -57,7 +66,8 @@ public class Tasks : MonoBehaviour
                     }
                 }
                 Debug.Log("room: " + roomname);
-                roomtext.text = "Tehtävän sijainti: " + roomname;
+                g.transform.GetChild(2).GetComponent<Text>().text = "Tehtävän sijainti: " + roomname;
+                //roomtext.text = "Tehtävän sijainti: " + roomname;
                 foreach(DifficultyCodes dc in ListOfDifficulties)
                 {
                     if(dc.id == difficultyid)
@@ -66,8 +76,9 @@ public class Tasks : MonoBehaviour
                     }
                 }
                 Debug.Log("difficulty: "+ difficultyname);
-                difficultytext.text = "Tehtävän vaikeustaso: " + difficultyname;
+                g.transform.GetChild(3).GetComponent<Text>().text = "Tehtävän vaikeustaso: " + difficultyname;
             }
+            Destroy(ItemTemplate);
         }
         catch(WebException e)
         {

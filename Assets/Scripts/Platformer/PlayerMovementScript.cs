@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -16,6 +15,13 @@ public class PlayerMovementScript : MonoBehaviour
     bool isGrounded;
     public Transform groundCheck;
     public LayerMask collisionlayer;
+
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
