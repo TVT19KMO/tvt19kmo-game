@@ -163,6 +163,7 @@ public class CharacterEditor : MonoBehaviour
         LeftArm.sprite = larms[ChosenJacket];
         RightArm.sprite = rarms[ChosenJacket];
         Top.sprite = tops[ChosenJacket];
+        Debug.Log(ChosenJacket);
     }
     public void prevJacket()
     {

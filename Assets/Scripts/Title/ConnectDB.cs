@@ -194,101 +194,101 @@ public class ConnectDB : MonoBehaviour
             switch(id)
             {
                 // Hats
-                case "60901acefffc21436f0aa485":
+                case "60903277dc08534c597879da":
                 {
                     Ownedhats.Add(hats[7]);
                     Debug.Log("blue cap");
                     break;
                 }
-                case "60901acefffc21436f0aa486":
+                case "60903277dc08534c597879db":
                 {
                     Ownedhats.Add(hats[6]);
                     Debug.Log("red cap");
                     break;
                 }
-                case "60901acefffc21436f0aa487":
+                case "60903277dc08534c597879dc":
                 {
                     Ownedhats.Add(hats[5]);
                     Debug.Log("yellow cap");
                     break;
                 }
-                case "60901acefffc21436f0aa488":
+                case "60903277dc08534c597879dd":
                 {
                     Ownedhats.Add(hats[8]);
                     Debug.Log("black cap");
                     break;
                 }
-                case "60901acefffc21436f0aa489":
+                case "60903277dc08534c597879de":
                 {
                     Ownedhats.Add(hats[1]);
                     Debug.Log("blue beanie");
                     break;
                 }
-                case "60901acefffc21436f0aa48a":
+                case "60903277dc08534c597879df":
                 {
                     Ownedhats.Add(hats[2]);
                     Debug.Log("red beanie");
                     break;
                 }
-                case "60901acefffc21436f0aa48b":
+                case "60903277dc08534c597879e0":
                 {
                     Ownedhats.Add(hats[4]);
                     Debug.Log("yellow beanie");
                     break;
                 }
-                case "60901acefffc21436f0aa48c":
+                case "60903277dc08534c597879e1":
                 {
                     Ownedhats.Add(hats[3]);
                     Debug.Log("black beanie");
                     break;
                 }
-                case "60901acefffc21436f0aa48d":
+                case "60903277dc08534c597879e2":
                 {
                     Ownedhats.Add(hats[10]);
                     Debug.Log("blue bandana");
                     break;
                 }
-                case "60901acefffc21436f0aa48e":
+                case "60903277dc08534c597879e3":
                 {
                     Ownedhats.Add(hats[12]);
                     Debug.Log("red bandana");
                     break;
                 }
-                case "60901acefffc21436f0aa48f":
+                case "60903277dc08534c597879e4":
                 {
                     Ownedhats.Add(hats[9]);
                     Debug.Log("yellow bandana");
                     break;
                 }
-                case "60901acefffc21436f0aa490":
+                case "60903277dc08534c597879e5":
                 {
                     Ownedhats.Add(hats[11]);
                     Debug.Log("black bandana");
                     break;
                 }
                 //shoes
-                case "60901acefffc21436f0aa498":
+                case "60903277dc08534c597879e6":
                 {
                     OwnedleftSneakers.Add(leftSneakers[4]);
                     OwnedrightSneakers.Add(rightSneakers[4]);
                     Debug.Log("blue sneakers");
                     break;
                 }
-                case "60901acefffc21436f0aa499":
+                case "60903277dc08534c597879e7":
                 {
                     OwnedleftSneakers.Add(leftSneakers[3]);
                     OwnedrightSneakers.Add(rightSneakers[3]);
                     Debug.Log("red sneakers");
                     break;
                 }
-                case "60901acefffc21436f0aa49a":
+                case "60903277dc08534c597879e8":
                 {
                     OwnedleftSneakers.Add(leftSneakers[2]);
                     OwnedrightSneakers.Add(rightSneakers[2]);
                     Debug.Log("yellow sneakers");
                     break;
                 }
-                case "60901acefffc21436f0aa49b":
+                case "60903277dc08534c597879e9":
                 {
                     OwnedleftSneakers.Add(leftSneakers[1]);
                     OwnedrightSneakers.Add(rightSneakers[1]);
@@ -296,7 +296,7 @@ public class ConnectDB : MonoBehaviour
                     break;
                 }
                 // Tops
-                case "60901acefffc21436f0aa4ad":
+                case "60903277dc08534c597879f2":
                 {
                     Ownedtops.Add(tops[2]);
                     Ownedlarms.Add(larms[2]);
@@ -304,7 +304,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("blue hoodie");
                     break;
                 }
-                case "60901acefffc21436f0aa4ae":
+                case "60903277dc08534c597879f3":
                 {
                     Ownedtops.Add(tops[3]);
                     Ownedlarms.Add(larms[3]);
@@ -312,7 +312,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("red hoodie");
                     break;
                 }
-                case "60901acefffc21436f0aa4af":
+                case "60903277dc08534c597879f4":
                 {
                     Ownedtops.Add(tops[4]);
                     Ownedlarms.Add(larms[4]);
@@ -320,7 +320,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("yellow hoodie");
                     break;
                 }
-                case "60901acefffc21436f0aa4b0":
+                case "60903277dc08534c597879f5":
                 {
                     Ownedtops.Add(tops[1]);
                     Ownedlarms.Add(larms[1]);
@@ -328,7 +328,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("black hoodie");
                     break;
                 }
-                case "60901acefffc21436f0aa4b1":
+                case "60903277dc08534c597879f6":
                 {
                     Ownedtops.Add(tops[7]);
                     Ownedlarms.Add(larms[7]);
@@ -336,7 +336,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("blue jacket");
                     break;
                 }
-                case "60901acefffc21436f0aa4b2":
+                case "60903277dc08534c597879f7":
                 {
                     Ownedtops.Add(tops[8]);
                     Ownedlarms.Add(larms[8]);
@@ -344,7 +344,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("red jacket");
                     break;
                 }
-                case "60901acefffc21436f0aa4b3":
+                case "60903277dc08534c597879f8":
                 {
                     Ownedtops.Add(tops[5]);
                     Ownedlarms.Add(larms[5]);
@@ -352,7 +352,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("yellow jacket");
                     break;
                 }
-                case "60901acefffc21436f0aa4b4":
+                case "60903277dc08534c597879f9":
                 {
                     Ownedtops.Add(tops[6]);
                     Ownedlarms.Add(larms[6]);
@@ -361,7 +361,7 @@ public class ConnectDB : MonoBehaviour
                     break;
                 }
                 // Bottoms
-                case "60901acefffc21436f0aa49d":
+                case "60903277dc08534c597879ea":
                 {
                     Ownedbottoms.Add(bottoms[7]);
                     OwnedleftLegs.Add(leftLegs[7]);
@@ -369,7 +369,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("blue pants");
                     break;
                 }
-                case "60901acefffc21436f0aa49e":
+                case "60903277dc08534c597879eb":
                 {
                     Ownedbottoms.Add(bottoms[8]);
                     OwnedleftLegs.Add(leftLegs[8]);
@@ -377,7 +377,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("red pants");
                     break;
                 }
-                case "60901acefffc21436f0aa49f":
+                case "60903277dc08534c597879ec":
                 {
                     Ownedbottoms.Add(bottoms[5]);
                     OwnedleftLegs.Add(leftLegs[5]);
@@ -385,7 +385,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("yellow pants");
                     break;
                 }
-                case "60901acefffc21436f0aa4a0":
+                case "60903277dc08534c597879ed":
                 {
                     Ownedbottoms.Add(bottoms[6]);
                     OwnedleftLegs.Add(leftLegs[6]);
@@ -393,7 +393,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("black pants");
                     break;
                 }
-                case "60901acefffc21436f0aa4a1":
+                case "60903277dc08534c597879ee":
                 {
                     Ownedbottoms.Add(bottoms[3]);
                     OwnedleftLegs.Add(leftLegs[3]);
@@ -401,7 +401,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("blue jeans");
                     break;
                 }
-                case "60901acefffc21436f0aa4a2":
+                case "60903277dc08534c597879ef":
                 {
                     Ownedbottoms.Add(bottoms[2]);
                     OwnedleftLegs.Add(leftLegs[2]);
@@ -409,7 +409,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("red jeans");
                     break;
                 }
-                case "60901acefffc21436f0aa4a3":
+                case "60903277dc08534c597879f0":
                 {
                     Ownedbottoms.Add(bottoms[1]);
                     OwnedleftLegs.Add(leftLegs[1]);
@@ -417,7 +417,7 @@ public class ConnectDB : MonoBehaviour
                     Debug.Log("yellow jeans");
                     break;
                 }
-                case "60901acefffc21436f0aa4a4":
+                case "60903277dc08534c597879f1":
                 {
                     Ownedbottoms.Add(bottoms[4]);
                     OwnedleftLegs.Add(leftLegs[4]);

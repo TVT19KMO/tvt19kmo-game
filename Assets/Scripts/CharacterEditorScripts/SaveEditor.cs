@@ -19,5 +19,6 @@ public class SaveEditor : MonoBehaviour
         PlayerPrefs.SetInt("Jacket", characterEditor.ChosenJacket);
         PlayerPrefs.SetInt("Pants", characterEditor.ChosenPants);
         Debug.Log("saved head color: " + characterEditor.ChosenHeadColor);
+        Debug.Log("sneaker " + characterEditor.ChosenSneaker + "jacket " + characterEditor.ChosenJacket);
     }
 }

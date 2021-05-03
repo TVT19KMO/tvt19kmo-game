@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 using System;
 using System.Net;
@@ -168,6 +169,10 @@ public class Shop : MonoBehaviour
     {        
         value = "{\"Items\":" + value + "}";        
         return value;
+    }
+    public void ExitButtonClicked()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 }
 
