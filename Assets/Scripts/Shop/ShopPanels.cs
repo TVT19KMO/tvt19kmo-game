@@ -24,9 +24,15 @@ public class ShopPanels : MonoBehaviour
         NextBtn.onClick.AddListener(NextButtonClicked);
         Button PrevBtn = PreviousButton.GetComponent<Button>();
         PrevBtn.onClick.AddListener(PreviousButtonClicked);
+        CoinManager.Instance.GetCoins();
         SetCoinsUI();
         MainPanel();
         
+    }
+
+    void Update()
+    {
+        SetCoinsUI();
     }
 
 

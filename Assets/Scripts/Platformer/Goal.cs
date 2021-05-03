@@ -10,7 +10,7 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.name == "PlayerPlatformer")
         {
-            GameControllerPlatformer.instance.GameOver();
+            GameControllerPlatformer.instance.GameOver(true);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -16,11 +15,17 @@ public class PlayerMovementScript : MonoBehaviour
     bool isGrounded;
     public Transform groundCheck;
     public LayerMask collisionlayer;
-    public Button jumpButton;
+
+    Animator animator;
+
+    AudioSource audioSource;
+    public AudioClip jumpClip;
+
 
     void Start()
     {
-        //jumpButton.onClick.AddListener(JumpOnClick);
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -29,6 +34,8 @@ public class PlayerMovementScript : MonoBehaviour
         {
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         }
+
+
     }
 
     void FixedUpdate()
@@ -38,8 +45,9 @@ public class PlayerMovementScript : MonoBehaviour
         if(isGrounded)
         {
             rb.velocity = new Vector2(variableJoystick.Horizontal * speed, rb.velocity.y);
- //           rb.AddForce(Vector2.right* variableJoystick.Horizontal * MovementSpeed, ForceMode2D.Impulse);
- //           rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+            //           rb.AddForce(Vector2.right* variableJoystick.Horizontal * MovementSpeed, ForceMode2D.Impulse);
+            //           rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+
         }
         else
         {
@@ -47,6 +55,27 @@ public class PlayerMovementScript : MonoBehaviour
             rb.AddForce(Vector2.up* variableJoystick.Vertical * AirSpeed, ForceMode2D.Impulse);
             rb.velocity = new Vector2(variableJoystick.Horizontal * speed, rb.velocity.y);
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+            
+        }
+
+        if (rb.velocity.x > 0) 
+        {
+            animator.SetBool("isRunning", true);
+        }
+
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("isJumping", true);
+        }
+
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 
@@ -55,6 +84,7 @@ public class PlayerMovementScript : MonoBehaviour
         if(isGrounded)
         {
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            audioSource.PlayOneShot(jumpClip);
         }
     }
 
@@ -63,6 +93,14 @@ public class PlayerMovementScript : MonoBehaviour
         if (other.gameObject.name == "Platform")
         {
             transform.parent = other.gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Platform")
+        {
+            transform.parent = null;
         }
     }
 }

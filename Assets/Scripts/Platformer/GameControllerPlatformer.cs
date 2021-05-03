@@ -12,7 +12,11 @@ public class GameControllerPlatformer : MonoBehaviour
     public GameObject UI;
     public GameObject GameOverMenu;
 
-    public AudioSource BackgroundMusic;
+    public AudioSource audioSource;
+    public AudioClip coinClip;
+    public AudioClip hitClip;
+    public AudioClip winClip;
+
     public Text coinText;
     public Text gameOverText;
     public Text timeText;
@@ -21,6 +25,7 @@ public class GameControllerPlatformer : MonoBehaviour
 
     public float maxtime;
     private float timer = 0;
+    private int timerStars = 0;
 
     void Awake()
     {
@@ -42,7 +47,7 @@ public class GameControllerPlatformer : MonoBehaviour
             timeText.text = "Aika: " + Mathf.Round(timer) + " / " + maxtime;
             if (timer >= maxtime)
             {
-                GameOver();
+                GameOver(false);
             }
         }
         
@@ -64,12 +69,38 @@ public class GameControllerPlatformer : MonoBehaviour
         UI.SetActive(true);
     }
 
-    public void GameOver()
+    public void GameOver(bool gameFinished)
     {
         gamePaused = true;
         Time.timeScale = 0;
-        BackgroundMusic.Pause();
-        gameOverText.text = "Kokonaispisteesi: " + coins + "\nAika: " + timer;
+        audioSource.Pause();
+
+        if (gameFinished)
+        {
+            audioSource.PlayOneShot(winClip);
+            if (timer/maxtime <= 0.25)
+            {
+                timerStars = 3;
+            }
+            else if (timer/maxtime <= 0.5)
+            {
+                timerStars = 2;
+            }
+            else if (timer/maxtime <= 0.75)
+            {
+                timerStars = 1;
+            }
+
+            gameOverText.text = "Kolikot: " + coins +
+            "\nAika: " + timerStars + "* / 3*";
+        }
+        else
+        {
+            audioSource.PlayOneShot(hitClip);
+            gameOverText.text = "Kolikot: " + coins +
+            "\nAika: 0* / 3*";
+        }
+
         GameOverMenu.SetActive(true);
     }
 
@@ -90,5 +121,6 @@ public class GameControllerPlatformer : MonoBehaviour
         coins++;
         Debug.Log("Coins: " + coins);
         coinText.text = "Pisteet: " + coins;
+        audioSource.PlayOneShot(coinClip);
     }
 }

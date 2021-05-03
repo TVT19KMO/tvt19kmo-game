@@ -46,9 +46,12 @@ MonoBehaviour:
   gamePaused: 0
   UI: {fileID: 0}
   GameOverMenu: {fileID: 0}
-  BackgroundMusic: {fileID: 0}
+  audioSource: {fileID: 0}
+  coinClip: {fileID: 8300000, guid: 47baedf97c001294d90caf84f62073d2, type: 3}
+  hitClip: {fileID: 8300000, guid: fdcbe7dbf859ecc47a53d77399aa6b35, type: 3}
+  winClip: {fileID: 8300000, guid: 5f825f09e2b14d04a85f96ffb7aa26a7, type: 3}
   coinText: {fileID: 0}
   gameOverText: {fileID: 0}
   timeText: {fileID: 0}
   coins: 0
-  maxtime: 300
+  maxtime: 180

@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+using System;
+using System.Net;
+using System.IO;
+using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
+
 public class ShopBottoms : MonoBehaviour
 {
     [System.Serializable]
@@ -78,10 +84,10 @@ public class ShopBottoms : MonoBehaviour
                 }
             }
 
-            foreach (var b in Bottoms)
+            /*foreach (var b in Bottoms)
             {
-                //Debug.Log("Item: " + b.type + " " + b.name + " " + b.color + " " + b.price + " " + b.id);
-            }
+                Debug.Log("Item: " + b.type + " " + b.name + " " + b.color + " " + b.price + " " + b.id);
+            }*/
 
             int x = BottomImageList.Count;
             for (int i = 0; i < x; i++)
@@ -89,9 +95,9 @@ public class ShopBottoms : MonoBehaviour
                 g = Instantiate(ItemTemplate, ShopScrollView);
                 g.transform.GetChild(0).GetComponent<Image>().sprite = BottomImageList[i].Image;
                 g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Bottoms[i].price.ToString();
-                buyBtn = g.transform.GetChild(2).GetComponent<Button>();
+                buyBtn = g.transform.GetChild(2).GetComponent<Button>();                
                 buyBtn.interactable = !Bottoms[i].IsPurchased;
-                buyBtn.AddEventListener(i, OnShopItemBtnClicked);
+                buyBtn.AddEventListener(i, OnShopItemBtnClicked);                
             }
             Destroy(ItemTemplate);
         }));
@@ -99,8 +105,27 @@ public class ShopBottoms : MonoBehaviour
 
     void OnShopItemBtnClicked(int itemIndex)
     {
-        if (CoinManager.Instance.HasEnoughCoins(Bottoms[itemIndex].price))
+        string url = "http://game-management-api.herokuapp.com/api/store/purchase";
+        string token = PlayerPrefs.GetString("ParentToken", "");
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        request.Headers.Add("Authorization", "bearer " + token);
+        request.ContentType = "application/json";
+        request.Method = "POST";
+        Debug.Log("buyItem called");
+        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
         {
+            string json = "{ \"item\": \"" + Bottoms[itemIndex].id + "\"}";
+            streamWriter.Write(json);
+            Debug.Log("postataan " + json);
+        }
+        try
+        {
+            WebResponse response = request.GetResponse();
+            Stream datastream = response.GetResponseStream();
+            StreamReader streamReader = new StreamReader(datastream);
+            string msg = streamReader.ReadToEnd();
+            Debug.Log(msg);
+            Debug.Log("buyItem onnistui!");
             CoinManager.Instance.UseCoins(Bottoms[itemIndex].price);
             Bottoms[itemIndex].IsPurchased = true;
             buyBtn = ShopScrollView.GetChild(itemIndex).GetChild(2).GetComponent<Button>();
@@ -108,11 +133,15 @@ public class ShopBottoms : MonoBehaviour
             buyBtn.transform.GetChild(0).GetComponent<Text>().text = "PURCHASED";
             Debug.Log(Bottoms[itemIndex].id);
         }
-        else
+        catch (WebException e)
         {
-            Debug.Log("Ei tarpeeksi kolikoita");
-        };
-
+            if (e.Status == WebExceptionStatus.ProtocolError)
+            {
+                string response = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                Debug.Log("buyItems ei onnistunut!");
+                Debug.Log(response);
+            }
+        }
     }
 
     IEnumerator GetBottomsRequest(System.Action<string> result)
@@ -130,7 +159,7 @@ public class ShopBottoms : MonoBehaviour
         }
         else
         {            
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
             if (result != null)
                 result(www.downloadHandler.text);
                         
@@ -145,31 +174,3 @@ public class ShopBottoms : MonoBehaviour
     }
 }
 
-/*public static class JsonHelper
-{
-    public static T[] FromJson<T>(string json)
-    {
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
-        return wrapper.Items;
-    }
-
-    public static string ToJson<T>(T[] array)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper);
-    }
-
-    public static string ToJson<T>(T[] array, bool prettyPrint)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper, prettyPrint);
-    }
-
-    [System.Serializable]
-    private class Wrapper<T>
-    {
-        public T[] Items;
-    }
-}*/

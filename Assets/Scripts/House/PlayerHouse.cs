@@ -11,10 +11,13 @@ public class PlayerHouse : MonoBehaviour
     Vector2 lookDirection;
     private Vector2 newPosition;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         newPosition = transform.position;
     }
    
@@ -27,6 +30,7 @@ public class PlayerHouse : MonoBehaviour
 
         Vector2 move = new Vector2(horizontal, vertical);
 
+
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
             lookDirection.Set(move.x, move.y);
@@ -38,6 +42,11 @@ public class PlayerHouse : MonoBehaviour
         {
             newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
 
         //Mobile movement
@@ -45,7 +54,14 @@ public class PlayerHouse : MonoBehaviour
         {
             newPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+            animator.SetBool("isRunning", true);
         }
+
+        /*Aktivoi alla oleva else mobiiliin ja deaktivoi tietokone testauksessa
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }*/
 
         // ======== INTERACT ==========
         if (Input.GetKeyDown(KeyCode.X))

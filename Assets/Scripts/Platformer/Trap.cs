@@ -9,7 +9,7 @@ public class Trap : MonoBehaviour
         if (collision.gameObject.name == "PlayerPlatformer")
         {
             Debug.Log("It's a trap!");
-            GameControllerPlatformer.instance.GameOver();
+            GameControllerPlatformer.instance.GameOver(false);
         }
     }
 }
