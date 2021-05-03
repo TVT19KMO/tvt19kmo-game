@@ -16,12 +16,6 @@ public class PlayerMovementScript : MonoBehaviour
     bool isGrounded;
     public Transform groundCheck;
     public LayerMask collisionlayer;
-    public Button jumpButton;
-
-    void Start()
-    {
-        //jumpButton.onClick.AddListener(JumpOnClick);
-    }
 
     void Update()
     {
@@ -63,6 +57,14 @@ public class PlayerMovementScript : MonoBehaviour
         if (other.gameObject.name == "Platform")
         {
             transform.parent = other.gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Platform")
+        {
+            transform.parent = null;
         }
     }
 }
