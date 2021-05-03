@@ -18,7 +18,6 @@ public class GameControllerPlatformer : MonoBehaviour
     public Text timeText;
 
     public int coins = 0;
-    public int totalCoins;
 
     public float maxtime;
     private float timer = 0;
@@ -87,12 +86,12 @@ public class GameControllerPlatformer : MonoBehaviour
                 timerStars = 1;
             }
 
-            gameOverText.text = "Kolikot: " + coins + " / " + totalCoins +
+            gameOverText.text = "Kolikot: " + coins +
             "\nAika: " + timerStars + "* / 3*";
         }
         else
         {
-            gameOverText.text = "Kolikot: " + coins + " / " + totalCoins +
+            gameOverText.text = "Kolikot: " + coins +
             "\nAika: 0* / 3*";
         }
 

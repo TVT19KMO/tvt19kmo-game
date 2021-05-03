@@ -10001,6 +10001,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 697435681}
     - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
+      propertyPath: maxtime
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591002634035329812, guid: 17f04bdbc858dc54a8fe1074f45779c6, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 278949966}
