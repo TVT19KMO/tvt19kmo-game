@@ -18,9 +18,11 @@ public class GameControllerPlatformer : MonoBehaviour
     public Text timeText;
 
     public int coins = 0;
+    public int totalCoins;
 
     public float maxtime;
     private float timer = 0;
+    private int timerStars = 0;
 
     void Awake()
     {
@@ -42,7 +44,7 @@ public class GameControllerPlatformer : MonoBehaviour
             timeText.text = "Aika: " + Mathf.Round(timer) + " / " + maxtime;
             if (timer >= maxtime)
             {
-                GameOver();
+                GameOver(false);
             }
         }
         
@@ -64,12 +66,36 @@ public class GameControllerPlatformer : MonoBehaviour
         UI.SetActive(true);
     }
 
-    public void GameOver()
+    public void GameOver(bool gameFinished)
     {
         gamePaused = true;
         Time.timeScale = 0;
         BackgroundMusic.Pause();
-        gameOverText.text = "Kokonaispisteesi: " + coins + "\nAika: " + timer;
+
+        if (gameFinished)
+        {
+            if (timer/maxtime <= 0.25)
+            {
+                timerStars = 3;
+            }
+            else if (timer/maxtime <= 0.5)
+            {
+                timerStars = 2;
+            }
+            else if (timer/maxtime <= 0.75)
+            {
+                timerStars = 1;
+            }
+
+            gameOverText.text = "Kolikot: " + coins + " / " + totalCoins +
+            "\nAika: " + timerStars + "* / 3*";
+        }
+        else
+        {
+            gameOverText.text = "Kolikot: " + coins + " / " + totalCoins +
+            "\nAika: 0* / 3*";
+        }
+
         GameOverMenu.SetActive(true);
     }
 

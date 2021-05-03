@@ -122,7 +122,7 @@ public class PlayerPlatformer : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                GameControllerPlatformer.instance.GameOver();
+                GameControllerPlatformer.instance.GameOver(false);
             }
 
         }
